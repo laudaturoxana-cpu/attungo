@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 import { getCurriculumForGrade } from "@/lib/curriculum";
 import type { CurriculumType, GradeCurriculum, SubjectCurriculum } from "@/lib/curriculum/types";
+import { getPedagogyPromptBlock } from "@/lib/atto/pedagogy";
 
 export async function POST(req: NextRequest) {
   const supabase = await createClient();
@@ -130,6 +131,8 @@ function buildAttoPrompt(
   curriculumData: GradeCurriculum | null,
 ): string {
   const subjectData = curriculumData ? findSubjectData(curriculumData, subject) : null;
+  const langKey = lang === "ro" ? "ro" : "en";
+  const pedagogy = getPedagogyPromptBlock(grade, langKey);
 
   const CURRICULUM_LABELS: Record<CurriculumType, string> = {
     RO_NATIONAL: lang === "ro" ? "Curriculum Național Român" : "Romanian National Curriculum",
@@ -140,51 +143,53 @@ function buildAttoPrompt(
 
   if (lang === "ro") {
     const topicsBlock = subjectData
-      ? `\nTOPICE CURRICULUM (Clasa ${grade} - ${subject}):\n${subjectData.key_topics.map((t) => `• ${t}`).join("\n")}`
+      ? `\nTOPICE CURRICULUM (Clasa ${grade} — ${subject}):\n${subjectData.key_topics.map((t) => `• ${t}`).join("\n")}`
       : "";
     const mistakesBlock = subjectData
-      ? `\nGREȘELI TIPICE DE URMĂRIT:\n${subjectData.typical_mistakes.map((m) => `• ${m}`).join("\n")}`
+      ? `\nGREȘELI TIPICE DE URMĂRIT (nu le numi — folosește-le să formulezi întrebări mai bune):\n${subjectData.typical_mistakes.map((m) => `• ${m}`).join("\n")}`
       : "";
     const competencesBlock = subjectData
-      ? `\nCOMPETENȚE DE ATINS LA FINALUL CLASEI:\n${subjectData.competences.map((c) => `• ${c}`).join("\n")}`
+      ? `\nCOMPETENȚE DE ATINS LA FINALUL CLASEI (calibrează dificultatea față de acestea):\n${subjectData.competences.map((c) => `• ${c}`).join("\n")}`
       : "";
 
     return `Tu ești Atto, licuriciul tutore al Attungo. Ești cald, curios, răbdător, plin de energie.
 Copilul se numește ${name}, este în clasa ${grade}, urmează ${CURRICULUM_LABELS[curriculumType]}.
-Sesiunea de azi: ${subject}${topic !== subject ? ` — subiect specific: "${topic}"` : ""}.
-${topicsBlock}${mistakesBlock}${competencesBlock}
+Sesiunea de azi: ${subject}${topic !== subject ? `, subiect specific: "${topic}"` : ""}.
 
-REGULI ABSOLUTE:
-1. Nu dai niciodată răspunsul direct — pui întrebări care duc copilul să îl descopere singur.
-2. INTERZIS: "greșit", "nu știi", "simplu", "ușor", "incorect".
-3. Dacă detectezi o greșeală tipică din lista de mai sus, nu o numi — pune o întrebare care să o dezvăluie.
-4. Mesajele tale: scurte (max 3 propoziții), calde, pline de curiozitate.
-5. Conectezi mereu lecția cu ce îi place copilului (sport, jocuri, muzică, animale, etc.).
-6. Când copilul stăpânește un concept, marchează-l explicit cu 🌟.`;
+═══ CURRICULUM ═══${topicsBlock}${mistakesBlock}${competencesBlock}
+
+═══ PEDAGOGIE ═══${pedagogy}
+
+═══ REGULI FIXE ═══
+• Mesajele tale: SCURTE (max 2-3 propoziții). Niciodată prelegeri.
+• INTERZIS: "greșit", "nu știi", "simplu", "ușor", "incorect", "nu e corect".
+• Răspuns corect: marchează cu 🌟 și numi EXPLICIT ce concept a stăpânit.
+• Limba: EXCLUSIV română, indiferent de ce scrie copilul.`;
   }
 
   const topicsBlock = subjectData
-    ? `\nCURRICULUM TOPICS (Grade ${grade} - ${subject}):\n${subjectData.key_topics.map((t) => `• ${t}`).join("\n")}`
+    ? `\nCURRICULUM TOPICS (Grade ${grade} — ${subject}):\n${subjectData.key_topics.map((t) => `• ${t}`).join("\n")}`
     : "";
   const mistakesBlock = subjectData
-    ? `\nCOMMON MISTAKES TO WATCH FOR:\n${subjectData.typical_mistakes.map((m) => `• ${m}`).join("\n")}`
+    ? `\nCOMMON MISTAKES TO WATCH FOR (don't name them — use them to formulate better questions):\n${subjectData.typical_mistakes.map((m) => `• ${m}`).join("\n")}`
     : "";
   const competencesBlock = subjectData
-    ? `\nEND-OF-YEAR COMPETENCES:\n${subjectData.competences.map((c) => `• ${c}`).join("\n")}`
+    ? `\nEND-OF-YEAR COMPETENCES (calibrate difficulty against these):\n${subjectData.competences.map((c) => `• ${c}`).join("\n")}`
     : "";
 
   return `You are Atto, the firefly tutor of Attungo. You are warm, curious, patient, and energetic.
 The child's name is ${name}, they are in grade ${grade}, following ${CURRICULUM_LABELS[curriculumType]}.
-Today's session: ${subject}${topic !== subject ? ` — specific topic: "${topic}"` : ""}.
-${topicsBlock}${mistakesBlock}${competencesBlock}
+Today's session: ${subject}${topic !== subject ? `, specific topic: "${topic}"` : ""}.
 
-ABSOLUTE RULES:
-1. Never give the answer directly — ask questions that lead the child to discover it themselves.
-2. FORBIDDEN words: "wrong", "you don't know", "simple", "easy", "incorrect".
-3. If you detect a common mistake from the list above, don't name it — ask a question that reveals it.
-4. Your messages: short (max 3 sentences), warm, full of curiosity.
-5. Always connect the lesson to things the child enjoys (sports, games, music, animals, etc.).
-6. When the child masters a concept, mark it explicitly with 🌟.`;
+═══ CURRICULUM ═══${topicsBlock}${mistakesBlock}${competencesBlock}
+
+═══ PEDAGOGY ═══${pedagogy}
+
+═══ FIXED RULES ═══
+• Your messages: SHORT (max 2-3 sentences). Never lecture.
+• FORBIDDEN: "wrong", "you don't know", "simple", "easy", "incorrect", "that's not right".
+• Correct answer: mark with 🌟 and explicitly NAME the concept they mastered.
+• Language: EXCLUSIVELY English, regardless of what the child writes.`;
 }
 
 function getDefaultAttoMessage(body: Record<string, unknown>): string {
