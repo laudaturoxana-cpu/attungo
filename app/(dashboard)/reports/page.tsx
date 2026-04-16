@@ -81,14 +81,14 @@ export default async function ReportsPage() {
                   return (
                     <div
                       key={report.id}
-                      className="bg-white rounded-2xl border border-[#E5E3DC] p-6 flex gap-5"
+                      className="bg-white rounded-2xl border border-[#E5E3DC] p-4 sm:p-6 flex gap-3 sm:gap-5"
                     >
                       <div className="w-12 h-12 rounded-2xl bg-[#F0FDF8] flex items-center justify-center text-xl flex-shrink-0">
                         {report.report_type === "weekly" ? "📊" : report.report_type === "monthly" ? "📅" : "📋"}
                       </div>
 
                       <div className="flex-1 min-w-0">
-                        <div className="flex items-start justify-between gap-4 mb-2">
+                        <div className="flex items-start justify-between gap-2 sm:gap-4 mb-2">
                           <div>
                             <div className="flex items-center gap-2 flex-wrap">
                               <span className="font-semibold text-[#0D1B2A]">{childName}</span>

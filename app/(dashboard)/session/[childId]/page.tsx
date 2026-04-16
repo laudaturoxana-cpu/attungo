@@ -103,7 +103,7 @@ export default function SessionPage() {
               value={topic}
               onChange={(e) => setTopic(e.target.value)}
               placeholder={lang === "ro" ? "ex. Fracții simple, Acordul adjectivului..." : "e.g. Simple fractions, Reading comprehension..."}
-              className="px-4 py-3 rounded-xl bg-[#FAFAF5] border border-[#E5E3DC] text-[#3D3C37] placeholder-[#9B9A93] focus:outline-none focus:ring-2 focus:ring-[#E8A020]/30"
+              className="px-4 py-3 rounded-xl bg-[#FAFAF5] border border-[#E5E3DC] text-base text-[#3D3C37] placeholder-[#9B9A93] focus:outline-none focus:ring-2 focus:ring-[#E8A020]/30"
             />
           </div>
 

@@ -32,7 +32,7 @@ export default async function DashboardPage() {
   return (
     <div className="flex flex-col gap-8">
       {/* Greeting */}
-      <div className="flex items-start justify-between gap-4">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
         <div>
           <h1 className="text-3xl font-bold text-[#0D1B2A]" style={{ fontFamily: "var(--font-display)" }}>
             Bun venit înapoi, {parent?.name?.split(" ")[0]} 👋

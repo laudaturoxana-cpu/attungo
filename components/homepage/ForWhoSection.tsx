@@ -15,8 +15,7 @@ export default function ForWhoSection({ lang = "ro" }: ForWhoSectionProps) {
   return (
     <section id="pentru-cine" className="py-16 sm:py-24 bg-[#FAFAF5]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-16">
           <h2
             className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0D1B2A] mb-4"
             style={{ fontFamily: "var(--font-display)" }}
@@ -25,31 +24,16 @@ export default function ForWhoSection({ lang = "ro" }: ForWhoSectionProps) {
           </h2>
         </div>
 
-        {/* Cards grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {cards.map((card, i) => (
-            <Card
-              key={i}
-              hover
-              className="p-6 flex flex-col gap-4 group"
-            >
-              {/* Icon */}
-              <div className="w-12 h-12 rounded-2xl bg-[#FEF3C7] flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+            <Card key={i} hover className="p-5 sm:p-6 flex flex-col gap-4 group">
+              <div className="w-12 h-12 rounded-2xl bg-[#FEF3C7] flex items-center justify-center text-2xl group-hover:scale-110 transition-transform flex-shrink-0">
                 {CARD_ICONS[i]}
               </div>
-
-              {/* Title */}
-              <h3
-                className="text-lg font-bold text-[#0D1B2A] leading-snug"
-                style={{ fontFamily: "var(--font-display)" }}
-              >
+              <h3 className="text-base sm:text-lg font-bold text-[#0D1B2A] leading-snug" style={{ fontFamily: "var(--font-display)" }}>
                 {card.title}
               </h3>
-
-              {/* Text */}
               <p className="text-[#9B9A93] text-sm leading-relaxed flex-1">{card.text}</p>
-
-              {/* Bullets */}
               <div className="pt-3 border-t border-[#E5E3DC]">
                 <p className="text-xs text-[#3ECDA0] font-semibold">{card.bullets}</p>
               </div>

@@ -71,34 +71,34 @@ export default async function ChildProfilePage({ params }: { params: Promise<{ c
   return (
     <div className="flex flex-col gap-8 max-w-4xl">
       {/* Back + header */}
-      <div className="flex items-start gap-4">
-        <Link href="/children" className="text-[#9B9A93] hover:text-[#E8A020] transition-colors text-sm mt-1">
+      <div className="flex flex-col gap-4">
+        <Link href="/children" className="text-[#9B9A93] hover:text-[#E8A020] transition-colors text-sm self-start">
           ← Înapoi
         </Link>
-        <div className="flex-1">
-          <div className="flex items-center gap-4">
-            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#1B2C3E] to-[#0D1B2A] flex items-center justify-center">
+        <div className="flex items-start justify-between gap-3">
+          <div className="flex items-center gap-3 sm:gap-4 min-w-0">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br from-[#1B2C3E] to-[#0D1B2A] flex items-center justify-center flex-shrink-0">
               <AttoCharacter
                 state={profile?.current_energy === "high" ? "happy" : "neutral"}
                 size={40}
               />
             </div>
-            <div>
-              <h1 className="text-3xl font-bold text-[#0D1B2A]" style={{ fontFamily: "var(--font-display)" }}>
+            <div className="min-w-0">
+              <h1 className="text-2xl sm:text-3xl font-bold text-[#0D1B2A] truncate" style={{ fontFamily: "var(--font-display)" }}>
                 {child.name}
               </h1>
-              <p className="text-[#9B9A93]">
+              <p className="text-[#9B9A93] text-sm">
                 Clasa {child.grade} · {child.age} ani · {CURRICULUM_LABELS[child.curriculum_type]}
               </p>
             </div>
           </div>
+          <Link
+            href={`/session/${child.id}`}
+            className="px-4 sm:px-5 py-2.5 rounded-full bg-[#E8A020] text-[#92520A] font-semibold text-sm hover:bg-[#C17D0A] hover:text-white transition-all flex-shrink-0"
+          >
+            Sesiune →
+          </Link>
         </div>
-        <Link
-          href={`/session/${child.id}`}
-          className="px-5 py-2.5 rounded-full bg-[#E8A020] text-[#92520A] font-semibold text-sm hover:bg-[#C17D0A] hover:text-white transition-all"
-        >
-          Sesiune cu Atto →
-        </Link>
       </div>
 
       {/* Stats grid */}

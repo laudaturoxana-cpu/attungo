@@ -122,7 +122,7 @@ export default function SettingsPage() {
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
-              className="px-4 py-3 rounded-xl bg-[#FAFAF5] border border-[#E5E3DC] text-[#0D1B2A] focus:outline-none focus:ring-2 focus:ring-[#E8A020]/30"
+              className="px-4 py-3 rounded-xl bg-[#FAFAF5] border border-[#E5E3DC] text-[#0D1B2A] text-base focus:outline-none focus:ring-2 focus:ring-[#E8A020]/30"
             />
           </div>
           <div className="flex flex-col gap-1.5">
@@ -131,7 +131,7 @@ export default function SettingsPage() {
               type="email"
               value={parent?.email ?? ""}
               disabled
-              className="px-4 py-3 rounded-xl bg-[#F5F4EF] border border-[#E5E3DC] text-[#9B9A93] cursor-not-allowed"
+              className="px-4 py-3 rounded-xl bg-[#F5F4EF] border border-[#E5E3DC] text-[#9B9A93] text-base cursor-not-allowed"
             />
           </div>
           <div className="flex flex-col gap-1.5">
@@ -141,7 +141,7 @@ export default function SettingsPage() {
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               placeholder="+40 7xx xxx xxx"
-              className="px-4 py-3 rounded-xl bg-[#FAFAF5] border border-[#E5E3DC] text-[#0D1B2A] focus:outline-none focus:ring-2 focus:ring-[#E8A020]/30"
+              className="px-4 py-3 rounded-xl bg-[#FAFAF5] border border-[#E5E3DC] text-[#0D1B2A] text-base focus:outline-none focus:ring-2 focus:ring-[#E8A020]/30"
             />
           </div>
 
