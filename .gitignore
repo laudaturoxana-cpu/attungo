@@ -30,8 +30,21 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# env files — NICIODATĂ în GitHub
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.production
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+.venv/
+venv/
+backend/.venv/
 
 # vercel
 .vercel
