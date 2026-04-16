@@ -15,6 +15,7 @@ interface ChatInterfaceProps {
   topic: string;
   grade: number;
   language: SessionLanguage;
+  curriculumType?: string;
   sprintMinutes?: number;
   onSessionEnd?: (summary: { stars: number; concepts: string[] }) => void;
 }
@@ -26,6 +27,7 @@ export default function ChatInterface({
   topic,
   grade,
   language,
+  curriculumType = "RO_NATIONAL",
   sprintMinutes = 15,
   onSessionEnd,
 }: ChatInterfaceProps) {
@@ -66,11 +68,12 @@ export default function ChatInterface({
         body: JSON.stringify({
           type: "start_session",
           childId,
+          childName,
           subject,
           topic,
           grade,
           language,
-          childName,
+          curriculumType,
         }),
       });
 
@@ -124,8 +127,13 @@ export default function ChatInterface({
           type: "message",
           sessionId,
           childId,
+          childName,
           message: text,
+          subject,
+          topic,
+          grade,
           language,
+          curriculumType,
           conversationHistory: messages.map((m) => ({
             role: m.role === "atto" ? "model" : "user",
             content: m.content,

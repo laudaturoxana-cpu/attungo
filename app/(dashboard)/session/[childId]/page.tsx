@@ -83,7 +83,7 @@ export default function SessionPage() {
                   onClick={() => setSelectedSubject(s)}
                   className={`py-2 px-3 rounded-xl text-sm font-medium transition-all ${
                     selectedSubject === s
-                      ? "bg-[#E8A020] text-[#92520A]"
+                      ? "bg-[#E8A020] text-[#3D1500]"
                       : "bg-[#FAFAF5] border border-[#E5E3DC] text-[#9B9A93] hover:border-[#E8A020]/40 hover:text-[#E8A020]"
                   }`}
                 >
@@ -110,7 +110,7 @@ export default function SessionPage() {
           <button
             disabled={!selectedSubject}
             onClick={() => setStarted(true)}
-            className="w-full py-3 rounded-full bg-[#E8A020] text-[#92520A] font-bold hover:bg-[#C17D0A] hover:text-white transition-all disabled:opacity-40"
+            className="w-full py-3 rounded-full bg-[#E8A020] text-[#3D1500] font-bold hover:bg-[#C17D0A] hover:text-white transition-all disabled:opacity-40"
           >
             {lang === "ro" ? "Pornește sesiunea →" : "Start session →"}
           </button>
@@ -128,6 +128,7 @@ export default function SessionPage() {
         topic={topic || selectedSubject}
         grade={child.grade}
         language={lang}
+        curriculumType={child.curriculum_type}
         sprintMinutes={sprintMinutes}
         onSessionEnd={() => router.push("/dashboard")}
       />
