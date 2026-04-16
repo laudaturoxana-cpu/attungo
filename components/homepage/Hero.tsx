@@ -79,7 +79,7 @@ export default function Hero({ lang = "ro" }: HeroProps) {
             <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
               <Link
                 href="/register"
-                className="inline-flex items-center justify-center px-6 py-4 rounded-full bg-[#E8A020] text-[#92520A] font-bold text-base sm:text-lg hover:bg-[#C17D0A] hover:text-white transition-all active:scale-95 glow-amber"
+                className="inline-flex items-center justify-center px-6 py-4 rounded-full bg-[#E8A020] text-[#3D1500] font-bold text-base sm:text-lg hover:bg-[#C17D0A] hover:text-white transition-all active:scale-95 glow-amber"
               >
                 {t.hero.ctaPrimary}
               </Link>
@@ -161,7 +161,7 @@ export default function Hero({ lang = "ro" }: HeroProps) {
                   </div>
                   <button className="w-7 h-7 rounded-full bg-[#E8A020] flex items-center justify-center flex-shrink-0">
                     <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
-                      <path d="M2 7h10M8 3l4 4-4 4" stroke="#92520A" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M2 7h10M8 3l4 4-4 4" stroke="#3D1500" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </button>
                 </div>

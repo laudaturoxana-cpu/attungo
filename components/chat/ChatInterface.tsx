@@ -274,7 +274,7 @@ export default function ChatInterface({
           aria-label={lang === "ro" ? "Trimite" : "Send"}
         >
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <path d="M2 8h12M9 3l5 5-5 5" stroke="#92520A" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M2 8h12M9 3l5 5-5 5" stroke="#3D1500" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </button>
       </form>
