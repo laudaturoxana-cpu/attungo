@@ -125,7 +125,7 @@ export default async function ReportsPage() {
                             <p className="text-[#1D9E75] text-sm italic">
                               &ldquo;{report.atto_message_to_parent}&rdquo;
                             </p>
-                            <p className="text-[#9B9A93] text-xs mt-0.5">— Atto</p>
+                            <p className="text-[#9B9A93] text-xs mt-0.5">Atto</p>
                           </div>
                         )}
 

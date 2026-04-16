@@ -17,7 +17,7 @@ export const ro = {
     titleLine2: "mai întâi.",
     titleLine3: "Ghidează după.",
     subtitle:
-      "Cunoaște-l pe Atto — licuriciul care îți ghidează copilul prin întunericul lecțiilor. Nu dă răspunsul. Aprinde lumina ca copilul să îl găsească singur.",
+      "Cunoaște-l pe Atto, licuriciul care îți ghidează copilul prin întunericul lecțiilor. Nu dă răspunsul. Aprinde lumina ca copilul să îl găsească singur.",
     ctaPrimary: "7 zile gratuit →",
     ctaSecondary: "Vezi cum funcționează",
     trustBar: "€16/lună · toate materiile · 24/7 disponibil · Cls 1–8 · RO + EN",
@@ -38,12 +38,12 @@ export const ro = {
     title: "Attungo e creat pentru familii ca a ta",
     card1: {
       title: "Copilul tău e la școală în engleză în România",
-      text: "Curriculum Cambridge sau internațional, meditatori greu de găsit, costuri duble. Atto știe exact programa școlii private și lucrează în engleză — disponibil oricând.",
+      text: "Curriculum Cambridge sau internațional, meditatori greu de găsit, costuri duble. Atto știe exact programa școlii private și lucrează în engleză, disponibil oricând.",
       bullets: "Common Core + Cambridge · Sesiuni în engleză · Raport săptămânal",
     },
     card2: {
       title: "Faceți homeschooling și aveți nevoie de ajutor în engleză",
-      text: "Ai ales să educi acasă — în engleză după curriculum american. Atto devine tutorele permanent, adaptat exact la ritmul și pasiunile copilului. Fără program fix, fără presiune.",
+      text: "Ai ales să educi acasă, în engleză după curriculum american. Atto devine tutorele permanent, adaptat exact la ritmul și pasiunile copilului. Fără program fix, fără presiune.",
       bullets: "US Common Core · Accelerate Academy style · Flexibil",
     },
     card3: {
@@ -79,7 +79,7 @@ export const ro = {
   pricing: {
     title: "Mai puțin decât o singură ședință de meditații",
     subtitle:
-      "Meditațiile costă 120-200 lei/ședință. Attungo costă €16/lună — toate materiile, toate zilele, fără programare.",
+      "Meditațiile costă 120-200 lei/ședință. Attungo costă €16/lună: toate materiile, toate zilele, fără programare.",
     popular: "Cel mai ales",
     savings: "Economisești €50",
     trialNote:
@@ -134,7 +134,7 @@ export const ro = {
     items: [
       {
         q: "Atto face temele în locul copilului?",
-        a: "Nu. Atto nu dă niciodată răspunsul direct. Pune întrebări care duc copilul să îl găsească singur. Dacă copilul nu a muncit, nu a înțeles — și Atto detectează asta. Raportul tău arată diferența.",
+        a: "Nu. Atto nu dă niciodată răspunsul direct. Pune întrebări care duc copilul să îl găsească singur. Dacă copilul nu a muncit, nu a înțeles, și Atto detectează asta. Raportul tău arată diferența.",
       },
       {
         q: "E sigur pentru copilul meu?",
@@ -142,11 +142,11 @@ export const ro = {
       },
       {
         q: "Funcționează pentru toate materiile?",
-        a: "Da, pentru toate materiile din curriculumul ales — matematică, română/engleză, știință, biologie, geografie și altele. Atto se adaptează la programa exactă a copilului tău.",
+        a: "Da, pentru toate materiile din curriculumul ales: matematică, română/engleză, știință, biologie, geografie și altele. Atto se adaptează la programa exactă a copilului tău.",
       },
       {
         q: "Copilul meu e în clasa 1 și nu știe să citească. Funcționează?",
-        a: "Da. Atto are voce — vorbește cu copilul, iar copilul poate răspunde vocal. Fără să citești o literă.",
+        a: "Da. Atto are voce și vorbește cu copilul, iar copilul poate răspunde vocal. Fără să citești o literă.",
       },
       {
         q: "Pot anula oricând?",

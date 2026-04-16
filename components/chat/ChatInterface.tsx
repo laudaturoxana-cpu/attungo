@@ -92,8 +92,8 @@ export default function ChatInterface({
         id: "atto-error",
         role: "atto",
         content: lang === "ro"
-          ? "Bună! Sunt Atto. Să începem cu ceva simplu — ce știi deja despre azi?"
-          : "Hi! I'm Atto. Let's start with something easy — what do you already know about today's topic?",
+          ? "Bună! Sunt Atto. Să începem cu ceva simplu: ce știi deja despre azi?"
+          : "Hi! I'm Atto. Let's start with something easy: what do you already know about today's topic?",
         attoState: "listening",
       }]);
     } finally {
@@ -212,8 +212,8 @@ export default function ChatInterface({
           <span>🎉</span>
           <span>
             {lang === "ro"
-              ? "Sprint completat! Ia o pauză — mișcă-te 3 minute!"
-              : "Sprint complete! Take a break — move for 3 minutes!"}
+              ? "Sprint completat! Ia o pauză și mișcă-te 3 minute!"
+              : "Sprint complete! Take a break and move for 3 minutes!"}
           </span>
           <button
             onClick={() => setSprintComplete(false)}

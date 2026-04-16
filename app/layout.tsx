@@ -32,13 +32,13 @@ export const viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Attungo — Tutorele care ascultă.",
+  title: "Attungo: Tutorele care ascultă.",
   description:
-    "Cunoaște-l pe Atto — licuriciul care ghidează copilul tău prin lecții. Nu dă răspunsul. Aprinde lumina ca el să îl găsească singur.",
+    "Cunoaște-l pe Atto, licuriciul care ghidează copilul tău prin lecții. Nu dă răspunsul. Aprinde lumina ca el să îl găsească singur.",
   keywords: ["tutore AI", "meditații online", "copii", "Romania", "matematica", "engleza"],
   authors: [{ name: "Attungo" }],
   openGraph: {
-    title: "Attungo — Tutorele care ascultă.",
+    title: "Attungo: Tutorele care ascultă.",
     description: "AI tutore adaptiv pentru copii, clasele 1-8, în română și engleză.",
     siteName: "Attungo",
     locale: "ro_RO",

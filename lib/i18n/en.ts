@@ -15,7 +15,7 @@ export const en = {
     titleLine2: "first.",
     titleLine3: "Guides after.",
     subtitle:
-      "Meet Atto — the firefly who guides your child through the darkness of learning. Doesn't give answers. Lights the way so your child finds them alone.",
+      "Meet Atto, the firefly who guides your child through the darkness of learning. Doesn't give answers. Lights the way so your child finds them alone.",
     ctaPrimary: "7 days free →",
     ctaSecondary: "See how it works",
     trustBar: "€16/month · all subjects · 24/7 available · Grades 1–8 · RO + EN",
@@ -34,12 +34,12 @@ export const en = {
     title: "Attungo is made for families like yours",
     card1: {
       title: "Your child goes to an English school in Romania",
-      text: "Cambridge or international curriculum, hard to find tutors, double costs. Atto knows the private school curriculum exactly and works in English — available anytime.",
+      text: "Cambridge or international curriculum, hard to find tutors, double costs. Atto knows the private school curriculum exactly and works in English, available anytime.",
       bullets: "Common Core + Cambridge · Sessions in English · Weekly report",
     },
     card2: {
       title: "You homeschool and need support in English",
-      text: "You chose to educate at home — in English following the American curriculum. Atto becomes the permanent tutor, adapted exactly to your child's pace and passions. No fixed schedule, no pressure.",
+      text: "You chose to educate at home, in English following the American curriculum. Atto becomes the permanent tutor, adapted exactly to your child's pace and passions. No fixed schedule, no pressure.",
       bullets: "US Common Core · Accelerate Academy style · Flexible",
     },
     card3: {
@@ -73,7 +73,7 @@ export const en = {
   pricing: {
     title: "Less than one single tutoring session",
     subtitle:
-      "Private tutors cost €50-100/session. Attungo costs €16/month — all subjects, every day, no scheduling.",
+      "Private tutors cost €50-100/session. Attungo costs €16/month: all subjects, every day, no scheduling.",
     popular: "Most chosen",
     savings: "Save €50",
     trialNote:
@@ -127,7 +127,7 @@ export const en = {
     items: [
       {
         q: "Does Atto do homework for the child?",
-        a: "No. Atto never gives the answer directly. Asks questions that lead the child to find it themselves. If the child hasn't worked, they haven't understood — and Atto detects that. Your report shows the difference.",
+        a: "No. Atto never gives the answer directly. Asks questions that lead the child to find it themselves. If the child hasn't worked, they haven't understood, and Atto detects that. Your report shows the difference.",
       },
       {
         q: "Is it safe for my child?",
@@ -135,11 +135,11 @@ export const en = {
       },
       {
         q: "Does it work for all subjects?",
-        a: "Yes, for all subjects in the chosen curriculum — maths, Romanian/English, science, biology, geography and more. Atto adapts to your child's exact programme.",
+        a: "Yes, for all subjects in the chosen curriculum: maths, Romanian/English, science, biology, geography and more. Atto adapts to your child's exact programme.",
       },
       {
         q: "My child is in Grade 1 and can't read yet. Does it work?",
-        a: "Yes. Atto has a voice — it talks to the child, and the child can answer vocally. Without reading a single letter.",
+        a: "Yes. Atto has a voice and talks to the child, and the child can answer vocally. Without reading a single letter.",
       },
       {
         q: "Can I cancel anytime?",
