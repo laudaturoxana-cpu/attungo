@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
 interface Firefly {
   x: number;
@@ -8,7 +8,6 @@ interface Firefly {
   size: number;
   delay: number;
   duration: number;
-  driftX: number;
 }
 
 interface AttoFirefliesProps {
@@ -16,15 +15,24 @@ interface AttoFirefliesProps {
   className?: string;
 }
 
-export default function AttoFireflies({ count = 8, className = "" }: AttoFirefliesProps) {
-  const fireflies: Firefly[] = Array.from({ length: count }, (_, i) => ({
+function generateFireflies(count: number): Firefly[] {
+  return Array.from({ length: count }, (_, i) => ({
     x: 5 + Math.random() * 90,
     y: 10 + Math.random() * 80,
     size: 2 + Math.random() * 3,
     delay: i * 0.7 + Math.random() * 2,
     duration: 3 + Math.random() * 3,
-    driftX: (Math.random() - 0.5) * 60,
   }));
+}
+
+export default function AttoFireflies({ count = 8, className = "" }: AttoFirefliesProps) {
+  const [fireflies, setFireflies] = useState<Firefly[]>([]);
+
+  useEffect(() => {
+    setFireflies(generateFireflies(count));
+  }, [count]);
+
+  if (fireflies.length === 0) return null;
 
   return (
     <div

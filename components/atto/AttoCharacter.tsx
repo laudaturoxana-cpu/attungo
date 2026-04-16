@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useId } from "react";
 import { cn } from "@/lib/utils/cn";
 
 export type AttoState = "listening" | "thinking" | "happy" | "neutral" | "concerned";
@@ -60,7 +60,8 @@ export default function AttoCharacter({
   color = "#E8A020",
 }: AttoCharacterProps) {
   const cfg = STATE_CONFIG[state];
-  const svgId = useRef(`atto-${Math.random().toString(36).slice(2, 7)}`).current;
+  const rawId = useId();
+  const svgId = `atto-${rawId.replace(/:/g, "")}`;
 
   return (
     <div
