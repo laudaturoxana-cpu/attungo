@@ -34,7 +34,7 @@ export const viewport = {
 export const metadata: Metadata = {
   title: "Attungo: Tutorele care ascultă.",
   description:
-    "Cunoaște-l pe Atto, licuriciul care ghidează copilul tău prin lecții. Nu dă răspunsul. Aprinde lumina ca el să îl găsească singur.",
+    "Cunoaște-l pe Atto, licuriciul care ghidează copilul tău prin lecții. Nu dă răspunsul. Aprinde lumina. Copilul îl găsește singur.",
   keywords: ["tutore AI", "meditații online", "copii", "Romania", "matematica", "engleza"],
   authors: [{ name: "Attungo" }],
   openGraph: {

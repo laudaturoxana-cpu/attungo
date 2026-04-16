@@ -17,7 +17,7 @@ export const ro = {
     titleLine2: "mai întâi.",
     titleLine3: "Ghidează după.",
     subtitle:
-      "Cunoaște-l pe Atto, licuriciul care îți ghidează copilul prin întunericul lecțiilor. Nu dă răspunsul. Aprinde lumina ca copilul să îl găsească singur.",
+      "Cunoaște-l pe Atto, licuriciul care îți ghidează copilul prin întunericul lecțiilor. Nu dă răspunsul. Aprinde lumina. Copilul îl găsește singur.",
     ctaPrimary: "7 zile gratuit →",
     ctaSecondary: "Vezi cum funcționează",
     trustBar: "€16/lună · toate materiile · 24/7 disponibil · Cls 1–8 · RO + EN",
