@@ -235,7 +235,7 @@ export default function ChatInterface({
       {/* Messages */}
       <div className="flex-1 overflow-y-auto px-4 py-4 space-y-4">
         {messages.map((msg) => (
-          <MessageBubble key={msg.id} message={msg} />
+          <MessageBubble key={msg.id} message={msg} lang={lang} />
         ))}
 
         {/* Typing indicator */}
@@ -261,30 +261,65 @@ export default function ChatInterface({
       {/* Input bar */}
       <form
         onSubmit={handleSubmit}
-        className="flex items-center gap-2 px-4 py-3 bg-white border-t border-[#E5E3DC]"
+        className="bg-white border-t border-[#E5E3DC]"
       >
-        <VoiceInput onTranscript={handleVoiceTranscript} lang={lang} disabled={loading || isTyping} />
-
-        <input
-          ref={inputRef}
-          type="text"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          placeholder={lang === "ro" ? "Scrie răspunsul tău..." : "Type your answer..."}
-          disabled={loading || isTyping}
-          className="flex-1 px-4 py-2.5 rounded-full bg-[#FAFAF5] border border-[#E5E3DC] text-[#3D3C37] placeholder-[#9B9A93] text-sm focus:outline-none focus:ring-2 focus:ring-[#E8A020]/30 focus:border-[#E8A020]/40 disabled:opacity-50"
-        />
-
-        <button
-          type="submit"
-          disabled={!input.trim() || loading || isTyping}
-          className="w-10 h-10 rounded-full bg-[#E8A020] flex items-center justify-center flex-shrink-0 hover:bg-[#C17D0A] transition-all active:scale-95 disabled:opacity-40"
-          aria-label={lang === "ro" ? "Trimite" : "Send"}
-        >
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <path d="M2 8h12M9 3l5 5-5 5" stroke="#3D1500" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </button>
+        {/* Grades 1-2: big voice button, keyboard secondary */}
+        {grade <= 2 ? (
+          <div className="flex flex-col items-center gap-2 px-4 pt-3 pb-3">
+            <VoiceInput
+              onTranscript={handleVoiceTranscript}
+              lang={lang}
+              disabled={loading || isTyping}
+              bigMode
+            />
+            {/* Text fallback (for parent) */}
+            <div className="flex w-full gap-2">
+              <input
+                ref={inputRef}
+                type="text"
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                placeholder={lang === "ro" ? "Sau scrie tu (pentru părinți)..." : "Or type (for parents)..."}
+                disabled={loading || isTyping}
+                className="flex-1 px-3 py-2 rounded-full bg-[#FAFAF5] border border-[#E5E3DC] text-[#3D3C37] placeholder-[#9B9A93] text-sm focus:outline-none focus:ring-2 focus:ring-[#E8A020]/30 disabled:opacity-50"
+              />
+              <button
+                type="submit"
+                disabled={!input.trim() || loading || isTyping}
+                className="w-9 h-9 rounded-full bg-[#E8A020] flex items-center justify-center flex-shrink-0 hover:bg-[#C17D0A] transition-all active:scale-95 disabled:opacity-40"
+                aria-label={lang === "ro" ? "Trimite" : "Send"}
+              >
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                  <path d="M2 8h12M9 3l5 5-5 5" stroke="#3D1500" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        ) : (
+          /* Grades 3+: compact mic + text + send */
+          <div className="flex items-center gap-2 px-4 py-3">
+            <VoiceInput onTranscript={handleVoiceTranscript} lang={lang} disabled={loading || isTyping} />
+            <input
+              ref={inputRef}
+              type="text"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              placeholder={lang === "ro" ? "Scrie răspunsul tău..." : "Type your answer..."}
+              disabled={loading || isTyping}
+              className="flex-1 px-4 py-2.5 rounded-full bg-[#FAFAF5] border border-[#E5E3DC] text-[#3D3C37] placeholder-[#9B9A93] text-sm focus:outline-none focus:ring-2 focus:ring-[#E8A020]/30 focus:border-[#E8A020]/40 disabled:opacity-50"
+            />
+            <button
+              type="submit"
+              disabled={!input.trim() || loading || isTyping}
+              className="w-10 h-10 rounded-full bg-[#E8A020] flex items-center justify-center flex-shrink-0 hover:bg-[#C17D0A] transition-all active:scale-95 disabled:opacity-40"
+              aria-label={lang === "ro" ? "Trimite" : "Send"}
+            >
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M2 8h12M9 3l5 5-5 5" stroke="#3D1500" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
+          </div>
+        )}
       </form>
     </div>
   );

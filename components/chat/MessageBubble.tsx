@@ -1,4 +1,5 @@
 import AttoCharacter, { type AttoState } from "@/components/atto/AttoCharacter";
+import ReadAloud from "./ReadAloud";
 import { cn } from "@/lib/utils/cn";
 
 export interface Message {
@@ -12,9 +13,10 @@ export interface Message {
 
 interface MessageBubbleProps {
   message: Message;
+  lang?: "ro" | "en";
 }
 
-export default function MessageBubble({ message }: MessageBubbleProps) {
+export default function MessageBubble({ message, lang = "ro" }: MessageBubbleProps) {
   const isAtto = message.role === "atto";
 
   return (
@@ -40,23 +42,30 @@ export default function MessageBubble({ message }: MessageBubbleProps) {
         </div>
       )}
 
-      {/* Bubble */}
-      <div
-        className={cn(
-          "max-w-[78%] px-4 py-3 text-sm leading-relaxed",
-          isAtto ? "bubble-atto text-[#1B5E4F]" : "bubble-child"
+      {/* Bubble + Read Aloud */}
+      <div className={cn("flex flex-col max-w-[78%]", !isAtto && "items-end")}>
+        <div
+          className={cn(
+            "px-4 py-3 text-sm leading-relaxed",
+            isAtto ? "bubble-atto text-[#1B5E4F]" : "bubble-child"
+          )}
+        >
+          {message.isVoice && (
+            <span className="inline-flex items-center gap-1 text-xs opacity-60 mb-1 block">
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                <circle cx="5" cy="5" r="4" fill="currentColor" opacity="0.4" />
+                <path d="M3 5a2 2 0 014 0" stroke="currentColor" strokeWidth="1" strokeLinecap="round" fill="none" />
+              </svg>
+              vocal
+            </span>
+          )}
+          {message.content}
+        </div>
+
+        {/* Read Aloud — only on Atto messages */}
+        {isAtto && (
+          <ReadAloud text={message.content} lang={lang} />
         )}
-      >
-        {message.isVoice && (
-          <span className="inline-flex items-center gap-1 text-xs opacity-60 mb-1 block">
-            <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
-              <circle cx="5" cy="5" r="4" fill="currentColor" opacity="0.4" />
-              <path d="M3 5a2 2 0 014 0" stroke="currentColor" strokeWidth="1" strokeLinecap="round" fill="none" />
-            </svg>
-            vocal
-          </span>
-        )}
-        {message.content}
       </div>
     </div>
   );
