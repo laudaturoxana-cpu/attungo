@@ -1,0 +1,89 @@
+{
+  "curriculum": "EN_CAMBRIDGE",
+  "grade": 6,
+  "language": "en",
+  "subjects": {
+    "Mathematics (Cambridge Primary Stage 6)": {
+      "key_topics": [
+        "Number: ordering and rounding decimals to three decimal places",
+        "Percentages: calculating percentage increase and decrease",
+        "Ratio and proportion: simplifying ratios, direct proportion",
+        "Algebra: using letters to represent unknowns, writing expressions",
+        "Solving linear equations with one unknown",
+        "Sequences: nth term (linear sequences)",
+        "Geometry: angles at a point, on a straight line, in a triangle, in a quadrilateral",
+        "Properties of circles: radius, diameter, circumference, area",
+        "Volume of cuboids and prisms",
+        "Transformations: scale factor for enlargements",
+        "Data: mean, median, mode, range from frequency tables",
+        "Probability: probability scale 0 to 1, mutually exclusive events"
+      ],
+      "competences": [
+        "Calculate percentage increases and decreases",
+        "Solve one-step and two-step linear equations",
+        "Calculate circumference and area of circles",
+        "Use the probability scale and calculate simple probabilities",
+        "Find the nth term of a linear sequence"
+      ],
+      "typical_mistakes": [
+        "Calculating percentage decrease by subtraction rather than multiplying by the complement",
+        "Confusing circumference and area formulae for circles",
+        "Errors solving equations with unknowns on both sides",
+        "Mistaking probability of 0 as impossible vs. just very unlikely"
+      ],
+      "prerequisite_grade": 5
+    },
+    "English (Cambridge Primary Stage 6)": {
+      "key_topics": [
+        "Reading: sustained engagement with novels and extended non-fiction",
+        "Critical analysis: evaluating effectiveness of language choices",
+        "Comparing writers' perspectives and techniques",
+        "Reading for different purposes: revision strategies, skimming, scanning",
+        "Writing: sophisticated narrative with multiple narrative threads",
+        "Discursive writing: synthesising multiple sources",
+        "Writing for a specific audience and purpose (letter, report, speech, review)",
+        "Grammar: complex sentence structures, varied punctuation",
+        "Editing and proofreading own work systematically",
+        "Spelling: morphology, etymology, common exceptions",
+        "Presentation and speaking: debate, formal speech, interview"
+      ],
+      "competences": [
+        "Critically evaluate writers' language choices with evidence",
+        "Write extended pieces in a range of forms for specific audiences",
+        "Synthesise information from multiple sources in writing",
+        "Edit and improve own writing for effect and accuracy"
+      ],
+      "typical_mistakes": [
+        "Quoting without explaining the effect of the language",
+        "Not adapting writing style to audience and purpose",
+        "Failing to use a range of sentence structures (over-reliance on complex sentences)",
+        "Inconsistent tense in narrative writing"
+      ],
+      "prerequisite_grade": 5
+    },
+    "Science (Cambridge Primary Stage 6)": {
+      "key_topics": [
+        "Cells: plant and animal cells — structure and function",
+        "Micro-organisms: their role in decomposition and disease",
+        "Adaptation and evolution: Darwin's theory, natural selection, evidence",
+        "Electricity: series and parallel circuits, resistance",
+        "Light: refraction, the eye, optical illusions",
+        "Sound: how sound is heard, hearing and the ear",
+        "Earth and beyond: moon phases, eclipses, satellites",
+        "Chemistry: chemical reactions vs. physical changes, acids and alkalis"
+      ],
+      "competences": [
+        "Compare plant and animal cells at a structural level",
+        "Explain natural selection with examples",
+        "Analyse series and parallel circuits, predict effects of changes",
+        "Describe refraction and how the eye works"
+      ],
+      "typical_mistakes": [
+        "Thinking evolution is directional (toward humans as the goal)",
+        "Confusing series and parallel circuit behaviour",
+        "Confusing reflection and refraction"
+      ],
+      "prerequisite_grade": 5
+    }
+  }
+}

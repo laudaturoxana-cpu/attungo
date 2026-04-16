@@ -1,0 +1,186 @@
+{
+  "curriculum": "RO_NATIONAL",
+  "grade": 8,
+  "language": "ro",
+  "subjects": {
+    "Matematică": {
+      "key_topics": [
+        "Funcția de gradul II: definiție, reprezentare grafică (parabola)",
+        "Ecuația de gradul II: formula de rezolvare, discriminantul",
+        "Sisteme de ecuații cu ecuații de gradul II",
+        "Progresii aritmetice și geometrice",
+        "Trigonometria triunghiului dreptunghic: sin, cos, tg, ctg",
+        "Teorema sinusurilor și a cosinusurilor",
+        "Geometrie în spațiu: prismele și cilindrul — arie și volum",
+        "Piramida și conul — arie și volum",
+        "Sfera: arie și volum",
+        "Elemente de statistică și probabilitate",
+        "Recapitulare pentru Evaluarea Națională"
+      ],
+      "competences": [
+        "Rezolvă ecuații de gradul II folosind formula discriminantului",
+        "Aplică relații trigonometrice în triunghiul dreptunghic",
+        "Calculează arii și volume ale corpurilor geometrice studiate",
+        "Rezolvă probleme de probabilitate simplă",
+        "Rezolvă probleme complexe pentru examenul de Evaluare Națională"
+      ],
+      "typical_mistakes": [
+        "Greșeli la calculul discriminantului (b²-4ac)",
+        "Confuzia sin-cos-tg în probleme (folosesc formula greșită)",
+        "Greșeli la calculul volumului sferei (confundă formula cu cea a ariei)",
+        "Calculul greșit al razei în ecuația cercului",
+        "Greșeli la progresii (nu identifică rațiunea)"
+      ],
+      "prerequisite_grade": 7
+    },
+    "Limba și literatura română": {
+      "key_topics": [
+        "Literatura română modernă și contemporană",
+        "Marin Preda: Moromeții (fragmente)",
+        "Nichita Stănescu: poezie neomodernistă",
+        "Marin Sorescu: dramatugie contemporană",
+        "Recapitulare morfologie: toate clasele de cuvinte",
+        "Recapitulare sintaxă: propoziția și fraza",
+        "Textul argumentativ și eseul critic",
+        "Pregătirea pentru Evaluarea Națională: model subiect I, II, III",
+        "Textul multimodal: imagine + text",
+        "Rezumatul, caracterizarea personajului, comentariul literar"
+      ],
+      "competences": [
+        "Analizează texte literare din literatura română modernă",
+        "Redactează eseuri critice structurate (40-50 rânduri)",
+        "Realizează analiza morfologică și sintactică completă",
+        "Pregătit pentru toate cerințele Evaluării Naționale"
+      ],
+      "typical_mistakes": [
+        "Lipsa argumentelor susținute cu citate în eseul critic",
+        "Greșeli de exprimare în redactare (repetiții, exprimare vagă)",
+        "Confuzia între comentariul literar și rezumat"
+      ],
+      "prerequisite_grade": 7
+    },
+    "Biologie": {
+      "key_topics": [
+        "Genetica: legile lui Mendel, moștenirea monohybridă și dihybridă",
+        "Genetica umană: boli genetice, grupele de sânge",
+        "Evoluția: teoria lui Darwin, selecția naturală",
+        "Biotehnologia: noțiuni de bază, OGM",
+        "Ecologia globală: schimbări climatice, biodiversitate",
+        "Corpul uman: recapitulare sisteme de organe",
+        "Sănătatea: boli infecțioase, vaccinuri, sistem imunitar"
+      ],
+      "competences": [
+        "Aplică legile lui Mendel în probleme de genetică",
+        "Explică teoria evoluției prin selecție naturală",
+        "Analizează impactul activității umane asupra biodiversității",
+        "Descrie mecanismul sistemului imunitar"
+      ],
+      "typical_mistakes": [
+        "Greșeli la schema Punnett (nu completează corect toate combinațiile)",
+        "Confuzia dominanță-recesivitate",
+        "Neînțelegerea diferenței adaptare-evoluție"
+      ],
+      "prerequisite_grade": 7
+    },
+    "Geografie": {
+      "key_topics": [
+        "România: geografia fizică detaliată — Carpații (Orientali, Meridionali, Occidentali)",
+        "Podișurile României: Podișul Moldovei, Getic, Transilvaniei, Dobrogei",
+        "Câmpiile României: Câmpia Română, Câmpia de Vest",
+        "Hidrografia României: Dunărea, râuri interioare, Marea Neagră",
+        "Clima României: tipuri, influențe",
+        "Vegetația și fauna României: zone și etaje",
+        "Populația României: densitate, distribuție, mișcări migratoare",
+        "Economia României: sectoare, resurse naturale",
+        "Regiunile de dezvoltare ale României",
+        "România în context european și global"
+      ],
+      "competences": [
+        "Localizează și descrie detaliat unitățile de relief ale României",
+        "Analizează interdependențele geografice pe teritoriul României",
+        "Interpretează hărți tematice ale României",
+        "Explică probleme demografice și economice actuale"
+      ],
+      "typical_mistakes": [
+        "Confuzia între subdiviziunile Carpaților",
+        "Localizarea greșită a râurilor pe harta României",
+        "Confuzia regiunilor de dezvoltare cu județele"
+      ],
+      "prerequisite_grade": 7
+    },
+    "Istorie": {
+      "grade_focus": "România în secolul XX și lumea contemporană",
+      "key_topics": [
+        "România interbelică: regimul democratic, criza economică",
+        "Al Doilea Război Mondial: cauze, alianțe, desfășurare",
+        "România în Al Doilea Război Mondial",
+        "Instaurarea regimului comunist în România",
+        "Comunismul în România: Dej și Ceaușescu",
+        "Revoluția din 1989 în România",
+        "România după 1989: tranziția la democrație",
+        "Integrarea euro-atlantică: NATO (2004), UE (2007)",
+        "Lumea contemporană: globalizare, conflicte, provocări"
+      ],
+      "competences": [
+        "Analizează cauzele și consecințele celui de-al Doilea Război Mondial",
+        "Descrie instaurarea și caracteristicile regimului comunist",
+        "Explică semnificația Revoluției din 1989",
+        "Argumentează importanța integrării europene a României"
+      ],
+      "typical_mistakes": [
+        "Confuzia perioadei Dej cu cea a lui Ceaușescu",
+        "Neînțelegerea procesului de integrare europeană (etape)",
+        "Confuzia cauzelor imediate cu cele de fond ale WWII"
+      ],
+      "prerequisite_grade": 7
+    },
+    "Fizică": {
+      "key_topics": [
+        "Câmpul gravitațional: legea gravitației universale",
+        "Mișcarea corpurilor în câmp gravitațional",
+        "Fizica atomică: structura atomului (modelul Bohr)",
+        "Radioactivitatea: tipuri de radiații, decădere radioactivă",
+        "Fisiunea și fuziunea nucleară: aplicații",
+        "Producerea și transportul energiei electrice",
+        "Sursele regenerabile de energie: solar, eolian, hidro",
+        "Recapitulare pentru Evaluarea Națională"
+      ],
+      "competences": [
+        "Aplică legea gravitației universale în calcule",
+        "Descrie structura atomului și fenomenele radioactive",
+        "Explică producerea energiei în centrale nucleare",
+        "Compară sursele regenerabile și neregenerabile de energie"
+      ],
+      "typical_mistakes": [
+        "Confuzia masă-greutate în câmp gravitațional",
+        "Greșeli la legea gravitației (nu ridică la pătrat distanța)",
+        "Confuzia fisiune-fuziune"
+      ],
+      "prerequisite_grade": 7
+    },
+    "Chimie": {
+      "key_topics": [
+        "Chimia organică: introducere, compuși organici",
+        "Hidrocarburi: alcani, alchene, alchine, arene",
+        "Derivații funcționali: alcooli, acizi carboxilici, esteri",
+        "Glucide: glucoza, zaharoza, amidonul",
+        "Lipidele și proteinele: importanță biologică",
+        "Polimerii: plastice, cauciuc natural și sintetic",
+        "Chimia în viața de zi cu zi: detergenți, medicamente, cosmetice",
+        "Poluarea chimică și protecția mediului"
+      ],
+      "competences": [
+        "Clasifică și denumește hidrocarburi simple",
+        "Descrie proprietățile și utilizările claselor de compuși organici",
+        "Explică importanța biologică a glucidelor, lipidelor și proteinelor",
+        "Conștientizează impactul chimiei asupra mediului"
+      ],
+      "typical_mistakes": [
+        "Confuzia alcan-alchenă-alchin (numărul de legături)",
+        "Greșeli la formulele moleculare ale hidrocarburilor",
+        "Confuzia glucide-lipide-proteine ca surse de energie"
+      ],
+      "prerequisite_grade": 7
+    }
+  }
+}

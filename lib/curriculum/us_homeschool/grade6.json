@@ -1,0 +1,114 @@
+{
+  "curriculum": "US_HOMESCHOOL",
+  "grade": 6,
+  "language": "en",
+  "subjects": {
+    "Mathematics (Core Knowledge Grade 6)": {
+      "key_topics": [
+        "Ratios and proportions: writing and solving proportions",
+        "Unit rates and dimensional analysis",
+        "Percent: percent of a number, discount, tax, tip, simple interest",
+        "Integers: all four operations with positive and negative numbers",
+        "Absolute value",
+        "Rational numbers: fractions and decimals on the number line",
+        "Algebra: writing and solving one-step and two-step equations",
+        "Writing and graphing inequalities",
+        "Variables and expressions: evaluating with substitution",
+        "Geometry: area of triangles, parallelograms, trapezoids",
+        "Surface area and volume of prisms",
+        "Coordinate plane: all quadrants, distances between points",
+        "Statistics: mean, median, mode, range, dot plots, box plots"
+      ],
+      "competences": [
+        "Solve percent problems: discount, tax, simple interest",
+        "Perform all operations with integers confidently",
+        "Write and solve two-step algebraic equations",
+        "Calculate surface area and volume of rectangular and triangular prisms",
+        "Create and interpret box plots and dot plots"
+      ],
+      "typical_mistakes": [
+        "Integer subtraction errors (subtracting a negative adds)",
+        "Not distributing correctly in algebraic expressions",
+        "Confusing median with mean",
+        "Surface area vs. volume confusion",
+        "Incorrect scaling in ratio problems"
+      ],
+      "prerequisite_grade": 5
+    },
+    "English Language Arts (Core Knowledge Grade 6)": {
+      "key_topics": [
+        "Reading: world literature — novels, short stories, poetry from global cultures",
+        "Comprehension: theme, symbol, irony, allegory",
+        "Literary criticism: introduction to different critical approaches",
+        "Informational text: evaluating sources for bias and credibility",
+        "Writing: analytical essays about literature",
+        "Persuasive essays: claim, warrant, evidence (Toulmin model)",
+        "Journalism: news writing, editorial writing",
+        "Grammar: complex and compound-complex sentences",
+        "Punctuation: all marks including semi-colons and dashes",
+        "Vocabulary: morphology, etymology, academic vocabulary (Tier 2)",
+        "Speech: persuasive speech, debate (Oxford style)"
+      ],
+      "competences": [
+        "Write analytical essays about literary themes and symbols",
+        "Evaluate the credibility and bias of informational sources",
+        "Write persuasive essays using claim-warrant-evidence structure",
+        "Use compound-complex sentences accurately"
+      ],
+      "typical_mistakes": [
+        "Confusing symbol and theme",
+        "Using only one source for research",
+        "Confusing complex and compound sentences in grammar",
+        "Not varying sentence length in essays"
+      ],
+      "prerequisite_grade": 5
+    },
+    "History and Geography": {
+      "key_topics": [
+        "Ancient World: Mesopotamia, Egypt, Persia — comparative study",
+        "Ancient Greece: philosophy (Socrates, Plato, Aristotle), history",
+        "Ancient Rome: Republic to Empire, Augustus, Pax Romana",
+        "World Religions: Judaism, Christianity, Islam — origins and core beliefs",
+        "Medieval Europe: feudalism, Black Death, Renaissance",
+        "Byzantine Empire and Islamic Golden Age",
+        "World Geography: Africa — cultures, resources, colonialism",
+        "Historical thinking skills: cause-effect, continuity-change, perspective"
+      ],
+      "competences": [
+        "Compare and contrast major ancient civilisations",
+        "Explain the origins and core beliefs of the three Abrahamic religions",
+        "Describe the Byzantine Empire's role in preserving classical knowledge",
+        "Apply historical thinking skills to primary sources"
+      ],
+      "typical_mistakes": [
+        "Confusing Greek and Roman political history",
+        "Oversimplifying causes of the fall of Rome"
+      ],
+      "prerequisite_grade": 5
+    },
+    "Science": {
+      "key_topics": [
+        "Life Science: plant biology — photosynthesis, transpiration, tropisms",
+        "Animal biology: circulatory, respiratory, digestive systems comparison",
+        "Ecology: ecosystems, trophic levels, biomes",
+        "Earth Science: oceanography — ocean features, currents, tides",
+        "Meteorology: cloud types, weather patterns, severe weather",
+        "Physical Science: matter — periodic table, atomic structure basics",
+        "Chemical reactions: conservation of mass, types of reactions",
+        "Physics: energy — mechanical, thermal, electrical, light"
+      ],
+      "competences": [
+        "Explain photosynthesis and transpiration in plants",
+        "Describe major ocean features and their global impact",
+        "Write simple chemical word equations",
+        "Classify organisms by trophic level in an ecosystem"
+      ],
+      "typical_mistakes": [
+        "Confusing elements, compounds, and mixtures",
+        "Thinking the ocean floor is flat",
+        "Confusing weather fronts (cold/warm)"
+      ],
+      "prerequisite_grade": 5
+    }
+  }
+}

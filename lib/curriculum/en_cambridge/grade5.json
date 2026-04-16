@@ -1,0 +1,94 @@
+{
+  "curriculum": "EN_CAMBRIDGE",
+  "grade": 5,
+  "language": "en",
+  "subjects": {
+    "Mathematics (Cambridge Primary Stage 5)": {
+      "key_topics": [
+        "Number: reading and ordering numbers to 1,000,000",
+        "Multiplying and dividing by 10, 100, 1000",
+        "Long multiplication: three-digit × two-digit numbers",
+        "Long division: dividing three-digit numbers by two-digit numbers",
+        "Prime numbers, factors, multiples, square numbers, cube numbers",
+        "Fractions: adding and subtracting fractions and mixed numbers with different denominators",
+        "Multiplying fractions by whole numbers",
+        "Fractions, decimals, and percentages: converting between all three",
+        "Ratio: understanding ratio notation, sharing in a ratio",
+        "Decimals: multiplying and dividing decimals by 10, 100, 1000",
+        "Negative numbers: calculating across zero",
+        "Geometry: angles in triangles and quadrilaterals (sum of interior angles)",
+        "3D shapes: nets, surface area",
+        "Translation, reflection, and rotation of 2D shapes",
+        "Co-ordinates in all four quadrants",
+        "Data: pie charts, scatter graphs (introduction)"
+      ],
+      "competences": [
+        "Multiply and divide three-digit numbers by two-digit numbers",
+        "Add and subtract fractions with different denominators",
+        "Convert fluently between fractions, decimals, and percentages",
+        "Use co-ordinates in all four quadrants",
+        "Calculate interior angle sums of polygons"
+      ],
+      "typical_mistakes": [
+        "Errors in long division (forgetting to bring down digits)",
+        "Adding denominators when adding unlike fractions",
+        "Confusing ratio with fractions",
+        "Rotation vs. reflection confusion",
+        "Not accounting for all four quadrants in co-ordinate work"
+      ],
+      "prerequisite_grade": 4
+    },
+    "English (Cambridge Primary Stage 5)": {
+      "key_topics": [
+        "Reading: responding to a wide range of text types and genres",
+        "Literary analysis: themes, characterisation, authorial choices",
+        "Comparing texts: different versions, different authors, same theme",
+        "Reading non-fiction: evaluating arguments, identifying bias",
+        "Writing: narrative with complex characters and sub-plots",
+        "Journalistic writing: newspaper reports, interviews",
+        "Speeches and formal presentations",
+        "Balanced arguments: pros and cons, connectives for argument",
+        "Grammar: passive voice, modal verbs, conditionals",
+        "Punctuation: semi-colons, colons, parenthetical dashes",
+        "Extended vocabulary: etymology, morphology, register"
+      ],
+      "competences": [
+        "Analyse texts with reference to literary techniques",
+        "Write sustained narratives with complex structure",
+        "Construct balanced arguments using evidence",
+        "Use a range of punctuation including semi-colons and colons"
+      ],
+      "typical_mistakes": [
+        "Confusing active and passive voice",
+        "Using 'however' without a comma",
+        "Balanced arguments that are not actually balanced",
+        "Overlong introductions in news reports (burying the lede)"
+      ],
+      "prerequisite_grade": 4
+    },
+    "Science (Cambridge Primary Stage 5)": {
+      "key_topics": [
+        "Living things: classification of living things (kingdoms)",
+        "Micro-organisms: bacteria, viruses, fungi — useful and harmful",
+        "Reproduction: human reproductive system, adolescence",
+        "Forces: air resistance, water resistance, streamlining",
+        "Gravity and its effects on planets and moons",
+        "Space: Solar System, planets, day/night, seasons",
+        "Earth in space: Moon phases, tides",
+        "Properties and changes of materials: thermal conductors and insulators"
+      ],
+      "competences": [
+        "Classify living things using a classification key",
+        "Explain the role of micro-organisms in the environment",
+        "Describe the Solar System and explain day/night and seasons",
+        "Investigate air resistance and streamlining"
+      ],
+      "typical_mistakes": [
+        "Thinking the Sun moves around the Earth (geocentric error)",
+        "Confusing the cause of seasons (orbit tilt vs. distance from Sun)",
+        "Thinking micro-organisms are always harmful"
+      ],
+      "prerequisite_grade": 4
+    }
+  }
+}

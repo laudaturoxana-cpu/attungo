@@ -1,0 +1,147 @@
+{
+  "curriculum": "RO_NATIONAL",
+  "grade": 1,
+  "language": "ro",
+  "subjects": {
+    "Matematică și explorarea mediului": {
+      "key_topics": [
+        "Numerele naturale 0-31: formare, citire, scriere",
+        "Șirul numerelor naturale de la 0 la 31",
+        "Compararea și ordonarea numerelor 0-31",
+        "Adunarea numerelor naturale în concentrul 0-10",
+        "Scăderea numerelor naturale în concentrul 0-10",
+        "Adunarea cu trecere peste ordin în concentrul 0-31",
+        "Figuri geometrice plane: pătrat, dreptunghi, triunghi, cerc",
+        "Corpuri geometrice: cub, cuboid, sferă, cilindru",
+        "Măsurarea lungimii cu unități nestandard",
+        "Noțiuni de timp: zi, săptămână, lună, an",
+        "Probleme simple de adunare și scădere cu o operație"
+      ],
+      "competences": [
+        "Recunoaște, formează, citește și scrie numere naturale până la 31",
+        "Compară și ordonează numere naturale 0-31 folosind semnele <, >, =",
+        "Efectuează adunări și scăderi în concentrul 0-31, fără și cu trecere peste ordin",
+        "Identifică și denumește figuri și corpuri geometrice din mediul înconjurător",
+        "Rezolvă probleme cu o operație de adunare sau scădere în concentrul 0-31",
+        "Utilizează instrumente de măsurare pentru lungime"
+      ],
+      "typical_mistakes": [
+        "Confuzia între cifre cu formă similară (6 și 9, 2 și 5)",
+        "Greșeli la trecerea peste ordinul zecilor la adunare",
+        "Scăderea greșită: scade numărul mai mare din cel mai mic",
+        "Confuzia între figuri plane și corpuri geometrice",
+        "Dificultăți la formarea numerelor de două cifre (ordine zeci-unități)"
+      ],
+      "prerequisite_grade": null
+    },
+    "Limba și literatura română": {
+      "key_topics": [
+        "Alfabetul limbii române: litere mari și mici de tipar",
+        "Citirea silabelor și a cuvintelor simple",
+        "Citirea propozițiilor scurte cu înțelegere",
+        "Scrierea literelor de mână (caligrafie)",
+        "Scrierea silabelor, cuvintelor și propozițiilor simple",
+        "Ortografie: scrierea cu literele â, î, ș, ț",
+        "Comunicare orală: formularea de propoziții simple",
+        "Despărțirea cuvintelor în silabe",
+        "Textul literar scurt: identificarea personajelor",
+        "Vocabular: cuvinte noi din textele citite"
+      ],
+      "competences": [
+        "Citește cu voce tare texte scurte, respectând intonația propozițiilor",
+        "Scrie corect litere, silabe, cuvinte și propoziții simple",
+        "Identifică literele alfabetului român și le asociază cu sunetele corespunzătoare",
+        "Desparte cuvinte în silabe aplicând regula despărțirii",
+        "Formulează oral propoziții despre persoane, animale, obiecte",
+        "Recunoaște personajele dintr-un text literar scurt"
+      ],
+      "typical_mistakes": [
+        "Confuzia între literele cu formă similară (b-d, p-q, m-n)",
+        "Omiterea literelor speciale românești (ș, ț, â, î, ă)",
+        "Scrierea în oglindă a unor litere",
+        "Cititul pe litere în loc de silabe",
+        "Greșeli la despărțirea în silabe a cuvintelor cu grupuri consonantice"
+      ],
+      "prerequisite_grade": null
+    },
+    "Arte vizuale și abilități practice": {
+      "key_topics": [
+        "Culorile primare și secundare",
+        "Linii, forme și culori în natură și în artă",
+        "Tehnici de desen: creion, acuarelă, guașă",
+        "Tehnici de lucru manual: pliere, tăiere, lipire",
+        "Elemente de compoziție plastică simplă",
+        "Modelaj cu plastilină: forme simple",
+        "Colaj cu materiale din natură",
+        "Ornamente și motive decorative tradiționale românești"
+      ],
+      "competences": [
+        "Identifică și utilizează culorile primare și secundare",
+        "Realizează lucrări plastice simple folosind diverse tehnici",
+        "Confecționează obiecte simple prin pliere, tăiere, lipire",
+        "Modelează forme simple din plastilină sau lut"
+      ],
+      "typical_mistakes": [
+        "Amestecul incorect al culorilor (nu știu că roșu+albastru=violet)",
+        "Dificultăți motrice fine la tăiere pe contur"
+      ],
+      "prerequisite_grade": null
+    },
+    "Muzică și mișcare": {
+      "key_topics": [
+        "Cântul în colectiv: cântece pentru copii",
+        "Elemente de ritm: bătăi din palme, percuție corporală",
+        "Elemente de melodie: sunete înalte și joase",
+        "Mișcare pe muzică: dans popular simplu",
+        "Cântece patriotice și de sezon"
+      ],
+      "competences": [
+        "Cântă în grup respectând ritmul și melodia",
+        "Realizează acompaniament ritmic simplu",
+        "Se mișcă coordonat pe muzică"
+      ],
+      "typical_mistakes": [
+        "Dificultăți de intonare a sunetelor înalte",
+        "Lipsa coordonării mișcare-ritm"
+      ],
+      "prerequisite_grade": null
+    },
+    "Educație fizică": {
+      "key_topics": [
+        "Mers, alergare, sărituri de bază",
+        "Echilibru și coordonare motrică",
+        "Jocuri de mișcare în colectiv",
+        "Gimnastică ritmică simplă",
+        "Aruncarea și prinderea mingii"
+      ],
+      "competences": [
+        "Execută mișcări locomotorii de bază (mers, alergare, săritură)",
+        "Participă la jocuri colective respectând regulile simple",
+        "Aruncă și prinde mingea la distanțe scurte"
+      ],
+      "typical_mistakes": [
+        "Dificultăți de coordonare ochi-mână la prinderea mingii",
+        "Lipsa echilibrului pe un picior"
+      ],
+      "prerequisite_grade": null
+    },
+    "Religie": {
+      "key_topics": [
+        "Rugăciunea: Tatăl nostru, Îngerașul meu",
+        "Sărbători creștine: Crăciunul, Paștele",
+        "Familia și valorile familiale creștine",
+        "Sfintele icoane și biserică",
+        "Fapte bune și comportament moral"
+      ],
+      "competences": [
+        "Recită rugăciuni de bază",
+        "Cunoaște principalele sărbători creștine",
+        "Identifică valori morale pozitive în povești și fabule"
+      ],
+      "typical_mistakes": [
+        "Confuzia între sărbători și semnificația lor"
+      ],
+      "prerequisite_grade": null
+    }
+  }
+}

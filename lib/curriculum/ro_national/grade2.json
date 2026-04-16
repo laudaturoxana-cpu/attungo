@@ -1,0 +1,148 @@
+{
+  "curriculum": "RO_NATIONAL",
+  "grade": 2,
+  "language": "ro",
+  "subjects": {
+    "Matematică și explorarea mediului": {
+      "key_topics": [
+        "Numerele naturale 0-100: formare, citire, scriere",
+        "Șirul numerelor naturale 0-100, vecinii unui număr",
+        "Compararea și ordonarea numerelor 0-100",
+        "Adunarea numerelor naturale în concentrul 0-100 fără trecere peste ordin",
+        "Adunarea cu trecere peste ordinul zecilor în 0-100",
+        "Scăderea în concentrul 0-100 fără și cu trecere peste ordin",
+        "Tabla înmulțirii 0-5 (inițiere)",
+        "Probleme cu două operații de adunare/scădere",
+        "Monede și bancnote românești: lei și bani",
+        "Măsurarea lungimii: metrul și centimetrul",
+        "Măsurarea masei: kilogramul",
+        "Măsurarea capacității: litrul",
+        "Calendaristica: citirea ceasului (ore fixe și jumătăți)"
+      ],
+      "competences": [
+        "Citește, scrie și compară numere naturale până la 100",
+        "Efectuează adunări și scăderi în concentrul 0-100 cu și fără trecere peste ordin",
+        "Cunoaște tabla înmulțirii cu 2, 3, 4, 5",
+        "Rezolvă probleme cu una-două operații în concentrul 0-100",
+        "Utilizează unități standard de măsură pentru lungime, masă, capacitate",
+        "Citește ora pe ceas la ore fixe și jumătăți"
+      ],
+      "typical_mistakes": [
+        "Greșeli la trecerea peste ordinul zecilor la scădere",
+        "Inversarea termenilor în scădere (scade minuendul din scăzător)",
+        "Confuzia unităților de măsură (m vs cm, kg vs g)",
+        "Greșeli la tabla înmulțirii cu 3 și 4",
+        "Nu recunosc proprietatea comutativă a adunării"
+      ],
+      "prerequisite_grade": 1
+    },
+    "Limba și literatura română": {
+      "key_topics": [
+        "Citirea fluentă a textelor literare și nonliterare",
+        "Înțelegerea textului citit: idei principale, personaje",
+        "Scrierea corectă: propoziții, alineate",
+        "Ortografie: scrierea cu â/î, oa, ea, ia, ie, ua",
+        "Ortografie: scrierea cu x (examen, exactă)",
+        "Punctuație: punctul, virgula, semnul întrebării, semnul exclamării",
+        "Substantivul: denumirea obiectelor, ființelor, locurilor",
+        "Verbul: acțiunea",
+        "Adjectivul: însușirile",
+        "Povestirea orală și scrisă după imagini",
+        "Textul narativ: secvențe, personaje, loc, timp",
+        "Cuvinte cu sens asemănător și opus"
+      ],
+      "competences": [
+        "Citește fluent și expresiv texte de 200-300 cuvinte",
+        "Identifică ideile principale ale unui text citit",
+        "Scrie corect propoziții cu punctuație adecvată",
+        "Recunoaște substantivul, verbul și adjectivul în texte simple",
+        "Povestește oral sau scris după un șir de imagini",
+        "Identifică sinonime și antonime simple"
+      ],
+      "typical_mistakes": [
+        "Scrierea greșită a grupurilor de litere oa, ea, ia",
+        "Omiterea semnelor de punctuație la finalul propozițiilor",
+        "Confuzia între substantiv și adjectiv",
+        "Greșeli la acordul adjectivului cu substantivul",
+        "Scrierea cu literă mică a numelor proprii"
+      ],
+      "prerequisite_grade": 1
+    },
+    "Arte vizuale și abilități practice": {
+      "key_topics": [
+        "Amestecarea culorilor: nuanțe deschise și închise",
+        "Compoziția plastică: plan, proporție, echilibru",
+        "Tehnici mixte: acuarelă + ceară, ștampilare",
+        "Confecționarea obiectelor din hârtie: origami simplu",
+        "Cusătura simplă pe pânză",
+        "Motive decorative populare românești"
+      ],
+      "competences": [
+        "Obține nuanțe prin amestecul culorilor",
+        "Realizează compoziții plastice echilibrate",
+        "Confecționează obiecte simple prin diverse tehnici"
+      ],
+      "typical_mistakes": [
+        "Proporții incorecte în desen",
+        "Dificultăți la tehnica acuarelei (culori care curg)"
+      ],
+      "prerequisite_grade": 1
+    },
+    "Muzică și mișcare": {
+      "key_topics": [
+        "Elemente de notație muzicală: portativul, cheia sol",
+        "Notele muzicale: do, re, mi, fa, sol, la, si",
+        "Durate muzicale: pătrimea, doimea, întreaga",
+        "Cântece populare românești pentru copii",
+        "Dans popular: pași de bază"
+      ],
+      "competences": [
+        "Recunoaște notele muzicale pe portativ",
+        "Cântă respectând duratele muzicale simple",
+        "Execută pași de dans popular simplu"
+      ],
+      "typical_mistakes": [
+        "Confuzia între note (do-re-mi)",
+        "Dificultăți la menținerea ritmului constant"
+      ],
+      "prerequisite_grade": 1
+    },
+    "Educație fizică": {
+      "key_topics": [
+        "Alergare de viteză și de rezistență",
+        "Sărituri: în lungime, peste obstacole",
+        "Aruncarea mingii la țintă",
+        "Jocuri sportive simple: fotbal, baschet adaptat",
+        "Înot (opțional, dacă există bază sportivă)"
+      ],
+      "competences": [
+        "Aleargă 400m fără oprire",
+        "Sare în lungime de pe loc minim 100cm",
+        "Participă activ la jocuri sportive colective"
+      ],
+      "typical_mistakes": [
+        "Tehnica incorectă de aruncare (nu rotesc brațul)",
+        "Respir neregulat la alergare de rezistență"
+      ],
+      "prerequisite_grade": 1
+    },
+    "Religie": {
+      "key_topics": [
+        "Viața lui Iisus Hristos: naștere, copilărie, minuni",
+        "Sfintele Taine: Botezul, Mirungerea, Euharistia",
+        "Virtuți creștine: dragostea, cinstea, hărnicia",
+        "Sfântul Nicolae, Sfântul Gheorghe, alți sfinți ocrotitori",
+        "Postul și rugăciunea"
+      ],
+      "competences": [
+        "Cunoaște momente cheie din viața lui Iisus Hristos",
+        "Identifică virtuți creștine și le aplică în viața de zi cu zi",
+        "Cunoaște câțiva sfinți și sărbătorile lor"
+      ],
+      "typical_mistakes": [
+        "Confuzia între sfinți și semnificația sărbătorilor lor"
+      ],
+      "prerequisite_grade": 1
+    }
+  }
+}

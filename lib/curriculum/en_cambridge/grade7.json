@@ -1,0 +1,92 @@
+{
+  "curriculum": "EN_CAMBRIDGE",
+  "grade": 7,
+  "language": "en",
+  "subjects": {
+    "Mathematics (Cambridge Lower Secondary Stage 7)": {
+      "key_topics": [
+        "Number: integers, powers, roots; HCF and LCM using prime factorisation",
+        "Fractions, decimals, percentages: advanced calculations",
+        "Ratio, proportion, and rates of change",
+        "Algebra: expanding brackets, factorising, simplifying expressions",
+        "Equations: solving linear equations and inequalities",
+        "Sequences: arithmetic and geometric sequences, nth term",
+        "Functions and graphs: coordinates, straight line graphs, y = mx + c",
+        "Geometry: angles in polygons, properties of parallel lines",
+        "Pythagoras' theorem: finding missing sides",
+        "Area and perimeter: circles, composite shapes",
+        "Surface area and volume: prisms, cylinders",
+        "Probability: experimental and theoretical, tree diagrams",
+        "Statistics: grouped data, frequency polygons, averages from tables"
+      ],
+      "competences": [
+        "Apply Pythagoras' theorem to right-angled triangles",
+        "Solve linear equations and inequalities",
+        "Plot and interpret straight line graphs using y = mx + c",
+        "Calculate probability using tree diagrams",
+        "Find averages from grouped frequency tables"
+      ],
+      "typical_mistakes": [
+        "Squaring a sum incorrectly (a+b)² ≠ a² + b²",
+        "Confusing gradient (m) and y-intercept (c) in y = mx + c",
+        "Forgetting to square-root the final answer in Pythagoras",
+        "Errors in expanding double brackets (FOIL method)",
+        "Not simplifying probability fractions"
+      ],
+      "prerequisite_grade": 6
+    },
+    "English (Cambridge Lower Secondary Stage 7)": {
+      "key_topics": [
+        "Reading: analytical response to unseen texts (literature and non-fiction)",
+        "Exploring how writers create effects through language and structure",
+        "Comparing two texts: similar themes, different techniques",
+        "Writing: narrative with controlled narrative voice",
+        "Analytical writing: structured response to texts with PEE (Point, Evidence, Explain)",
+        "Persuasive and discursive writing: rhetorical devices",
+        "Research project: extended writing with citation",
+        "Grammar: advanced punctuation, complex syntax",
+        "Vocabulary in context: connotation, denotation, field-specific language",
+        "Speaking: debate, formal discussion, verbal presentation with slides"
+      ],
+      "competences": [
+        "Analyse writer's craft with structured PEE responses",
+        "Compare two texts for similarities and differences",
+        "Write controlled, technically accurate narrative and discursive texts",
+        "Use rhetorical devices effectively in spoken and written argument"
+      ],
+      "typical_mistakes": [
+        "PEE responses that don't explain the effect clearly",
+        "Comparisons that list differences without analysing them",
+        "Over-quoting (too long quotes) without sufficient analysis",
+        "Confusing language techniques (metaphor and simile)"
+      ],
+      "prerequisite_grade": 6
+    },
+    "Science (Cambridge Lower Secondary Stage 7)": {
+      "key_topics": [
+        "Biology: photosynthesis and respiration — inputs, outputs, conditions",
+        "Biology: human reproduction, puberty, development",
+        "Biology: ecosystems — nutrient cycling, energy flow",
+        "Chemistry: particle theory — explaining properties of states of matter",
+        "Chemistry: elements, compounds, mixtures — separation techniques",
+        "Chemistry: chemical reactions — word equations, conservation of mass",
+        "Physics: speed, distance, time — calculations",
+        "Physics: forces — resultant forces, pressure",
+        "Physics: energy — stores and transfers"
+      ],
+      "competences": [
+        "Write and interpret word equations for chemical reactions",
+        "Calculate speed using the speed-distance-time triangle",
+        "Explain photosynthesis and respiration in terms of reactants and products",
+        "Describe particle behaviour in different states and during changes of state"
+      ],
+      "typical_mistakes": [
+        "Confusing photosynthesis and respiration equations",
+        "Errors in speed-distance-time calculations (using wrong formula)",
+        "Thinking mixtures and compounds are the same",
+        "Confusing reactants and products in chemical equations"
+      ],
+      "prerequisite_grade": 6
+    }
+  }
+}

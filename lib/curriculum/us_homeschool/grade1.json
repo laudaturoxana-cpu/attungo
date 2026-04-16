@@ -1,0 +1,141 @@
+{
+  "curriculum": "US_HOMESCHOOL",
+  "grade": 1,
+  "language": "en",
+  "subjects": {
+    "Mathematics (Core Knowledge Grade 1)": {
+      "key_topics": [
+        "Counting and cardinality: numbers to 100",
+        "Number words: one through twenty",
+        "Place value: ones and tens",
+        "Comparing quantities: more/less/equal",
+        "Addition facts: sums to 20",
+        "Subtraction facts: differences from 20",
+        "Doubles and near-doubles",
+        "Story problems (word problems) with addition and subtraction",
+        "Ordinal numbers: 1st through 10th",
+        "Telling time: to the hour and half-hour",
+        "Counting coins: pennies, nickels, dimes, quarters",
+        "Measuring with non-standard and standard units (inches)",
+        "Geometry: squares, rectangles, triangles, circles",
+        "Introduction to fractions: one-half",
+        "Graphs: reading simple bar graphs and pictographs"
+      ],
+      "competences": [
+        "Count to 100 by 1s, 2s, 5s, and 10s",
+        "Know addition and subtraction facts to 20",
+        "Tell time to the hour and half-hour",
+        "Identify basic 2D shapes and sort by properties",
+        "Solve simple word problems with addition and subtraction"
+      ],
+      "typical_mistakes": [
+        "Skipping numbers when counting to 100",
+        "Reverting to counting all instead of counting on",
+        "Confusing dimes and nickels by value",
+        "Writing numerals backwards (especially 3, 5, 7)"
+      ],
+      "prerequisite_grade": null
+    },
+    "English Language Arts (Core Knowledge Grade 1)": {
+      "key_topics": [
+        "Phonics and Decoding: Core Knowledge Language Arts (CKLA) phonics sequence",
+        "Short vowels: CVC words (cat, dog, sit, hot, cut)",
+        "Consonant blends and digraphs",
+        "Long vowels: CVCe pattern (cake, bike, cone)",
+        "High-frequency words (Dolch and Fry word lists)",
+        "Reading connected text with fluency",
+        "Comprehension: retelling stories with beginning, middle, end",
+        "Writing: composing sentences and short paragraphs",
+        "Capitalisation and punctuation: periods, question marks",
+        "Handwriting: print letter formation",
+        "Listening and speaking: telling and listening to stories",
+        "Grammar: nouns (common and proper), verbs in sentences"
+      ],
+      "competences": [
+        "Decode CVC and CVCe words fluently",
+        "Read grade-appropriate text with accuracy and expression",
+        "Retell stories identifying beginning, middle, and end",
+        "Write complete sentences with capital letters and end punctuation",
+        "Identify common and proper nouns"
+      ],
+      "typical_mistakes": [
+        "Confusing short vowel sounds (especially short e and short i)",
+        "Not applying the silent e rule consistently",
+        "Omitting end punctuation in writing",
+        "Reversing b and d"
+      ],
+      "prerequisite_grade": null
+    },
+    "History and Geography": {
+      "key_topics": [
+        "World Geography: continents and oceans",
+        "Maps: compass rose, key, symbols",
+        "American History: Columbus and Early Explorers",
+        "Native Americans: major tribes and cultures",
+        "Early American settlements: Jamestown, Plymouth",
+        "Thanksgiving: Pilgrims and Wampanoag",
+        "American Symbols: Statue of Liberty, Liberty Bell, bald eagle",
+        "Presidents: George Washington, Abraham Lincoln",
+        "World History: Ancient Egypt — pharaohs, pyramids, mummies",
+        "Mesopotamia: Tigris and Euphrates, early civilization"
+      ],
+      "competences": [
+        "Name and locate continents and oceans on a map",
+        "Use a map key and compass rose",
+        "Identify key American historical figures and their contributions",
+        "Describe basic features of Ancient Egypt"
+      ],
+      "typical_mistakes": [
+        "Confusing continents with countries",
+        "Not understanding cardinal directions N/S/E/W"
+      ],
+      "prerequisite_grade": null
+    },
+    "Science": {
+      "key_topics": [
+        "Animals and Their Needs: food, water, shelter, air",
+        "Classification: mammals, birds, reptiles, fish, amphibians",
+        "Insects: structure (head, thorax, abdomen), life cycle",
+        "Plants and Their Needs: sunlight, water, nutrients",
+        "Plant life cycle: seed, germination, seedling, plant, flower, fruit",
+        "Human Body: major organs — heart, lungs, stomach, brain",
+        "Senses: five senses and sense organs",
+        "Weather: measuring temperature, wind, rain",
+        "Seasons: characteristics of each season",
+        "Sky: Sun, Moon, stars — day and night cycle"
+      ],
+      "competences": [
+        "Classify common animals by class (mammal, bird, etc.)",
+        "Describe the plant life cycle from seed to seed",
+        "Identify major human body organs and their functions",
+        "Describe weather and explain the four seasons"
+      ],
+      "typical_mistakes": [
+        "Classifying whales as fish (not mammals)",
+        "Thinking plants get food from soil alone",
+        "Confusing rotation (day/night) with seasons"
+      ],
+      "prerequisite_grade": null
+    },
+    "Music and Visual Arts": {
+      "key_topics": [
+        "Music: singing simple songs, keeping a beat, dynamics (loud/soft)",
+        "Music: recognising common instruments: violin, trumpet, piano, flute",
+        "Visual Arts: elements of art — line, shape, colour, texture",
+        "Art techniques: drawing, painting, collage",
+        "Art appreciation: looking at famous works (Van Gogh, Picasso basics)",
+        "Folk songs: American folk traditions"
+      ],
+      "competences": [
+        "Keep a steady beat and recognize dynamics",
+        "Identify common musical instruments by sight and sound",
+        "Use basic art elements in own artwork"
+      ],
+      "typical_mistakes": [
+        "Confusing tempo with dynamics",
+        "Difficulty distinguishing similar-sounding instrument families"
+      ],
+      "prerequisite_grade": null
+    }
+  }
+}

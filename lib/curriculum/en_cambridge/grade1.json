@@ -1,0 +1,89 @@
+{
+  "curriculum": "EN_CAMBRIDGE",
+  "grade": 1,
+  "language": "en",
+  "subjects": {
+    "Mathematics (Cambridge Primary Stage 1)": {
+      "key_topics": [
+        "Number: counting and ordering numbers to 20",
+        "Reading and writing numbers to 20 in numerals and words",
+        "Comparing numbers: more, fewer, less, greater than, less than",
+        "Number bonds: pairs of numbers that make up to 10",
+        "Addition and subtraction within 20",
+        "Counting on and back in ones, twos, fives, and tens",
+        "Odd and even numbers to 20",
+        "Simple fractions: half and quarter of shapes and sets",
+        "Geometry: 2D shapes (circle, triangle, square, rectangle, pentagon, hexagon)",
+        "3D shapes: cube, cuboid, sphere, cone, cylinder",
+        "Patterns: repeating patterns with shapes and numbers",
+        "Measurement: comparing and ordering lengths, masses, and capacities",
+        "Time: days of week, months of year, reading time to the hour"
+      ],
+      "competences": [
+        "Count, read, and write numbers to 20",
+        "Add and subtract one-digit numbers within 20",
+        "Identify and sort 2D and 3D shapes by properties",
+        "Find halves and quarters of shapes and quantities",
+        "Compare and order lengths, masses, and capacities"
+      ],
+      "typical_mistakes": [
+        "Confusing tens and ones when reading two-digit numbers",
+        "Incorrect number bond combinations that don't sum to target",
+        "Counting objects more than once or skipping objects",
+        "Confusing half (equal parts) with just splitting into two parts",
+        "Reversing numerals (writing 21 instead of 12)"
+      ],
+      "prerequisite_grade": null
+    },
+    "English (Cambridge Primary Stage 1)": {
+      "key_topics": [
+        "Phonics: letter-sound correspondences, consonant blends",
+        "Reading simple sentences and short stories with picture support",
+        "High-frequency words: recognising and spelling common words",
+        "Reading aloud with growing confidence and expression",
+        "Comprehension: answering questions about texts",
+        "Writing: forming letters correctly, writing words and simple sentences",
+        "Capital letters and full stops",
+        "Speaking and listening: taking turns, expressing ideas clearly",
+        "Vocabulary: building word knowledge through reading and discussion",
+        "Grammar: nouns, verbs, adjectives (naming words, doing words, describing words)"
+      ],
+      "competences": [
+        "Decode and read simple texts using phonics knowledge",
+        "Write simple sentences with correct letter formation and punctuation",
+        "Answer questions about stories and informational texts",
+        "Participate in discussions and take turns speaking"
+      ],
+      "typical_mistakes": [
+        "Reversing letters (b/d confusion)",
+        "Omitting spaces between words when writing",
+        "Reading without attention to punctuation (no pausing at full stops)",
+        "Guessing words from initial letter only without applying phonics"
+      ],
+      "prerequisite_grade": null
+    },
+    "Science (Cambridge Primary Stage 1)": {
+      "key_topics": [
+        "Living things: plants and animals in the local environment",
+        "Parts of a plant: root, stem, leaf, flower",
+        "Parts of an animal: head, body, legs, wings",
+        "Materials: wood, plastic, metal, fabric — sorting by properties",
+        "Properties of materials: hard/soft, rough/smooth, shiny/dull",
+        "Senses: sight, hearing, touch, taste, smell",
+        "Light and dark: sources of light, shadows",
+        "Pushes and pulls: how forces move objects"
+      ],
+      "competences": [
+        "Identify and name parts of plants and animals",
+        "Sort materials by observable properties",
+        "Describe objects using the five senses",
+        "Investigate pushes and pulls in everyday life"
+      ],
+      "typical_mistakes": [
+        "Confusing living and non-living things (fire, water as living)",
+        "Not distinguishing between a property and a material"
+      ],
+      "prerequisite_grade": null
+    }
+  }
+}

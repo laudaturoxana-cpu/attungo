@@ -1,0 +1,114 @@
+{
+  "curriculum": "US_COMMON_CORE",
+  "grade": 1,
+  "language": "en",
+  "subjects": {
+    "Mathematics": {
+      "key_topics": [
+        "Operations and Algebraic Thinking: addition and subtraction within 20",
+        "Word problems involving addition and subtraction within 20",
+        "Properties of addition: commutative and associative",
+        "Relationship between addition and subtraction",
+        "Counting to 120, starting from any number",
+        "Number and Operations in Base Ten: tens and ones",
+        "Comparing two-digit numbers using <, >, =",
+        "Adding and subtracting within 100 using place value",
+        "Mentally adding 10 or subtracting 10 from two-digit numbers",
+        "Measurement and Data: ordering objects by length, measuring with non-standard units",
+        "Telling time to the hour and half-hour",
+        "Representing and interpreting data (charts, graphs)",
+        "Geometry: distinguishing shapes (2D and 3D), partitioning circles and rectangles into halves and quarters"
+      ],
+      "competences": [
+        "Add and subtract within 20 using strategies (counting on, making 10, decomposing)",
+        "Understand place value for two-digit numbers (tens and ones)",
+        "Compare two two-digit numbers using symbols <, >, =",
+        "Tell and write time in hours and half-hours using analog and digital clocks",
+        "Partition circles and rectangles into two and four equal shares"
+      ],
+      "typical_mistakes": [
+        "Counting all instead of counting on for addition",
+        "Reversing tens and ones when writing two-digit numbers",
+        "Confusing half-hour (30 minutes) with quarter-hour (15 minutes) on clocks",
+        "Not recognizing that 2+3 and 3+2 are the same (commutativity)",
+        "Errors when bridging through 10 (e.g., 8+5)"
+      ],
+      "prerequisite_grade": null
+    },
+    "English Language Arts": {
+      "key_topics": [
+        "Reading Literature: key ideas, characters, settings, events in stories",
+        "Comparing and contrasting adventures of characters in stories",
+        "Reading Informational Text: main topic and key details",
+        "Asking and answering questions about key details",
+        "Phonics: consonant digraphs (ch, sh, th, wh), long vowel patterns",
+        "Decoding regularly spelled one-syllable words",
+        "High-frequency (sight) words",
+        "Reading with sufficient accuracy and fluency to support comprehension",
+        "Writing: opinion pieces, informative texts, narrative writing",
+        "Using spacing between words when writing",
+        "Speaking and Listening: participating in collaborative conversations",
+        "Language: using nouns and verbs, subject-verb agreement"
+      ],
+      "competences": [
+        "Read first-grade text with purpose and understanding",
+        "Decode words using phonics and word analysis skills",
+        "Write simple opinion, informative, and narrative texts",
+        "Participate in collaborative conversations with peers and adults",
+        "Use correct grammar in written and spoken English"
+      ],
+      "typical_mistakes": [
+        "Reversing letters b/d and p/q",
+        "Omitting silent letters in high-frequency words (said, was, the)",
+        "Skipping punctuation when reading aloud",
+        "Writing sentences without capital letters or end marks",
+        "Confusing long and short vowel sounds"
+      ],
+      "prerequisite_grade": null
+    },
+    "Science (NGSS-aligned)": {
+      "key_topics": [
+        "Light and Sound: properties, how objects can be seen only when illuminated",
+        "Communication using light and sound",
+        "Structure and Function of plants and animals",
+        "Mimicry and camouflage as survival adaptations",
+        "Parent and offspring similarities and differences",
+        "Weather and climate: patterns, seasonal change",
+        "Objects in the sky: sun, moon, stars"
+      ],
+      "competences": [
+        "Plan and conduct investigations about light and sound",
+        "Identify structures that help plants and animals survive",
+        "Compare parents and offspring",
+        "Use weather observations to describe patterns"
+      ],
+      "typical_mistakes": [
+        "Confusing weather (daily) with climate (long-term patterns)",
+        "Thinking all animals look exactly like their parents (not understanding variation)"
+      ],
+      "prerequisite_grade": null
+    },
+    "Social Studies": {
+      "key_topics": [
+        "Families and communities: roles, rules, responsibilities",
+        "School and classroom community",
+        "Maps and globes: basic geography skills",
+        "American symbols and traditions: flag, Pledge of Allegiance",
+        "National holidays: Veterans Day, Thanksgiving, MLK Day",
+        "Goods and services, needs and wants",
+        "Past and present: how communities change over time"
+      ],
+      "competences": [
+        "Identify rules and responsibilities in family and school",
+        "Locate places on a simple map",
+        "Distinguish between needs and wants",
+        "Explain the significance of national symbols and holidays"
+      ],
+      "typical_mistakes": [
+        "Confusing needs and wants",
+        "Difficulty understanding chronological past/present/future"
+      ],
+      "prerequisite_grade": null
+    }
+  }
+}

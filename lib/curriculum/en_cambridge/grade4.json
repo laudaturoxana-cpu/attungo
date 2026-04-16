@@ -1,0 +1,96 @@
+{
+  "curriculum": "EN_CAMBRIDGE",
+  "grade": 4,
+  "language": "en",
+  "subjects": {
+    "Mathematics (Cambridge Primary Stage 4)": {
+      "key_topics": [
+        "Number: reading and ordering numbers to 10,000",
+        "Negative numbers: reading and ordering on a number line",
+        "Rounding to nearest 10, 100, 1000",
+        "Addition and subtraction of numbers up to 10,000",
+        "Multiplication: 7, 8, 9 times tables; multiplying TU × U and TU × TU",
+        "Division: dividing three-digit numbers by one-digit, including remainders",
+        "Fractions: mixed numbers, improper fractions, adding and subtracting like fractions",
+        "Equivalence between fractions and decimals (tenths and hundredths)",
+        "Ordering decimals with one and two decimal places",
+        "Percentages: finding simple percentages (10%, 25%, 50%)",
+        "Geometry: properties of triangles and quadrilaterals",
+        "Symmetry: reflective and rotational symmetry",
+        "Co-ordinates in the first quadrant",
+        "Perimeter and area of rectangles and compound shapes",
+        "Angles: acute, obtuse, right, reflex — measuring with a protractor",
+        "Data: line graphs, frequency tables, mode, median, mean, range"
+      ],
+      "competences": [
+        "Know all multiplication facts to 12 × 12",
+        "Add and subtract numbers up to 10,000 efficiently",
+        "Convert between fractions, decimals, and percentages",
+        "Measure and draw angles with a protractor",
+        "Find mode, median, mean, and range of data sets"
+      ],
+      "typical_mistakes": [
+        "Errors in 7 and 8 times tables",
+        "Confusing mixed numbers and improper fractions when converting",
+        "Measuring angles from wrong baseline on protractor",
+        "Confusing mean with median",
+        "Adding tenths and hundredths without aligning decimal points"
+      ],
+      "prerequisite_grade": 3
+    },
+    "English (Cambridge Primary Stage 4)": {
+      "key_topics": [
+        "Reading: inference and deduction from longer, complex texts",
+        "Identifying how authors create characters and settings",
+        "Non-fiction: comparing texts on the same topic",
+        "Point of view: how text type affects content and language",
+        "Writing: narrative with developed characters and settings",
+        "Formal and informal writing styles: letters, emails",
+        "Explanation texts: cause and effect language",
+        "Argument texts: presenting both sides of an issue",
+        "Grammar: relative clauses, fronted adverbials",
+        "Punctuation: commas after fronted adverbials, inverted commas for dialogue",
+        "Vocabulary: synonyms, antonyms, word formation"
+      ],
+      "competences": [
+        "Read and analyse complex texts, making inferences with evidence",
+        "Write narrative texts with well-developed characters and atmosphere",
+        "Distinguish formal and informal registers and apply appropriately",
+        "Use relative clauses and fronted adverbials in writing"
+      ],
+      "typical_mistakes": [
+        "Forgetting commas after fronted adverbials",
+        "Using speech marks incorrectly in dialogue",
+        "Not distinguishing formal from informal register",
+        "Characterisation through 'telling' not 'showing'"
+      ],
+      "prerequisite_grade": 3
+    },
+    "Science (Cambridge Primary Stage 4)": {
+      "key_topics": [
+        "Humans and animals: digestive system, teeth and diet",
+        "Skeleton and muscles: support, protection, movement",
+        "Plants: photosynthesis, pollination, seed dispersal",
+        "Electricity: circuits, conductors and insulators, symbols",
+        "Electrical components: switches, bulbs, buzzers, motors",
+        "Sound: how sound travels, pitch and loudness, vibration",
+        "States of matter: evaporation, condensation, the water cycle",
+        "Rocks: rock types (igneous, sedimentary, metamorphic), fossils, soil"
+      ],
+      "competences": [
+        "Describe the human digestive system and its functions",
+        "Explain photosynthesis in simple terms",
+        "Build and draw simple electrical circuits",
+        "Describe the water cycle and explain evaporation and condensation",
+        "Classify rocks and explain how fossils form"
+      ],
+      "typical_mistakes": [
+        "Confusing conductors and insulators",
+        "Thinking plants get energy from soil rather than from light",
+        "Not drawing the water cycle arrows in the correct direction",
+        "Confusing igneous and sedimentary rock formation"
+      ],
+      "prerequisite_grade": 3
+    }
+  }
+}

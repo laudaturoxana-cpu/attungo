@@ -1,0 +1,183 @@
+{
+  "curriculum": "RO_NATIONAL",
+  "grade": 5,
+  "language": "ro",
+  "subjects": {
+    "Matematică": {
+      "key_topics": [
+        "Mulțimi: noțiuni introductive, submulțimi, reuniune, intersecție",
+        "Numerele naturale: mulțimea N, operații, proprietăți",
+        "Divizibilitatea: criterii de divizibilitate cu 2, 3, 5, 9, 10",
+        "Cel mai mare divizor comun (CMMDC)",
+        "Cel mai mic multiplu comun (CMMMC)",
+        "Numerele prime și compuse: descompunerea în factori primi",
+        "Fracții ordinare: simplificarea, amplificarea, reducerea la același numitor",
+        "Adunarea și scăderea fracțiilor cu numitori diferiți",
+        "Înmulțirea și împărțirea fracțiilor ordinare",
+        "Fracții zecimale: scriere, citire, operații",
+        "Transformarea fracțiilor ordinare în zecimale și invers",
+        "Procente: noțiuni introductive",
+        "Unghi: tipuri, măsurarea cu raportor",
+        "Triunghiuri: clasificare după laturi și unghiuri",
+        "Perimetrul și aria triunghiului",
+        "Patrulaterul: clasificare, perimetru, arie dreptunghi și pătrat"
+      ],
+      "competences": [
+        "Aplică criterii de divizibilitate și determină CMMDC și CMMMC",
+        "Efectuează operații cu fracții ordinare și zecimale",
+        "Transformă fracții ordinare în zecimale și calculează procente simple",
+        "Măsoară și clasifică unghiuri cu raportor",
+        "Calculează perimetrul și aria triunghiurilor și patrulaterelor"
+      ],
+      "typical_mistakes": [
+        "Greșeli la CMMDC (aplică greșit algoritmul lui Euclid)",
+        "Adunarea fracțiilor fără reducere la același numitor",
+        "Confuzia fracțiilor ordinare cu cele zecimale la transformare",
+        "Greșeli la aria triunghiului (nu împart cu 2)",
+        "Confuzia unghiului drept cu cel ascuțit"
+      ],
+      "prerequisite_grade": 4
+    },
+    "Limba și literatura română": {
+      "key_topics": [
+        "Textul literar: roman, nuvelă, basm cult (fragmente)",
+        "Textul nonliterar: articolul de ziar, reportajul",
+        "Narațiunea la persoana I și a III-a",
+        "Descrierea: portretul și tabloul",
+        "Morfologie: substantivul (toate cazurile, articolul)",
+        "Adjectivul: acordul, gradele de comparație",
+        "Pronumele: personal, reflexiv, de politețe, posesiv, demonstrativ",
+        "Numeralul: cardinal, ordinal, colectiv, distributiv",
+        "Verbul: conjugările, timpurile modului indicativ, modul conjunctiv",
+        "Adverbul: de loc, de timp, de mod",
+        "Prepoziția și conjuncția",
+        "Propoziția și fraza: elementele de relație",
+        "Subiectul și predicatul: tipuri"
+      ],
+      "competences": [
+        "Analizează morfologic toate părțile de vorbire studiate",
+        "Identifică și analizează subiectul și predicatul",
+        "Redactează texte narative și descriptive de 25-30 rânduri",
+        "Rezumă un text literar respectând structura narativă"
+      ],
+      "typical_mistakes": [
+        "Confuzia modului conjunctiv cu indicativul (să vrea vs vrea)",
+        "Greșeli de analiză morfologică a pronumelui reflexiv",
+        "Acordul greșit în fraze complexe",
+        "Identificarea greșită a predicatului nominal vs verbal"
+      ],
+      "prerequisite_grade": 4
+    },
+    "Biologie": {
+      "key_topics": [
+        "Celula: structura celulei vegetale și animale",
+        "Țesuturi, organe, sisteme de organe",
+        "Regnurile: monere, protiste, fungi, plante, animale",
+        "Nevertebratele: porifera, cnidaria, viermi, moluște, artropode",
+        "Vertebratele: pești, amfibieni, reptile, păsări, mamifere",
+        "Relații ecologice: hrănire, reproducere, adaptare",
+        "Importanța biodiversității"
+      ],
+      "competences": [
+        "Descrie structura celulei și compară celula vegetală cu cea animală",
+        "Clasifică organismele vii în regnuri",
+        "Identifică caracteristicile claselor de vertebrate",
+        "Explică relațiile dintre organisme și mediu"
+      ],
+      "typical_mistakes": [
+        "Confuzia celulă vegetală-animală (peretele celular, cloroplastele)",
+        "Clasificarea greșită a chitinei (artropode)",
+        "Confuzia amfibienilor cu reptilele"
+      ],
+      "prerequisite_grade": 4
+    },
+    "Geografie": {
+      "key_topics": [
+        "Universul: sistemul solar, planetele",
+        "Pământul: forma, dimensiunile, mișcările",
+        "Coordonate geografice: latitudine și longitudine",
+        "Harta și globul pământesc: tipuri de proiecții",
+        "Relieful terestru: munți, câmpii, podișuri, depresiuni",
+        "Hidrografia: oceane, mări, fluvii, lacuri",
+        "Clima: factorii climatici, zonele climatice",
+        "Vegetația și fauna: zone naturale"
+      ],
+      "competences": [
+        "Localizează pe hartă și glob elemente geografice",
+        "Citește coordonatele geografice ale unui punct",
+        "Descrie o zonă naturală prin elementele sale definitorii"
+      ],
+      "typical_mistakes": [
+        "Confuzia latitudine-longitudine",
+        "Localizarea greșită a oceanelor pe hartă",
+        "Confuzia între climă și vreme"
+      ],
+      "prerequisite_grade": 4
+    },
+    "Istorie": {
+      "key_topics": [
+        "Preistoria: paleolitic, mezolitic, neolitic",
+        "Civilizațiile antice: Mesopotamia, Egipt, Grecia, Roma",
+        "Dacii și romanii: Dacia, războaiele daco-romane, Decebal și Traian",
+        "Formarea poporului român și a limbii române",
+        "Evul Mediu românesc: voievodatele, formarea statelor medievale",
+        "Mircea cel Bătrân, Vlad Țepeș, Ștefan cel Mare"
+      ],
+      "competences": [
+        "Situează cronologic evenimentele istorice studiate",
+        "Caracterizează civilizațiile antice studiate",
+        "Explică formarea poporului român și a limbii",
+        "Prezintă personalități istorice și contribuțiile lor"
+      ],
+      "typical_mistakes": [
+        "Confuzia cronologică între paleolitic-neolitic",
+        "Neînțelegerea procesului de romanizare a dacilor",
+        "Confuzia între voievodate și principate"
+      ],
+      "prerequisite_grade": null
+    },
+    "Educație socială": {
+      "key_topics": [
+        "Persoana și societatea: identitate, grup social",
+        "Familia și relațiile familiale",
+        "Școala ca instituție socială",
+        "Drepturile și îndatoririle cetățeanului",
+        "Statul român: constituție, instituții",
+        "Diversitate și toleranță culturală"
+      ],
+      "competences": [
+        "Descrie rolul familiei și școlii ca instituții sociale",
+        "Enumeră drepturi și îndatoriri cetățenești",
+        "Manifestă toleranță față de diversitate"
+      ],
+      "typical_mistakes": [
+        "Confuzia drepturi-obligații",
+        "Neînțelegerea conceptului de cetățenie"
+      ],
+      "prerequisite_grade": 4
+    },
+    "Fizică": {
+      "key_topics": [
+        "Mărimi fizice și unități de măsură (SI)",
+        "Mișcarea și repausul: viteza medie",
+        "Forțe: greutatea, forța de frecare, reacțiunea normală",
+        "Echilibrul corpurilor: pârghia, scripetele",
+        "Presiunea: definiție, formula, aplicații",
+        "Temperatura și căldura: scări de temperatură",
+        "Stările de agregare și transformările de fază"
+      ],
+      "competences": [
+        "Identifică și măsoară mărimi fizice cu instrumente adecvate",
+        "Calculează viteza medie",
+        "Aplică condiția de echilibru la pârghie",
+        "Calculează presiunea și rezolvă probleme simple"
+      ],
+      "typical_mistakes": [
+        "Confuzia masă-greutate (kg vs N)",
+        "Greșeli la calculul vitezei (confundă distanța cu timpul)",
+        "Inversarea brațelor pârghiei"
+      ],
+      "prerequisite_grade": null
+    }
+  }
+}

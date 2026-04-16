@@ -1,0 +1,119 @@
+{
+  "curriculum": "US_COMMON_CORE",
+  "grade": 8,
+  "language": "en",
+  "subjects": {
+    "Mathematics": {
+      "key_topics": [
+        "The Number System: irrational numbers, approximating irrational numbers",
+        "Properties of integer exponents, scientific notation",
+        "Expressions and Equations: solving linear equations in one variable (one solution, no solution, infinitely many solutions)",
+        "Solving pairs of simultaneous linear equations (graphically and algebraically)",
+        "Functions: defining functions, function notation, input/output tables",
+        "Linear functions: rate of change (slope), y-intercept, slope-intercept form y = mx + b",
+        "Comparing linear and non-linear functions",
+        "Geometry: Pythagorean theorem and its converse",
+        "Applying Pythagorean theorem to find distance in coordinate plane",
+        "Congruence and similarity: transformations (translation, rotation, reflection, dilation)",
+        "Angle relationships with parallel lines and transversals",
+        "Volume of cones, cylinders, and spheres",
+        "Statistics and Probability: scatter plots, lines of best fit",
+        "Bivariate categorical data, two-way tables"
+      ],
+      "competences": [
+        "Solve linear equations with rational coefficients",
+        "Solve systems of two linear equations by substitution and elimination",
+        "Understand and represent functions, identify linear vs. non-linear",
+        "Apply the Pythagorean theorem to real-world and geometric problems",
+        "Describe transformations and their effects on congruence and similarity"
+      ],
+      "typical_mistakes": [
+        "Errors solving equations with variables on both sides",
+        "Confusing slope formula (rise over run, not run over rise)",
+        "Graphing equations incorrectly (wrong y-intercept placement)",
+        "Confusing dilation with other transformations",
+        "Using Pythagorean theorem on non-right triangles"
+      ],
+      "prerequisite_grade": 7
+    },
+    "English Language Arts": {
+      "key_topics": [
+        "Reading Literature: analyzing how themes develop across multiple texts",
+        "Analyzing modern fiction and literary non-fiction",
+        "Comparing an author's book to a film or play adaptation",
+        "Reading Informational Text: delineating and evaluating arguments",
+        "Analyzing conflicting information from different sources",
+        "Understanding how authors acknowledge and respond to counterarguments",
+        "Vocabulary: technical and academic vocabulary, tone, and style",
+        "Writing: argumentative essays with sophisticated reasoning and counterarguments",
+        "Informative/explanatory writing: sustained multi-paragraph essays",
+        "Narrative writing: published-quality narrative with effective technique",
+        "Research: long-term research projects, integrating and evaluating sources",
+        "Language: verbals (gerunds, participles, infinitives), active vs. passive voice, mood"
+      ],
+      "competences": [
+        "Write sophisticated multi-paragraph argumentative and informative essays",
+        "Analyze complex literary and non-fiction texts with close reading",
+        "Conduct and present research using multiple credible sources",
+        "Demonstrate mastery of grade 8 grammar including verbals and voice"
+      ],
+      "typical_mistakes": [
+        "Passive voice overuse (weakens arguments)",
+        "Not integrating quotes smoothly (dropping quotes without context)",
+        "Weak paragraph organization (PEEL or TREE structure not followed)",
+        "Errors with dangling or misplaced participial phrases",
+        "Informal register in formal essays"
+      ],
+      "prerequisite_grade": 7
+    },
+    "Science (NGSS-aligned)": {
+      "key_topics": [
+        "Forces and motion: Newton's Laws applied to complex systems",
+        "Gravity and gravitational force across distances",
+        "Waves: mechanical and electromagnetic wave properties, applications",
+        "Information transfer: digital encoding of information",
+        "Heredity: DNA structure, mutations, genetic engineering basics",
+        "Natural selection: evidence from fossil record, comparative anatomy, DNA",
+        "Macroevolution: speciation and extinction events",
+        "Earth's history: plate tectonics, rock cycle",
+        "Climate systems: causes and evidence of climate change, mitigation strategies"
+      ],
+      "competences": [
+        "Apply Newton's Laws to multi-step force problems",
+        "Explain heredity at molecular level (DNA to traits)",
+        "Construct and evaluate evidence for evolution",
+        "Analyze climate data and propose evidence-based solutions"
+      ],
+      "typical_mistakes": [
+        "Thinking organisms evolve by choice or intention",
+        "Confusing DNA, genes, and chromosomes as the same thing",
+        "Misunderstanding climate feedback loops"
+      ],
+      "prerequisite_grade": 7
+    },
+    "Social Studies / History": {
+      "key_topics": [
+        "American history: 20th century — WWI, WWII",
+        "The Great Depression: causes, New Deal, social impact",
+        "Civil Rights Movement: key events, leaders, legislation",
+        "Cold War: US-Soviet tensions, key events (Korean War, Vietnam War, Cuban Missile Crisis)",
+        "Post-Cold War world: globalization, terrorism, 9/11",
+        "Government and civics: three branches, checks and balances, landmark Supreme Court cases",
+        "Economics: GDP, inflation, fiscal and monetary policy",
+        "Contemporary global issues: climate, inequality, technology"
+      ],
+      "competences": [
+        "Analyze the causes and consequences of WWI and WWII",
+        "Evaluate the effectiveness of the Civil Rights Movement",
+        "Explain the structure of the US government and checks and balances",
+        "Analyze contemporary global issues using geographic and economic data"
+      ],
+      "typical_mistakes": [
+        "Oversimplifying WWII causes (only Hitler, not broader factors)",
+        "Not understanding checks and balances as a system",
+        "Confusing fiscal policy (government) with monetary policy (Federal Reserve)"
+      ],
+      "prerequisite_grade": 7
+    }
+  }
+}

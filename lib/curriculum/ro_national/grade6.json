@@ -1,0 +1,182 @@
+{
+  "curriculum": "RO_NATIONAL",
+  "grade": 6,
+  "language": "ro",
+  "subjects": {
+    "Matematică": {
+      "key_topics": [
+        "Numerele întregi: definiție, reprezentare pe axă, ordonare",
+        "Operații cu numere întregi: adunare, scădere, înmulțire, împărțire",
+        "Numere raționale: definiție, reprezentare, operații",
+        "Raportul a două mărimi, proporțiile",
+        "Mărimi direct proporționale și invers proporționale",
+        "Regula de trei simplă",
+        "Procente: calcule procentuale, aplicații",
+        "Expresii algebrice: monome, polinoame (noțiuni introductive)",
+        "Patrulaterul: trapez, paralelogram, romb — proprietăți și arii",
+        "Cercul și discul: definiție, elemente, lungimea cercului, aria discului",
+        "Corpuri geometrice: cubul și cuboidul — arie laterală, totală, volum",
+        "Cilindrul: elemente, arie, volum (noțiuni)"
+      ],
+      "competences": [
+        "Efectuează operații cu numere întregi și raționale",
+        "Rezolvă probleme cu proporții și mărimi direct/invers proporționale",
+        "Calculează procente și rezolvă probleme de tip procentual",
+        "Calculează arii ale figurilor plane studiate",
+        "Calculează aria și volumul cubului și cuboidului"
+      ],
+      "typical_mistakes": [
+        "Greșeli la adunarea numerelor întregi negative",
+        "Confuzia mărimi direct vs invers proporționale",
+        "Greșeli la calculul ariei cercului (folosesc diametrul în loc de raza)",
+        "Confuzia ariei laterale cu aria totală la cub",
+        "Greșeli la regula de trei simplă inversă"
+      ],
+      "prerequisite_grade": 5
+    },
+    "Limba și literatura română": {
+      "key_topics": [
+        "Genuri literare: epic, liric, dramatic",
+        "Specii literare: schiță, nuvelă, roman, comedie",
+        "I.L. Caragiale: schiță, comedii",
+        "Mihai Eminescu: poezii (Luceafărul — fragmente, La steaua)",
+        "Creangă: amintiri, povești",
+        "Propoziția subordonată: subiectivă, predicativă, atributivă",
+        "Complementul: direct, indirect, circumstanțial (de loc, de timp, de mod)",
+        "Verbul: diatezele (activă, pasivă, reflexivă)",
+        "Verbele copulative și predicatul nominal",
+        "Structuri argumentative simple",
+        "Textul funcțional: procesul verbal, cererea"
+      ],
+      "competences": [
+        "Identifică genurile și speciile literare",
+        "Analizează sintactic propoziții simple și fraze",
+        "Identifică diatezele verbale",
+        "Redactează texte argumentative și funcționale"
+      ],
+      "typical_mistakes": [
+        "Confuzia diatezei reflexive cu cea pasivă",
+        "Identificarea greșită a subordonatelor (confundă subiectiva cu predicativa)",
+        "Greșeli de acord predicat-subiect în fraze complexe"
+      ],
+      "prerequisite_grade": 5
+    },
+    "Biologie": {
+      "key_topics": [
+        "Botanica: alcătuirea și funcțiile rădăcinii, tulpinii, frunzei",
+        "Fotosinteza și respirația plantelor",
+        "Floarea, fructul, sămânța: rol, alcătuire",
+        "Înmulțirea plantelor: sexuată și asexuată",
+        "Zoologie: sistemele de organe la vertebrate",
+        "Sistemul digestiv, circulator, respirator, nervos la animale",
+        "Omul: sistemul digestiv — anatomie și fiziologie",
+        "Omul: sistemul circulator — inima, vasele de sânge",
+        "Igiena aparatelor și sistemelor"
+      ],
+      "competences": [
+        "Descrie anatomia și fiziologia plantelor",
+        "Explică procesul fotosintezei și respirației",
+        "Compară sisteme de organe la diferite vertebrate",
+        "Descrie funcționarea sistemului digestiv și circulator uman"
+      ],
+      "typical_mistakes": [
+        "Confuzia fotosintezei cu respirația (direcția CO2 și O2)",
+        "Confuzia arteră-venă (oxigenat/dezoxigenat)",
+        "Neînțelegerea diferenței între celulă-țesut-organ-sistem"
+      ],
+      "prerequisite_grade": 5
+    },
+    "Geografie": {
+      "key_topics": [
+        "Europa: relief, hidrografie, climă, vegetație",
+        "Țările Europei: localizare, capitale, caracteristici",
+        "Uniunea Europeană: state membre, instituții, simboluri",
+        "Populația Europei: distribuție, densitate, naționalități",
+        "Economia Europei: industrie, agricultură, turism",
+        "România în Europa: poziție, relații, importanță"
+      ],
+      "competences": [
+        "Localizează state și capitale europene pe hartă",
+        "Descrie caracteristicile geografice ale Europei",
+        "Explică rolul UE și locul României în aceasta"
+      ],
+      "typical_mistakes": [
+        "Confuzia capitalelor europene",
+        "Nelocalizarea corectă a statelor pe harta Europei"
+      ],
+      "prerequisite_grade": 5
+    },
+    "Istorie": {
+      "key_topics": [
+        "Evul Mediu: feudalismul, cruciadele",
+        "Renașterea: artă, știință, umanism",
+        "Marile descoperiri geografice",
+        "Reforma și Contrareforma",
+        "Principatele române în Evul Mediu: Țara Românească, Moldova, Transilvania",
+        "Mihai Viteazul și unirea de la 1600",
+        "Epoca modernă: Revoluția Franceză, Napoleon",
+        "Revoluția industrială"
+      ],
+      "competences": [
+        "Plasează evenimentele medievale și moderne pe axa timpului",
+        "Explică cauzele și consecințele marilor transformări istorice",
+        "Caracterizează personalități istorice (Mihai Viteazul, Napoleon)",
+        "Analizează surse istorice simple"
+      ],
+      "typical_mistakes": [
+        "Confuzia cronologică între Renaștere și Reformă",
+        "Neînțelegerea feudalismului ca sistem social",
+        "Confuzia între unirile românești (1600, 1859, 1918)"
+      ],
+      "prerequisite_grade": 5
+    },
+    "Fizică": {
+      "key_topics": [
+        "Optică: lumina, surse de lumină, propagarea rectilinie",
+        "Reflexia luminii: legile reflexiei, oglinzile",
+        "Refracția luminii: legile refracției, lentile",
+        "Culorile luminii: descompunerea luminii, curcubeul",
+        "Sunetul: producere, propagare, caracteristici",
+        "Electricitate: sarcina electrică, conductori și izolatori",
+        "Circuitul electric simplu: tensiunea, intensitatea, rezistența",
+        "Legea lui Ohm",
+        "Circuite serie și paralel"
+      ],
+      "competences": [
+        "Aplică legile reflexiei și refracției luminii",
+        "Explică formarea curcubeului și descompunerea luminii",
+        "Montează circuite electrice simple serie și paralel",
+        "Aplică Legea lui Ohm în calcule simple"
+      ],
+      "typical_mistakes": [
+        "Confuzia reflexie-refracție",
+        "Greșeli la Legea lui Ohm (inversarea formulei)",
+        "Confuzia circuit serie cu cel paralel"
+      ],
+      "prerequisite_grade": 5
+    },
+    "Chimie": {
+      "key_topics": [
+        "Substanțe pure și amestecuri: separarea amestecurilor",
+        "Atomul: structura atomului, protoni, neutroni, electroni",
+        "Elementele chimice: tabelul periodic (grupe și perioade)",
+        "Legătura chimică: ionică și covalentă (noțiuni introductive)",
+        "Formulele chimice: valența",
+        "Reacții chimice: tipuri (sinteză, descompunere, substituție, schimb)",
+        "Oxizii, acizii, bazele, sărurile — clasificare"
+      ],
+      "competences": [
+        "Descrie structura atomului",
+        "Scrie formule chimice simple pe baza valenței",
+        "Clasifică substanțele anorganice",
+        "Identifică tipurile de reacții chimice"
+      ],
+      "typical_mistakes": [
+        "Confuzia atom-ion",
+        "Scrierea incorectă a formulelor chimice (valența)",
+        "Confuzia acizi-baze (proprietăți contrare)"
+      ],
+      "prerequisite_grade": null
+    }
+  }
+}

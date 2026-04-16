@@ -1,0 +1,118 @@
+{
+  "curriculum": "US_COMMON_CORE",
+  "grade": 2,
+  "language": "en",
+  "subjects": {
+    "Mathematics": {
+      "key_topics": [
+        "Operations and Algebraic Thinking: addition and subtraction within 100",
+        "Fluently add and subtract within 20 using mental strategies",
+        "Even and odd numbers within 20",
+        "Arrays: using repeated addition to find the total",
+        "Number and Operations in Base Ten: understanding place value to 1000",
+        "Reading and writing numbers to 1000 using base-ten numerals, number names, expanded form",
+        "Comparing three-digit numbers using <, >, =",
+        "Fluently add and subtract within 100",
+        "Adding up to four two-digit numbers",
+        "Adding and subtracting within 1000 using concrete models",
+        "Mentally add or subtract 10 or 100 from any number 100-900",
+        "Measurement: measuring and estimating lengths in standard units (inches, feet, cm, m)",
+        "Relating addition and subtraction to length",
+        "Telling and writing time to the nearest five minutes",
+        "Money: solving word problems involving dollar bills, quarters, dimes, nickels, pennies",
+        "Data: picture graphs, bar graphs, line plots",
+        "Geometry: recognizing and drawing shapes, partitioning rectangles into rows/columns"
+      ],
+      "competences": [
+        "Fluently add and subtract within 20 from memory",
+        "Understand place value for three-digit numbers",
+        "Measure and estimate lengths using standard units",
+        "Tell time to the nearest 5 minutes on analog and digital clocks",
+        "Solve word problems involving money (coins and bills)"
+      ],
+      "typical_mistakes": [
+        "Not regrouping when adding two-digit numbers (e.g., writing 17 as two separate digits)",
+        "Subtracting the smaller digit from the larger regardless of position",
+        "Confusing centimeters and inches when measuring",
+        "Errors in reading clock (confusing hour and minute hands)",
+        "Not counting change correctly (starting from wrong coin value)"
+      ],
+      "prerequisite_grade": 1
+    },
+    "English Language Arts": {
+      "key_topics": [
+        "Reading Literature: theme and central message, character response to events",
+        "Describing how characters respond to challenges",
+        "Comparing and contrasting two or more versions of the same story",
+        "Reading Informational Text: main purpose, key details",
+        "Describing the connection between steps in a technical procedure",
+        "Phonics: decoding two-syllable words, long-vowel spellings, r-controlled vowels",
+        "Common prefixes and suffixes (un-, re-, -ful, -less)",
+        "Reading grade-level text fluently and accurately",
+        "Writing: opinion writing with reasons, informative writing, narrative writing with details",
+        "Using linking words (because, and, also, but)",
+        "Research: participating in shared research projects",
+        "Language: collective nouns, irregular plurals, reflexive pronouns, adjectives and adverbs"
+      ],
+      "competences": [
+        "Read and comprehend grade 2 literature and informational texts",
+        "Write coherent opinion, informative, and narrative paragraphs",
+        "Use phonics knowledge to decode unfamiliar multisyllabic words",
+        "Demonstrate command of grammar conventions in writing"
+      ],
+      "typical_mistakes": [
+        "Confusing homophones (their/there/they're, to/too/two)",
+        "Writing run-on sentences",
+        "Not supporting opinions with reasons",
+        "Difficulty with irregular plural nouns (feet, children, mice)",
+        "Forgetting apostrophes in contractions"
+      ],
+      "prerequisite_grade": 1
+    },
+    "Science (NGSS-aligned)": {
+      "key_topics": [
+        "Properties of matter: solid, liquid, gas — how matter changes",
+        "Heating and cooling: changes in matter",
+        "Plants and their needs: water, sunlight, soil, air",
+        "Life cycles of plants and animals",
+        "Habitats and ecosystems: what living things need to survive",
+        "Earth's surface: landforms, bodies of water",
+        "Maps: using simple maps to locate landforms"
+      ],
+      "competences": [
+        "Describe and classify matter by observable properties",
+        "Explain how heating and cooling change matter",
+        "Describe plant and animal life cycles",
+        "Identify how animals use their habitat to meet needs"
+      ],
+      "typical_mistakes": [
+        "Confusing physical change with chemical change",
+        "Thinking all life cycles are identical",
+        "Confusing evaporation with boiling"
+      ],
+      "prerequisite_grade": 1
+    },
+    "Social Studies": {
+      "key_topics": [
+        "Communities: urban, suburban, rural differences",
+        "Local government: leaders, laws, citizen responsibilities",
+        "Economics: producers and consumers, trade",
+        "History: significant American historical figures",
+        "Geography: cardinal directions, simple maps and globes",
+        "Cultural diversity in America",
+        "Contributions of various ethnic groups to America"
+      ],
+      "competences": [
+        "Compare urban, suburban, and rural communities",
+        "Identify roles of local government leaders",
+        "Explain basic economic concepts (goods, services, trade)",
+        "Use cardinal directions and simple maps"
+      ],
+      "typical_mistakes": [
+        "Confusing producers and consumers",
+        "Difficulty distinguishing urban vs. suburban vs. rural"
+      ],
+      "prerequisite_grade": 1
+    }
+  }
+}

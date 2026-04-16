@@ -1,0 +1,161 @@
+{
+  "curriculum": "RO_NATIONAL",
+  "grade": 3,
+  "language": "ro",
+  "subjects": {
+    "Matematică": {
+      "key_topics": [
+        "Numerele naturale 0-10000: formare, citire, scriere",
+        "Ordinele și clasele numerelor: unități, zeci, sute, mii",
+        "Compararea și ordonarea numerelor 0-10000",
+        "Adunarea numerelor naturale în concentrul 0-10000",
+        "Scăderea numerelor naturale în concentrul 0-10000",
+        "Înmulțirea numerelor naturale: tabla înmulțirii completă (1-10)",
+        "Proprietățile înmulțirii: comutativitate, asociativitate, element neutru",
+        "Împărțirea exactă ca operație inversă înmulțirii",
+        "Împărțirea cu rest (câtul și restul)",
+        "Ordinea efectuării operațiilor fără paranteze",
+        "Ordinea efectuării operațiilor cu paranteze",
+        "Fracții: jumătate, sfert, treime (noțiuni introductive)",
+        "Perimetrul figurilor geometrice",
+        "Unități de măsură: km, m, cm, mm; kg, g; l, ml; oră, minut, secundă",
+        "Probleme cu una-trei operații"
+      ],
+      "competences": [
+        "Citește, scrie și compară numere naturale până la 10000",
+        "Cunoaște și aplică tabla înmulțirii 1-10",
+        "Efectuează împărțiri exacte și cu rest",
+        "Respectă ordinea operațiilor în expresii cu paranteze",
+        "Calculează perimetrul figurilor geometrice plane",
+        "Rezolvă probleme cu 1-3 operații din viața cotidiană"
+      ],
+      "typical_mistakes": [
+        "Greșeli frecvente în tabla înmulțirii cu 6, 7, 8",
+        "Confuzia între cât și rest la împărțire",
+        "Ignorarea ordinii operațiilor (calculează de la stânga la dreapta fără a lua în seamă parantezele)",
+        "Greșeli la conversia unităților de măsură (km-m, kg-g)",
+        "Calcularea perimetrului adunând incorect laturile"
+      ],
+      "prerequisite_grade": 2
+    },
+    "Limba și literatura română": {
+      "key_topics": [
+        "Textul literar: narativ, descriptiv, dialogat",
+        "Textul nonliterar: instrucțiuni, afișe, rețete",
+        "Personajele: caracterizare, relații între personaje",
+        "Planul simplu de idei al unui text",
+        "Rezumatul oral și scris",
+        "Substantivul: gen, număr, cazuri (noțiuni introductive)",
+        "Articolul hotărât și nehotărât",
+        "Adjectivul: acordul cu substantivul",
+        "Pronumele personal: eu, tu, el/ea, noi, voi, ei/ele",
+        "Verbul: persoana, numărul, timpul (prezent, trecut, viitor)",
+        "Propoziția simplă și dezvoltată",
+        "Ortografie: scrierea cu i scurt final, nu/n-",
+        "Scrierea cu literă mare: începutul propoziției, nume proprii",
+        "Compunerea după plan"
+      ],
+      "competences": [
+        "Identifică tipul unui text și trăsăturile sale",
+        "Caracterizează personajele unui text citit",
+        "Elaborează planul simplu de idei al unui text",
+        "Recunoaște și folosește corect părțile de vorbire studiate",
+        "Conjugă verbele la prezent, trecut, viitor",
+        "Redactează o compunere de 10-15 rânduri după plan"
+      ],
+      "typical_mistakes": [
+        "Greșeli de acord al adjectivului cu substantivul (gen, număr)",
+        "Conjugarea greșită a verbelor neregulate (a fi, a avea)",
+        "Confuzia între propoziție simplă și propoziție dezvoltată",
+        "Scrierea cu literă mică a numelor proprii",
+        "Greșeli la scrierea cu î/â în interiorul cuvântului"
+      ],
+      "prerequisite_grade": 2
+    },
+    "Științe ale naturii": {
+      "key_topics": [
+        "Corpurile: proprietăți (formă, culoare, masă, volum)",
+        "Stările de agregare: solidă, lichidă, gazoasă",
+        "Transformările apei: evaporare, condensare, solidificare, topire",
+        "Plantele: alcătuire (rădăcină, tulpină, frunze, flori, fructe, semințe)",
+        "Animalele: vertebrate și nevertebrate",
+        "Lanțul trofic simplu",
+        "Corpul uman: sistemul locomotor, digestiv (noțiuni de bază)",
+        "Sănătatea: igiena personală, alimentație sănătoasă",
+        "Anotimpurile și caracteristicile lor",
+        "Mediile de viață: pădure, câmpie, apă, deltă"
+      ],
+      "competences": [
+        "Descrie proprietățile corpurilor și le clasifică după starea de agregare",
+        "Explică ciclul apei în natură",
+        "Identifică alcătuirea plantelor și rolul fiecărei părți",
+        "Clasifică animalele în vertebrate și nevertebrate",
+        "Descrie structura de bază a corpului uman"
+      ],
+      "typical_mistakes": [
+        "Confuzia între evaporare și fierbere",
+        "Clasificarea incorectă a animalelor (balena ca pește, liliacul ca pasăre)",
+        "Confuzia între plantele cu flori și cele fără flori",
+        "Neînțelegerea lanțului trofic (ordinea consumatorilor)"
+      ],
+      "prerequisite_grade": 2
+    },
+    "Educație civică": {
+      "key_topics": [
+        "Familia: roluri, drepturi și responsabilități",
+        "Școala: reguli de comportament, drepturi și îndatoriri",
+        "Comunitatea locală: vecinii, instituțiile publice",
+        "Regulile de circulație pentru pietoni",
+        "Diversitatea culturală și respectul față de celălalt",
+        "Comportament civic: politețe, onestitate, corectitudine"
+      ],
+      "competences": [
+        "Identifică roluri și responsabilități în familie și școală",
+        "Respectă regulile de circulație ca pieton",
+        "Manifestă respect față de diversitate culturală",
+        "Aplică norme de comportament civic în situații cotidiene"
+      ],
+      "typical_mistakes": [
+        "Dificultatea de a distinge drepturi de responsabilități",
+        "Aplicarea inconsecventă a regulilor de comportament"
+      ],
+      "prerequisite_grade": 2
+    },
+    "Istorie (elemente de)": {
+      "key_topics": [
+        "Familia și istoria familiei: arborele genealogic",
+        "Comunitatea locală: trecut și prezent",
+        "Monumente și locuri istorice din localitate",
+        "Personalități locale și naționale"
+      ],
+      "competences": [
+        "Construiește arborele genealogic al familiei proprii",
+        "Identifică urme ale trecutului în comunitatea locală",
+        "Asociază personalități cu fapte/realizări semnificative"
+      ],
+      "typical_mistakes": [
+        "Confuzia noțiunilor de trecut-prezent-viitor în context istoric"
+      ],
+      "prerequisite_grade": null
+    },
+    "Educație fizică": {
+      "key_topics": [
+        "Atletism: alergare de viteză 50m, alergare de rezistență 600m",
+        "Sărituri în lungime de pe loc și cu elan",
+        "Jocuri sportive: mini-baschet, fotbal adaptat, handbal adaptat",
+        "Gimnastică: rostogoliri, echilibre pe bancă",
+        "Ștafete și jocuri de mișcare"
+      ],
+      "competences": [
+        "Aleargă 600m în timp limitat conform normelor pe vârstă",
+        "Sare în lungime de pe loc minim 110cm",
+        "Participă corect la jocuri sportive cunoscând regulile de bază"
+      ],
+      "typical_mistakes": [
+        "Pornire greșită la sprint (nu aplică start de jos)",
+        "Tehnica incorectă la rostogoliri (cap nerezemat)"
+      ],
+      "prerequisite_grade": 2
+    }
+  }
+}

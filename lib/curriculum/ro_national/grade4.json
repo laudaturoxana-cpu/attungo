@@ -1,0 +1,157 @@
+{
+  "curriculum": "RO_NATIONAL",
+  "grade": 4,
+  "language": "ro",
+  "subjects": {
+    "Matematică": {
+      "key_topics": [
+        "Numerele naturale 0-1000000: formare, citire, scriere",
+        "Clase și ordine: clasa unităților și clasa miilor",
+        "Compararea și ordonarea numerelor până la 1.000.000",
+        "Adunarea și scăderea numerelor naturale până la 1.000.000",
+        "Înmulțirea unui număr de mai multe cifre cu un număr de o cifră",
+        "Înmulțirea numerelor naturale de două cifre cu două cifre",
+        "Împărțirea la un număr de o cifră (câtul și restul)",
+        "Împărțirea la 10, 100, 1000",
+        "Ordinea operațiilor cu și fără paranteze",
+        "Fracții ordinare: numărătorul și numitorul",
+        "Compararea fracțiilor cu același numitor",
+        "Adunarea și scăderea fracțiilor cu același numitor",
+        "Aria pătratului și dreptunghiului",
+        "Perimetrul poligoanelor regulate",
+        "Probleme cu 3-4 operații"
+      ],
+      "competences": [
+        "Citește, scrie și compară numere naturale până la 1.000.000",
+        "Efectuează înmulțiri cu factori de 2-3 cifre",
+        "Efectuează împărțiri cu rest la un număr de o cifră",
+        "Lucrează cu fracții ordinare (comparare, adunare, scădere cu același numitor)",
+        "Calculează aria și perimetrul figurilor geometrice",
+        "Rezolvă probleme complexe cu 3-4 operații"
+      ],
+      "typical_mistakes": [
+        "Greșeli la înmulțirile cu trecere repetată peste ordin",
+        "Confuzia numărătorului cu numitorul la fracții",
+        "Scăderea greșită a fracțiilor (scade și numitorii)",
+        "Calculul greșit al ariei (adunarea laturilor în loc de înmulțire)",
+        "Omiterea restului la împărțirile cu rest"
+      ],
+      "prerequisite_grade": 3
+    },
+    "Limba și literatura română": {
+      "key_topics": [
+        "Textul literar: poezie, proză, dramaturgie",
+        "Figuri de stil: comparația, personificarea, epitetul",
+        "Structura textului narativ: introducere, cuprins, încheiere",
+        "Substantivul: cazurile (nominativ, acuzativ, genitiv, dativ, vocativ)",
+        "Adjectivul: grade de comparație",
+        "Pronumele personal și de politețe",
+        "Verbul: moduri (indicativ, imperativ) și timpuri (perfect compus, imperfect, mai mult ca perfect)",
+        "Numeralul cardinal și ordinal",
+        "Propoziția: subiect și predicat",
+        "Comunicare scrisă: scrisoarea, invitația, felicitarea",
+        "Compunerea: narativă, descriptivă",
+        "Ortografie: scrierea corectă a formelor verbale auxiliare"
+      ],
+      "competences": [
+        "Identifică figuri de stil în texte literare",
+        "Analizează morfologic substantive, adjective, verbe, pronume",
+        "Identifică subiectul și predicatul în propoziții",
+        "Redactează texte funcționale: scrisoare, invitație, felicitare",
+        "Elaborează compuneri narative și descriptive de 20-25 rânduri"
+      ],
+      "typical_mistakes": [
+        "Greșeli la declinar­ea substantivelor (confuzia cazurilor gen. și dat.)",
+        "Acordul greșit subiect-predicat (plural/singular)",
+        "Identificarea greșită a subiectului (îl confundă cu complementul)",
+        "Greșeli la gradele de comparație ale adjectivelor neregulate",
+        "Folosirea greșită a auxiliarelor am/ai/a/am/ați/au"
+      ],
+      "prerequisite_grade": 3
+    },
+    "Științe ale naturii": {
+      "key_topics": [
+        "Ecosistemele: pădure, câmpie, deltă, mare",
+        "Relații între organisme: prădător-pradă, parazitism, simbioză",
+        "Omul și mediul: poluarea și protecția mediului",
+        "Forțele: gravitația, forța de frecare, forța elastică",
+        "Mișcarea corpurilor: repaus și mișcare, viteza",
+        "Proprietățile materialelor: conductibilitate, transparență, magnetism",
+        "Surse de energie: solară, eoliană, hidro, fosile",
+        "Corpul uman: sistemul respirator, circulator, nervos"
+      ],
+      "competences": [
+        "Descrie structura unui ecosistem și relațiile din cadrul acestuia",
+        "Identifică tipuri de forțe și efectele lor",
+        "Clasifică materialele după proprietăți",
+        "Descrie funcționarea sistemelor corpului uman",
+        "Propune soluții pentru protecția mediului"
+      ],
+      "typical_mistakes": [
+        "Confuzia forță-energie",
+        "Nerecunoașterea simbiozei (o confundă cu parazitismul)",
+        "Confuzia sistemelor corpului uman (circulator vs respirator)"
+      ],
+      "prerequisite_grade": 3
+    },
+    "Geografie (elemente de)": {
+      "key_topics": [
+        "Planeta Pământ: forma, mișcările de rotație și revoluție",
+        "Harta: elemente (scară, legendă, orientare)",
+        "Relieful României: munți, dealuri, câmpii, Delta Dunării",
+        "Apele României: Dunărea, Marea Neagră, râuri principale",
+        "Clima României: anotimpuri, precipitații",
+        "Localitățile: rural și urban, reședința de județ, capitala"
+      ],
+      "competences": [
+        "Citește și interpretează harta fizică a României",
+        "Localizează pe hartă formele de relief, apele și localitățile",
+        "Explică legătura dintre relief și climă"
+      ],
+      "typical_mistakes": [
+        "Orientarea greșită pe hartă (N-S-E-V)",
+        "Confuzia între deal și munte ca forme de relief"
+      ],
+      "prerequisite_grade": null
+    },
+    "Educație civică": {
+      "key_topics": [
+        "Drepturile copilului (Convenția ONU)",
+        "Instituțiile statului român: Parlamentul, Președinția, Guvernul",
+        "Simbolurile naționale: drapelul, stema, imnul",
+        "Cetățenia și responsabilitățile civice",
+        "Mass-media și publicitatea: lectură critică"
+      ],
+      "competences": [
+        "Enumeră drepturile fundamentale ale copilului",
+        "Identifică rolul instituțiilor statului român",
+        "Recunoaște și explică simbolurile naționale",
+        "Manifestă comportament civic responsabil"
+      ],
+      "typical_mistakes": [
+        "Confuzia între drept și libertate",
+        "Neînțelegerea rolului distinct al celor trei puteri în stat"
+      ],
+      "prerequisite_grade": 3
+    },
+    "Educație fizică": {
+      "key_topics": [
+        "Atletism: 50m viteză, 800m rezistență, aruncarea mingii de oină",
+        "Gimnastică acrobatică: stând pe mâini (cu ajutor), roata",
+        "Jocuri sportive: fotbal, baschet, volei (reguli complete)",
+        "Nataţie (opțional)",
+        "Dans sportiv: elemente de dans popular"
+      ],
+      "competences": [
+        "Aleargă 800m în timp normat pe vârstă",
+        "Execută elemente de gimnastică acrobatică de bază",
+        "Cunoaște și aplică regulile jocurilor sportive studiate"
+      ],
+      "typical_mistakes": [
+        "Tehnica incorectă la roată (nu ține brațele drepte)",
+        "Driblingul incorect la baschet (bate mingea cu palma)"
+      ],
+      "prerequisite_grade": 3
+    }
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "curriculum": "US_COMMON_CORE",
+  "grade": 6,
+  "language": "en",
+  "subjects": {
+    "Mathematics": {
+      "key_topics": [
+        "Ratios and Proportional Relationships: understanding ratios, unit rates",
+        "Ratio tables, tape diagrams, double number lines",
+        "Percent as a rate per 100",
+        "The Number System: dividing fractions by fractions",
+        "Fluency with multi-digit division and multi-digit decimal operations",
+        "Greatest common factor (GCF) and least common multiple (LCM)",
+        "Positive and negative numbers: rational numbers on the number line",
+        "Absolute value and ordering rational numbers",
+        "Expressions and Equations: writing and evaluating algebraic expressions",
+        "Identifying parts of an expression (terms, factors, coefficients)",
+        "Writing equations and inequalities for situations",
+        "Dependent and independent variables",
+        "Geometry: area of triangles, special quadrilaterals, polygons",
+        "Surface area using nets of 3D figures",
+        "Volume of rectangular prisms with fractional edge lengths",
+        "Statistics and Probability: statistical questions, distribution, measures of center",
+        "Mean, median, mode, range",
+        "Box plots, histograms, dot plots"
+      ],
+      "competences": [
+        "Understand and apply ratios and unit rates to solve problems",
+        "Divide fractions by fractions using the standard algorithm",
+        "Write, evaluate, and solve one-variable equations and inequalities",
+        "Calculate surface area and volume of 3D figures",
+        "Analyze statistical data using measures of center and variability"
+      ],
+      "typical_mistakes": [
+        "Confusing ratio and fraction notation",
+        "Errors dividing fractions (not flipping the divisor before multiplying)",
+        "Confusing mean, median, and mode",
+        "Errors finding surface area (missing faces of 3D figures)",
+        "Misinterpreting absolute value (confusing with negative sign)"
+      ],
+      "prerequisite_grade": 5
+    },
+    "English Language Arts": {
+      "key_topics": [
+        "Reading Literature: theme development, character analysis, author's choices",
+        "Point of view and its effect on meaning and tone",
+        "Analyzing how author's word choice shapes tone and meaning",
+        "Reading Informational Text: central idea, summarizing, author's argument",
+        "Evaluating arguments and claims, distinguishing fact from opinion",
+        "Comparing texts in different formats (print and multimedia)",
+        "Vocabulary: context clues, figurative language, connotation",
+        "Writing: argumentative writing with clear claims and evidence",
+        "Informative/explanatory writing with organized paragraphs and citations",
+        "Narrative writing: narrative techniques, pacing, and word choice",
+        "Research: gathering, evaluating, and citing sources (MLA basics)",
+        "Language: pronouns and their antecedents, varying sentence patterns, punctuation"
+      ],
+      "competences": [
+        "Write argumentative essays with claims, evidence, and counterarguments",
+        "Analyze how authors develop theme and character",
+        "Distinguish facts from opinions in informational texts",
+        "Conduct research and cite sources appropriately"
+      ],
+      "typical_mistakes": [
+        "Confusing claim and evidence in argumentative writing",
+        "Not addressing counterarguments in persuasive essays",
+        "Using informal language in formal writing",
+        "Pronoun-antecedent disagreement (everyone... their vs. his/her)",
+        "Plagiarizing rather than paraphrasing research sources"
+      ],
+      "prerequisite_grade": 5
+    },
+    "Science (NGSS-aligned)": {
+      "key_topics": [
+        "Waves: electromagnetic spectrum, visible light",
+        "Information technologies and instrumentation",
+        "Energy: thermal energy, heat transfer",
+        "Growth and development of organisms: cell division, DNA replication (intro)",
+        "Ecosystems: changes in ecosystems, biodiversity and ecosystem stability",
+        "Earth's systems: biogeology, feedback mechanisms",
+        "Weather and climate: factors affecting climate, climate change evidence"
+      ],
+      "competences": [
+        "Describe how electromagnetic waves transfer energy",
+        "Explain cellular processes related to growth and reproduction",
+        "Analyze ecosystem stability and disruption",
+        "Evaluate evidence for climate change"
+      ],
+      "typical_mistakes": [
+        "Confusing climate and weather",
+        "Thinking all cells divide at the same rate",
+        "Misunderstanding biodiversity's role in ecosystem stability"
+      ],
+      "prerequisite_grade": 5
+    },
+    "Social Studies / History": {
+      "key_topics": [
+        "Ancient civilizations: Mesopotamia, Egypt, Greece, Rome (world history approach)",
+        "Political systems: early democracy (Athens), republic (Rome)",
+        "Geography of ancient world: rivers, trade routes, agricultural foundations",
+        "World religions: origins and beliefs of major religions",
+        "Economic systems: ancient trade, currency, specialization",
+        "Fall of Rome and transition to medieval period",
+        "Map skills: latitude, longitude, map projections, time zones"
+      ],
+      "competences": [
+        "Compare political systems of ancient civilizations",
+        "Trace trade routes using historical maps",
+        "Identify major world religions and their core beliefs",
+        "Analyze primary sources from ancient civilizations"
+      ],
+      "typical_mistakes": [
+        "Confusing Greek and Roman gods/myths",
+        "Not understanding how geography shaped ancient civilizations"
+      ],
+      "prerequisite_grade": 5
+    }
+  }
+}

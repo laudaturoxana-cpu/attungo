@@ -1,0 +1,110 @@
+{
+  "curriculum": "US_HOMESCHOOL",
+  "grade": 5,
+  "language": "en",
+  "subjects": {
+    "Mathematics (Core Knowledge Grade 5)": {
+      "key_topics": [
+        "Fractions: multiplying fractions and mixed numbers",
+        "Dividing unit fractions and whole numbers",
+        "Decimals: all four operations with decimals to thousandths",
+        "Place value: understanding through 1,000,000,000",
+        "Order of operations: PEMDAS with multiple steps",
+        "Introduction to integers: positive and negative on a number line",
+        "Coordinate plane: all four quadrants, graphing ordered pairs",
+        "Patterns and functions: input/output tables",
+        "Volume: rectangular prisms (V = l × w × h)",
+        "Measurement conversions: customary and metric",
+        "Geometry: classifying polygons, triangles, quadrilaterals"
+      ],
+      "competences": [
+        "Multiply and divide fractions and mixed numbers",
+        "Perform all four operations with decimals accurately",
+        "Apply order of operations (PEMDAS) correctly",
+        "Graph points in all four quadrants of the coordinate plane",
+        "Calculate volume of rectangular prisms"
+      ],
+      "typical_mistakes": [
+        "PEMDAS errors: performing addition before multiplication",
+        "Inversion error in division of fractions (not flipping divisor)",
+        "Decimal multiplication: misplacing the decimal in the product",
+        "Confusing x and y axes when graphing coordinates"
+      ],
+      "prerequisite_grade": 4
+    },
+    "English Language Arts (Core Knowledge Grade 5)": {
+      "key_topics": [
+        "Reading: classic literature, myths and legends from world cultures",
+        "Literary analysis: author's purpose, point of view, rhetoric",
+        "Comprehension strategies: visualizing, questioning, synthesising",
+        "Informational text: primary and secondary sources",
+        "Evaluating arguments: identifying logical fallacies",
+        "Writing: argumentative essays with evidence and counterargument",
+        "Research paper: MLA format, bibliography, in-text citation",
+        "Grammar: gerunds, infinitives, participial phrases",
+        "Advanced vocabulary: etymology, connotation vs. denotation",
+        "Speaking: oral reports, Socratic seminars"
+      ],
+      "competences": [
+        "Write argumentative essays with counterclaims and rebuttals",
+        "Complete a structured research paper with citations",
+        "Identify logical fallacies in arguments",
+        "Use participial phrases and gerunds correctly in writing"
+      ],
+      "typical_mistakes": [
+        "Circular reasoning in arguments (using the claim as evidence)",
+        "Not integrating quotes (dropping them without introduction)",
+        "Dangling participial phrases",
+        "Incorrect MLA citation format"
+      ],
+      "prerequisite_grade": 4
+    },
+    "History and Geography": {
+      "key_topics": [
+        "The Enlightenment: Locke, Rousseau, Voltaire, Montesquieu",
+        "American Revolution: detailed study of key battles and figures",
+        "The Constitution: Articles, Amendments, Federalist Papers",
+        "19th Century America: Industrial Revolution, immigration",
+        "Abolition movement: Frederick Douglass, Harriet Tubman, Underground Railroad",
+        "The Civil War: detailed study — Gettysburg, Sherman's March",
+        "World Geography: Asia — physical and political features",
+        "Latin America: geography, history, independence movements"
+      ],
+      "competences": [
+        "Explain Enlightenment ideas and their influence on the Constitution",
+        "Analyse primary sources from the Civil War era",
+        "Describe the Industrial Revolution's impact on American society",
+        "Locate and describe physical and political features of Asia"
+      ],
+      "typical_mistakes": [
+        "Confusing Constitutional Amendments (1st, 2nd, 4th, 5th)",
+        "Not understanding how Enlightenment ideas influenced the founders"
+      ],
+      "prerequisite_grade": 4
+    },
+    "Science": {
+      "key_topics": [
+        "Life Science: cells — mitosis, DNA basics",
+        "Genetics: traits, dominant and recessive genes, Punnett squares",
+        "Evolution: natural selection, fossil evidence, adaptation",
+        "Earth Science: plate tectonics, earthquakes, volcanoes",
+        "Atmosphere: layers, weather patterns, climate change basics",
+        "Physical Science: chemistry — atoms, elements, compounds, mixtures",
+        "Chemical vs. physical changes",
+        "The Periodic Table: introduction to organisation"
+      ],
+      "competences": [
+        "Complete basic Punnett squares for monohybrid crosses",
+        "Explain plate tectonics and connect to earthquakes/volcanoes",
+        "Distinguish physical from chemical changes with examples",
+        "Explain natural selection using a real or hypothetical example"
+      ],
+      "typical_mistakes": [
+        "Punnett square errors (not filling all four boxes)",
+        "Confusing physical and chemical changes",
+        "Thinking natural selection is goal-directed"
+      ],
+      "prerequisite_grade": 4
+    }
+  }
+}

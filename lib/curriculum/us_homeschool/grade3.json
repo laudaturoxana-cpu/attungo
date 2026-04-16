@@ -1,0 +1,113 @@
+{
+  "curriculum": "US_HOMESCHOOL",
+  "grade": 3,
+  "language": "en",
+  "subjects": {
+    "Mathematics (Core Knowledge Grade 3)": {
+      "key_topics": [
+        "Multiplication: facts 0-12, multiplication tables mastery",
+        "Division: basic facts, relationship to multiplication",
+        "Multi-digit multiplication: two-digit by one-digit",
+        "Long division: one-digit divisors",
+        "Fractions: numerator and denominator, fractions on a number line",
+        "Equivalent fractions: finding and comparing",
+        "Adding and subtracting fractions with like denominators",
+        "Place value: to 10,000",
+        "Rounding: nearest 10, 100, 1000",
+        "Measurement: area using unit squares, perimeter",
+        "Elapsed time: calculating time intervals",
+        "Geometry: quadrilaterals, right angles",
+        "Graphs: line plots, pictographs, bar graphs"
+      ],
+      "competences": [
+        "Know multiplication and division facts 0-12 from memory",
+        "Find equivalent fractions and compare fractions",
+        "Calculate area and perimeter of rectangles",
+        "Read and create line plots with fractional units",
+        "Solve word problems using all four operations"
+      ],
+      "typical_mistakes": [
+        "Multiplication fact errors for 7×8, 6×7, 8×9",
+        "Confusing perimeter and area calculations",
+        "Not simplifying fractions after calculations",
+        "Errors in long division (forgetting remainder)"
+      ],
+      "prerequisite_grade": 2
+    },
+    "English Language Arts (Core Knowledge Grade 3)": {
+      "key_topics": [
+        "Reading: chapter books, myths, folktales, biographies",
+        "Comprehension: theme, character motivation, cause and effect",
+        "Figurative language: simile, metaphor, personification",
+        "Point of view: first vs. third person",
+        "Writing: opinion writing with supporting reasons",
+        "Narrative writing: well-structured stories with dialogue",
+        "Informational writing: paragraphs with topic sentences",
+        "Research: gathering information from texts and reference materials",
+        "Grammar: common and proper nouns, adjectives, adverbs, prepositions",
+        "Sentences: simple, compound, and complex",
+        "Spelling: Greek and Latin roots, prefixes, suffixes"
+      ],
+      "competences": [
+        "Identify theme and character motivation in grade-level literature",
+        "Write opinion essays with organised reasons and conclusions",
+        "Write narrative stories with dialogue and descriptive detail",
+        "Use compound and complex sentences in writing"
+      ],
+      "typical_mistakes": [
+        "Theme confusion: stating topic instead of theme (e.g., 'dogs' instead of 'loyalty is important')",
+        "Dialogue punctuation errors",
+        "Run-on sentences (joining with 'and then' repeatedly)",
+        "Not using transition words between paragraphs"
+      ],
+      "prerequisite_grade": 2
+    },
+    "History and Geography": {
+      "key_topics": [
+        "Ancient Greece: city-states, Athens and Sparta, democracy",
+        "Greek mythology: gods and heroes (Zeus, Athena, Odyssey)",
+        "Ancient Rome: Republic, Empire, Julius Caesar, Augustus",
+        "Roman contributions: law, architecture, language",
+        "World Geography: Europe — major countries and capitals",
+        "American History: the Civil War — causes and consequences",
+        "Abraham Lincoln and the Emancipation Proclamation",
+        "Reconstruction: changes and challenges after the Civil War"
+      ],
+      "competences": [
+        "Compare Athens and Sparta as political systems",
+        "Describe major contributions of ancient Greece and Rome",
+        "Explain causes and consequences of the Civil War",
+        "Locate European countries on a map"
+      ],
+      "typical_mistakes": [
+        "Confusing Greek and Roman gods (Zeus/Jupiter, Poseidon/Neptune)",
+        "Oversimplifying Civil War causes"
+      ],
+      "prerequisite_grade": 2
+    },
+    "Science": {
+      "key_topics": [
+        "Life Science: ecosystems, food webs, energy flow",
+        "Adaptations: physical and behavioural adaptations",
+        "Habitats: biomes of North America",
+        "Earth Science: weather instruments — thermometer, barometer, anemometer",
+        "Water cycle: evaporation, condensation, precipitation",
+        "Rocks and minerals: classification, rock cycle",
+        "Physical Science: simple machines — lever, pulley, inclined plane, wheel and axle",
+        "Forces: gravity, friction, mass vs. weight"
+      ],
+      "competences": [
+        "Explain energy flow through a food web",
+        "Describe the water cycle with correct vocabulary",
+        "Classify rocks as igneous, sedimentary, or metamorphic",
+        "Identify and explain simple machines in everyday life"
+      ],
+      "typical_mistakes": [
+        "Confusing mass and weight",
+        "Thinking the water cycle has a starting point",
+        "Confusing producers, consumers, and decomposers"
+      ],
+      "prerequisite_grade": 2
+    }
+  }
+}

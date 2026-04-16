@@ -1,0 +1,93 @@
+{
+  "curriculum": "EN_CAMBRIDGE",
+  "grade": 3,
+  "language": "en",
+  "subjects": {
+    "Mathematics (Cambridge Primary Stage 3)": {
+      "key_topics": [
+        "Number: reading and ordering numbers to 1000",
+        "Rounding to the nearest 10 or 100",
+        "Addition and subtraction of three-digit numbers",
+        "Multiplication tables: 2, 3, 4, 5, 6, 10",
+        "Multiplication of two-digit by one-digit numbers",
+        "Division: dividing two-digit numbers by one-digit numbers",
+        "Fractions: finding fractions of amounts, equivalent fractions",
+        "Comparing and ordering fractions with the same denominator",
+        "Decimals: tenths as decimals and fractions",
+        "Geometry: properties of 2D shapes — sides, angles",
+        "Right angles: identifying and comparing",
+        "Perimeter of rectilinear shapes",
+        "Area: counting squares",
+        "Measurement: metric units for length, mass, capacity",
+        "Time: reading time to the minute, 24-hour clock",
+        "Data: tables, bar charts, pictograms, Carroll and Venn diagrams"
+      ],
+      "competences": [
+        "Add and subtract three-digit numbers with regrouping",
+        "Know multiplication tables for 2, 3, 4, 5, 6, 10",
+        "Find fractions of amounts and identify equivalent fractions",
+        "Read and interpret data from bar charts and pictograms",
+        "Use metric units confidently for measurement"
+      ],
+      "typical_mistakes": [
+        "Errors in multiplication tables for 6 and 9",
+        "Thinking equivalent fractions are different values",
+        "Confusing perimeter with area",
+        "Reading 24-hour clock times incorrectly (e.g., 14:00 as 4:00)"
+      ],
+      "prerequisite_grade": 2
+    },
+    "English (Cambridge Primary Stage 3)": {
+      "key_topics": [
+        "Reading longer texts: chapters, non-fiction books",
+        "Comprehension: inference, deduction, authorial intent",
+        "Story structure: beginning, build-up, climax, resolution",
+        "Descriptive writing: using similes, adjectives, adverbs",
+        "Informational writing: non-chronological reports",
+        "Instructional writing: sequential steps, imperative verbs",
+        "Persuasive writing: reasons, emotive language",
+        "Grammar: conjunctions for time, cause, contrast",
+        "Apostrophes: possession and contraction",
+        "Paragraphs: organizing writing into paragraphs",
+        "Vocabulary: word families, prefixes (un-, dis-, mis-, re-)"
+      ],
+      "competences": [
+        "Read and respond to a variety of text types with inference",
+        "Write stories with clear structure and descriptive language",
+        "Use paragraphs to organize non-fiction writing",
+        "Apply apostrophes for possession and contraction correctly"
+      ],
+      "typical_mistakes": [
+        "Apostrophe errors (it's vs. its, your vs. you're)",
+        "Starting every sentence with 'The' or 'I'",
+        "Similes that are not effective or mixed up with metaphors",
+        "Over-reliance on common adjectives (nice, big, good)"
+      ],
+      "prerequisite_grade": 2
+    },
+    "Science (Cambridge Primary Stage 3)": {
+      "key_topics": [
+        "Life processes: movement, reproduction, sensitivity, growth, respiration, excretion, nutrition (MRS GREN)",
+        "Habitats: how plants and animals adapt to their environment",
+        "Food webs: multiple interconnected food chains",
+        "States of matter: solids, liquids, gases — particle model",
+        "Changing materials: reversible and irreversible changes",
+        "Forces: gravity, friction, magnetic forces",
+        "Magnets: poles, attraction and repulsion",
+        "Light: reflection, shadows and their changes"
+      ],
+      "competences": [
+        "Identify the seven life processes using MRS GREN",
+        "Construct food webs from food chains",
+        "Distinguish reversible from irreversible changes",
+        "Investigate magnetic forces and describe results"
+      ],
+      "typical_mistakes": [
+        "Confusing respiration with breathing",
+        "Thinking MRS GREN applies only to animals, not plants",
+        "Confusing reversible and irreversible changes (melting is reversible)"
+      ],
+      "prerequisite_grade": 2
+    }
+  }
+}

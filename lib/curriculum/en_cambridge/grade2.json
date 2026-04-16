@@ -1,0 +1,92 @@
+{
+  "curriculum": "EN_CAMBRIDGE",
+  "grade": 2,
+  "language": "en",
+  "subjects": {
+    "Mathematics (Cambridge Primary Stage 2)": {
+      "key_topics": [
+        "Number: counting and ordering numbers to 100",
+        "Place value: tens and ones in two-digit numbers",
+        "Comparing and ordering two-digit numbers",
+        "Number sequences: counting in 2s, 3s, 4s, 5s, 10s",
+        "Addition and subtraction within 100",
+        "Adding 10 and multiples of 10 to any two-digit number",
+        "Introduction to multiplication: equal groups, arrays",
+        "Multiplication facts for 2 and 10",
+        "Division as sharing and grouping",
+        "Fractions: halves, thirds, quarters of shapes and numbers",
+        "Geometry: describing and sorting 2D and 3D shapes",
+        "Symmetry: identifying lines of symmetry",
+        "Measurement: measuring length in cm and m, mass in kg and g",
+        "Money: recognising coins and notes, adding amounts",
+        "Time: reading time to the half hour, using calendars"
+      ],
+      "competences": [
+        "Understand place value in two-digit numbers and partition them",
+        "Add and subtract within 100 using informal and formal methods",
+        "Know multiplication facts for 2 and 10",
+        "Find fractions (half, quarter, third) of shapes and quantities",
+        "Measure and compare lengths, masses in standard units"
+      ],
+      "typical_mistakes": [
+        "Not regrouping (carrying) when adding two-digit numbers",
+        "Confusion between sharing and grouping interpretations of division",
+        "Thinking larger denominator means larger fraction",
+        "Errors reading cm on a ruler (not starting from zero)"
+      ],
+      "prerequisite_grade": 1
+    },
+    "English (Cambridge Primary Stage 2)": {
+      "key_topics": [
+        "Reading a variety of texts: fiction, non-fiction, poetry",
+        "Comprehension: retrieving information, making inferences",
+        "Phonics consolidation: vowel digraphs, split digraphs",
+        "Spelling: common patterns, tricky words",
+        "Reading fluency: reading aloud with expression and accuracy",
+        "Writing: sentences with varied structure",
+        "Punctuation: capital letters, full stops, question marks, exclamation marks",
+        "Nouns, verbs, adjectives, adverbs in sentences",
+        "Planning and writing short texts: recounts, instructions, stories",
+        "Speaking: presenting ideas to the class, role play"
+      ],
+      "competences": [
+        "Read and comprehend a range of texts appropriate to Stage 2",
+        "Write short texts in different forms with correct punctuation",
+        "Use phonics to spell unfamiliar words",
+        "Speak clearly and listen attentively in discussions"
+      ],
+      "typical_mistakes": [
+        "Confusing homophones (their/there, to/too)",
+        "Using the same connective throughout (always 'and then')",
+        "Not varying sentence openers in writing",
+        "Forgetting question marks and exclamation marks"
+      ],
+      "prerequisite_grade": 1
+    },
+    "Science (Cambridge Primary Stage 2)": {
+      "key_topics": [
+        "Plants: what plants need to grow (water, light, warmth)",
+        "Humans and animals: diet and nutrition",
+        "Food chains: producer, consumer, predator, prey",
+        "Materials: changing state — melting, freezing, dissolving",
+        "Solids, liquids, and gases",
+        "Movement: pushes, pulls, friction",
+        "Light: how we see, opaque/transparent/translucent materials",
+        "Sound: vibration, pitch, and loudness"
+      ],
+      "competences": [
+        "Investigate what plants need to grow and present results",
+        "Construct simple food chains",
+        "Sort materials by state: solid, liquid, gas",
+        "Investigate light and shadow",
+        "Describe sounds in terms of pitch and loudness"
+      ],
+      "typical_mistakes": [
+        "Thinking plants get food from soil (not making it through photosynthesis)",
+        "Confusing predator and prey",
+        "Confusing transparent and translucent"
+      ],
+      "prerequisite_grade": 1
+    }
+  }
+}

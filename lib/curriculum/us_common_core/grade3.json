@@ -1,0 +1,119 @@
+{
+  "curriculum": "US_COMMON_CORE",
+  "grade": 3,
+  "language": "en",
+  "subjects": {
+    "Mathematics": {
+      "key_topics": [
+        "Multiplication and division within 100: meaning and relationship",
+        "Multiplication tables (facts) 0-10: fluency",
+        "Properties of multiplication: commutative, associative, distributive",
+        "Division as equal groups and as unknown factor problems",
+        "Word problems involving multiplication and division",
+        "Two-step word problems using four operations",
+        "Patterns in arithmetic: identifying arithmetic patterns",
+        "Number and Operations in Base Ten: rounding to nearest 10 or 100",
+        "Fluently adding and subtracting within 1000",
+        "Multiplying one-digit numbers by multiples of 10",
+        "Number and Operations — Fractions: unit fractions, fractions on a number line",
+        "Comparing fractions with same numerator or denominator",
+        "Equivalent fractions (introduction)",
+        "Measurement and Data: measuring to the nearest half/quarter inch",
+        "Area: understanding area, counting unit squares",
+        "Perimeter of polygons",
+        "Geometry: categorizing shapes by properties (quadrilaterals)"
+      ],
+      "competences": [
+        "Fluently multiply and divide within 100",
+        "Solve two-step word problems using all four operations",
+        "Understand fractions as numbers, represent on number line",
+        "Find area by multiplying side lengths",
+        "Understand perimeter as a measurement around a figure"
+      ],
+      "typical_mistakes": [
+        "Confusing multiplication and addition in word problems",
+        "Errors in multiplication facts for 6, 7, 8",
+        "Confusing area and perimeter (adding sides for area instead of multiplying)",
+        "Not understanding fractions as parts of a whole (thinking bigger denominator = bigger piece)",
+        "Forgetting to carry in multi-digit addition"
+      ],
+      "prerequisite_grade": 2
+    },
+    "English Language Arts": {
+      "key_topics": [
+        "Reading Literature: theme, central message, lessons from stories",
+        "Determining point of view: author vs. narrator/character",
+        "Comparing and contrasting themes and settings of stories",
+        "Reading Informational Text: main idea and supporting details",
+        "Using text features (headings, captions, glossary) to locate information",
+        "Describing the logical connection between sentences and paragraphs",
+        "Phonics: decoding multisyllabic words, common Latin suffixes",
+        "Reading with fluency, accuracy, and appropriate rate",
+        "Writing: opinion essays with introduction, supporting reasons, conclusion",
+        "Informative/explanatory writing with facts and details",
+        "Narrative writing: sequenced events, descriptive details, dialogue",
+        "Research: gathering information from multiple sources",
+        "Language: abstract nouns, regular past tense, simple verb tenses, comparative adjectives"
+      ],
+      "competences": [
+        "Identify theme and main idea in literature and informational texts",
+        "Write multi-paragraph opinion, informative, and narrative texts",
+        "Use text evidence to support answers",
+        "Read third-grade text accurately and fluently (90+ words per minute)"
+      ],
+      "typical_mistakes": [
+        "Confusing main idea with topic",
+        "Writing opinions without reasons or evidence",
+        "Using vague pronouns (it, they) without clear antecedents",
+        "Not using transitional words in writing",
+        "Difficulty identifying theme vs. summarizing plot"
+      ],
+      "prerequisite_grade": 2
+    },
+    "Science (NGSS-aligned)": {
+      "key_topics": [
+        "Forces and interactions: balanced/unbalanced forces, magnets",
+        "Inheritance and variation of traits",
+        "Fossils and what they reveal about ancient environments",
+        "Weather and climate patterns: seasonal changes, climate data",
+        "Impact of weather on humans",
+        "Climate solutions: ways to reduce weather-related hazards",
+        "Ecosystems: food chains, food webs, interdependence"
+      ],
+      "competences": [
+        "Investigate forces and their effects on motion",
+        "Explain how fossils provide evidence of past life",
+        "Analyze and interpret weather data",
+        "Describe food chains and food webs in ecosystems"
+      ],
+      "typical_mistakes": [
+        "Confusing force direction and magnitude",
+        "Thinking fossils form quickly (not understanding geological time)",
+        "Confusing producers, consumers, decomposers in food webs"
+      ],
+      "prerequisite_grade": 2
+    },
+    "Social Studies": {
+      "key_topics": [
+        "Local and state government structure",
+        "State history and geography",
+        "Native American cultures and contributions",
+        "Economics: supply and demand, scarcity",
+        "Geography: using maps to identify regions of the US",
+        "Citizenship: rights and responsibilities",
+        "Historical figures: people who fought for equality"
+      ],
+      "competences": [
+        "Describe levels of government (local, state, national)",
+        "Identify geographic regions of the United States",
+        "Explain supply, demand, and scarcity",
+        "Describe contributions of historical figures to American history"
+      ],
+      "typical_mistakes": [
+        "Confusing state and national government roles",
+        "Difficulty reading thematic maps"
+      ],
+      "prerequisite_grade": 2
+    }
+  }
+}

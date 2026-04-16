@@ -1,0 +1,119 @@
+{
+  "curriculum": "US_COMMON_CORE",
+  "grade": 7,
+  "language": "en",
+  "subjects": {
+    "Mathematics": {
+      "key_topics": [
+        "Ratios and Proportional Relationships: computing unit rates with fractions",
+        "Proportional relationships: equations, graphs, tables",
+        "Percent problems: discounts, taxes, tips, simple interest, percent increase/decrease",
+        "The Number System: operations with rational numbers (all four operations)",
+        "Converting between fractions and decimals",
+        "Expressions and Equations: applying properties to expand and factor linear expressions",
+        "Solving multi-step equations and inequalities",
+        "Rewriting equations in equivalent forms",
+        "Geometry: scale drawings and geometric figures",
+        "Circles: circumference (C = πd or 2πr) and area (A = πr²)",
+        "Area, surface area, and volume of 2D and 3D figures",
+        "Angles: supplementary, complementary, vertical, and adjacent angles",
+        "Triangle inequality theorem",
+        "Statistics and Probability: random sampling and inference",
+        "Comparing populations using data distributions",
+        "Probability of simple and compound events",
+        "Experimental vs. theoretical probability"
+      ],
+      "competences": [
+        "Solve multi-step real-life problems with rational numbers",
+        "Identify proportional relationships and write equations",
+        "Calculate percent change, discounts, and simple interest",
+        "Find circumference and area of circles",
+        "Calculate probability of simple and compound events"
+      ],
+      "typical_mistakes": [
+        "Errors with negative number operations (especially subtracting negatives)",
+        "Confusing percent change with absolute change",
+        "Using diameter instead of radius in circle area formula",
+        "Confusing theoretical and experimental probability",
+        "Errors solving two-step equations (wrong order of inverse operations)"
+      ],
+      "prerequisite_grade": 6
+    },
+    "English Language Arts": {
+      "key_topics": [
+        "Reading Literature: analyzing theme, character development, plot structure",
+        "How multiple themes interact and build in complex texts",
+        "Author's style: word choice, sentence structure, tone",
+        "Reading Informational Text: analyzing the structure of arguments",
+        "Evaluating an author's claims and evidence",
+        "Comparing two or more authors on the same topic",
+        "Vocabulary: Greek and Latin affixes, figurative language, technical language",
+        "Writing: argumentative essays with clear thesis, evidence, rebuttals",
+        "Informative writing: using domain-specific vocabulary, precise language",
+        "Narrative writing: using multiple techniques for effect",
+        "Research: evaluating source credibility, synthesizing research",
+        "Language: phrases and clauses, sentence types, comma usage, semicolons"
+      ],
+      "competences": [
+        "Analyze complex literary and informational texts with text evidence",
+        "Write sophisticated argumentative essays with rebuttals",
+        "Evaluate credibility and relevance of sources",
+        "Demonstrate command of grade 7 grammar conventions"
+      ],
+      "typical_mistakes": [
+        "Using unreliable internet sources without evaluating credibility",
+        "Weak rebuttals (just saying the counterargument is wrong without evidence)",
+        "Vague thesis statements that don't make a specific claim",
+        "Run-on sentences in long argumentative paragraphs",
+        "Confusing complex and compound sentences"
+      ],
+      "prerequisite_grade": 6
+    },
+    "Science (NGSS-aligned)": {
+      "key_topics": [
+        "Structure and properties of matter: atoms, elements, periodic table",
+        "Chemical reactions: conservation of mass, types of reactions",
+        "Forces and Newton's Laws of Motion",
+        "Energy: kinetic and potential energy, mechanical advantage",
+        "Earth's history: evidence from rocks and fossils",
+        "Human impacts: land use, pollution, resource depletion",
+        "Natural selection and evolution: adaptation over time"
+      ],
+      "competences": [
+        "Apply Newton's Laws of Motion to real-world scenarios",
+        "Explain conservation of mass in chemical reactions",
+        "Construct explanations for evolution by natural selection",
+        "Analyze human impacts on Earth's systems"
+      ],
+      "typical_mistakes": [
+        "Confusing mass and weight",
+        "Thinking evolution is a linear process toward perfection",
+        "Errors applying Newton's Third Law (not identifying action-reaction pairs)"
+      ],
+      "prerequisite_grade": 6
+    },
+    "Social Studies / History": {
+      "key_topics": [
+        "Medieval world: feudalism, the Church, the Crusades",
+        "Renaissance and Reformation in Europe",
+        "Age of Exploration: causes, routes, consequences",
+        "Early African civilizations: Mali, Ghana, Songhai",
+        "Asian empires: Mongol, Ottoman, Mughal, Ming China",
+        "Columbian Exchange: impact on Old and New World",
+        "Colonialism: causes, effects on indigenous peoples",
+        "Enlightenment ideas and their influence"
+      ],
+      "competences": [
+        "Explain the causes and consequences of European exploration",
+        "Analyze the impact of the Columbian Exchange",
+        "Compare major world empires of the medieval and early modern period",
+        "Evaluate primary sources from different cultures and perspectives"
+      ],
+      "typical_mistakes": [
+        "Oversimplifying colonialism without acknowledging indigenous perspectives",
+        "Confusing the Renaissance with the Enlightenment"
+      ],
+      "prerequisite_grade": 6
+    }
+  }
+}

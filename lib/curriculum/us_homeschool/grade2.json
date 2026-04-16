@@ -1,0 +1,114 @@
+{
+  "curriculum": "US_HOMESCHOOL",
+  "grade": 2,
+  "language": "en",
+  "subjects": {
+    "Mathematics (Core Knowledge Grade 2)": {
+      "key_topics": [
+        "Place value: hundreds, tens, ones",
+        "Reading and writing numbers to 1,000",
+        "Comparing and ordering three-digit numbers",
+        "Addition within 1,000 with regrouping",
+        "Subtraction within 1,000 with regrouping",
+        "Introduction to multiplication: equal groups, skip counting",
+        "Multiplication facts: 2s, 5s, 10s",
+        "Introduction to division: fair shares",
+        "Fractions: halves, thirds, fourths of shapes",
+        "Money: making change with dollars and cents",
+        "Measurement: ruler (inches and centimetres), yardstick",
+        "Telling time to the nearest five minutes",
+        "Graphs: bar graphs, line plots",
+        "Geometry: congruence, symmetry, 3D shapes"
+      ],
+      "competences": [
+        "Add and subtract three-digit numbers with regrouping",
+        "Skip count by 2, 5, and 10 to multiply",
+        "Tell time to the nearest 5 minutes",
+        "Make change for simple purchases",
+        "Read and create simple bar graphs"
+      ],
+      "typical_mistakes": [
+        "Not regrouping from hundreds column in subtraction",
+        "Confusing the hour and minute hands",
+        "Computing change by counting up incorrectly",
+        "Not aligning digits when adding multi-digit numbers"
+      ],
+      "prerequisite_grade": 1
+    },
+    "English Language Arts (Core Knowledge Grade 2)": {
+      "key_topics": [
+        "Phonics: vowel teams (oa, ea, ai, ou), r-controlled vowels (ar, er, ir, or, ur)",
+        "Suffixes: -ing, -ed, -er, -est, -ly, -ful, -less",
+        "Reading multi-syllabic words: compound words, syllable types",
+        "Reading fluency: 90 words per minute by year end",
+        "Comprehension: main idea, supporting details, sequence",
+        "Making inferences from text",
+        "Writing: personal narratives, friendly letters, how-to writing",
+        "Editing: capital letters, punctuation, spelling",
+        "Grammar: plural nouns, past-tense verbs, pronouns",
+        "Spelling: word families, spelling patterns",
+        "Research: using reference materials (dictionary, encyclopedia)"
+      ],
+      "competences": [
+        "Decode multisyllabic words using knowledge of syllable patterns",
+        "Read grade 2 text at 90 wpm with comprehension",
+        "Write personal narratives with a beginning, middle, and end",
+        "Use correct grammar for plurals and past-tense verbs"
+      ],
+      "typical_mistakes": [
+        "Irregular past tense errors (goed instead of went, drawed instead of drew)",
+        "Confusing homophones in spelling (bear/bare, hear/here)",
+        "Writing sentences that are too short or lack detail",
+        "Over-punctuating (putting periods after every phrase)"
+      ],
+      "prerequisite_grade": 1
+    },
+    "History and Geography": {
+      "key_topics": [
+        "American History: the Constitution, Bill of Rights",
+        "Early American Democracy: Founding Fathers, government structure",
+        "Westward Expansion: pioneers, Lewis and Clark",
+        "Native Americans of the Plains",
+        "Immigration: Ellis Island, immigrant stories",
+        "World Geography: geographic features of North America",
+        "Ancient Civilizations: Ancient China — the Great Wall, inventions",
+        "Ancient India: the Indus Valley, Hinduism and Buddhism"
+      ],
+      "competences": [
+        "Explain the basic structure of American government",
+        "Describe the experience of pioneers and immigrants",
+        "Locate geographic features of North America on a map",
+        "Compare ancient Chinese and Indian civilisations"
+      ],
+      "typical_mistakes": [
+        "Confusing three branches of government",
+        "Not understanding chronological order of American history"
+      ],
+      "prerequisite_grade": 1
+    },
+    "Science": {
+      "key_topics": [
+        "Living Things: cells, basic biology of plants and animals",
+        "Human Body: skeletal system, muscular system",
+        "Biomes: rainforest, desert, tundra, ocean, grassland",
+        "Matter: solid, liquid, gas; properties of matter",
+        "Changing Matter: melting, freezing, evaporation",
+        "Electricity basics: circuits, conductors, insulators",
+        "Earth Science: erosion, volcanoes, earthquakes",
+        "Solar System: the planets and their order"
+      ],
+      "competences": [
+        "Classify biomes by climate and characteristic plants/animals",
+        "Describe the three states of matter and how matter changes",
+        "Name the planets of the Solar System in order",
+        "Describe what bones and muscles do for the body"
+      ],
+      "typical_mistakes": [
+        "Confusing biomes with ecosystems",
+        "Thinking all matter changes are irreversible",
+        "Confusing planets: Uranus/Neptune, Venus/Mars"
+      ],
+      "prerequisite_grade": 1
+    }
+  }
+}

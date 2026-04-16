@@ -1,0 +1,182 @@
+{
+  "curriculum": "RO_NATIONAL",
+  "grade": 7,
+  "language": "ro",
+  "subjects": {
+    "Matematică": {
+      "key_topics": [
+        "Mulțimea numerelor reale: iraționale, reprezentare pe axa numerelor",
+        "Rădăcina pătrată: definiție, calcul, proprietăți",
+        "Puterile cu exponent întreg: definiție, proprietăți, calcule",
+        "Notația științifică a numerelor mari și mici",
+        "Ecuații de gradul I cu o necunoscută",
+        "Inecuații de gradul I cu o necunoscută",
+        "Sisteme de ecuații de gradul I cu două necunoscute",
+        "Funcția de gradul I: definiție, reprezentare grafică",
+        "Panta și ordonata la origine",
+        "Triunghiul: congruența triunghiurilor (cazuri SSS, SAS, ASA)",
+        "Teorema lui Pitagora și reciproca",
+        "Similitudinea triunghiurilor",
+        "Aria și perimetrul poligoanelor regulate",
+        "Corpuri geometrice: piramida — arie și volum",
+        "Statistică: media aritmetică, mediana, modul"
+      ],
+      "competences": [
+        "Efectuează calcule cu numere reale, puteri și rădăcini",
+        "Rezolvă ecuații și inecuații de gradul I",
+        "Rezolvă sisteme de ecuații prin substituție și reducere",
+        "Reprezintă grafic funcții de gradul I",
+        "Aplică teorema lui Pitagora în probleme geometrice",
+        "Calculează arii și volume ale piramidei"
+      ],
+      "typical_mistakes": [
+        "Greșeli la extragerea rădăcinii pătrate (nu aproximează corect)",
+        "Confuzia soluției ecuației cu verificarea",
+        "Greșeli la sistemul de ecuații (semn la substituție)",
+        "Calcularea incorectă a pantei (delta y / delta x)",
+        "Greșeli la teorema lui Pitagora (adunare în loc de scădere la catetă)"
+      ],
+      "prerequisite_grade": 6
+    },
+    "Limba și literatura română": {
+      "key_topics": [
+        "Romanul: structură, perspectivă narativă, personaje",
+        "Ion de Liviu Rebreanu (fragmente)",
+        "Poezia interbelică: Lucian Blaga, George Bacovia",
+        "Tudor Arghezi: arta poetică",
+        "Propoziția subordonată completivă directă și indirectă",
+        "Subordonata circumstanțială de loc, timp, mod, cauză, scop, condiție, concesie",
+        "Fraza: coordonare și subordonare",
+        "Stilistica: limbajul artistic vs. limbajul științific",
+        "Textul argumentativ: structura, tipuri de argumente",
+        "Eseul structurat"
+      ],
+      "competences": [
+        "Analizează romanul ca gen epic",
+        "Identifică și analizează propoziții subordonate",
+        "Construiește texte argumentative coerente",
+        "Redactează eseuri structurate de 30-40 rânduri"
+      ],
+      "typical_mistakes": [
+        "Confuzia subordonatei cauzale cu cea condiționale",
+        "Lipsa coerenței în textele argumentative",
+        "Identificarea greșită a elementelor de relație (conjuncții vs pronume relative)"
+      ],
+      "prerequisite_grade": 6
+    },
+    "Biologie": {
+      "key_topics": [
+        "Omul: sistemul nervos — anatomie și fiziologie",
+        "Sistemul endocrin: glande și hormoni",
+        "Sistemul reproducător: noțiuni de bază, pubertate",
+        "Genetica: ADN, cromozomi, gene (noțiuni introductive)",
+        "Ereditatea: transmiterea caracterelor",
+        "Ecologia: ecosisteme, factori ecologici",
+        "Poluarea și consecințele asupra sănătății",
+        "Adaptarea organismelor la mediu"
+      ],
+      "competences": [
+        "Descrie funcționarea sistemului nervos și endocrin",
+        "Explică transmiterea caracterelor ereditare",
+        "Analizează relații ecologice în ecosisteme",
+        "Propune măsuri de protecție a mediului"
+      ],
+      "typical_mistakes": [
+        "Confuzia neuron-nerv",
+        "Neînțelegerea relației ADN-cromozom-genă",
+        "Confuzia factori abiotici-biotici"
+      ],
+      "prerequisite_grade": 6
+    },
+    "Geografie": {
+      "key_topics": [
+        "Asia: relief, climă, hidrografie, vegetație",
+        "Marile civilizații ale Asiei: China, India, Japonia",
+        "Africa: relief, climă, vegetație, fauna",
+        "Probleme specifice Africii: deșertificare, sărăcie",
+        "America: Nord, Centrală, Sud — caracteristici",
+        "Oceanele și Australia",
+        "Globalizarea și consecințele ei geografice"
+      ],
+      "competences": [
+        "Localizează și descrie continentele studiate",
+        "Analizează relațiile om-mediu în contexte globale",
+        "Compară regiunile geografice prin indicatori specifici"
+      ],
+      "typical_mistakes": [
+        "Confuzia climatelor africane (savana vs deșert)",
+        "Localizarea greșită a statelor americane pe hartă"
+      ],
+      "prerequisite_grade": 6
+    },
+    "Istorie": {
+      "key_topics": [
+        "Secolul XIX: mișcări naționale în Europa",
+        "Unirea Principatelor Române 1859: Alexandru Ioan Cuza",
+        "Reformele lui Cuza și Carol I",
+        "Independența României 1877-1878: Războiul de Independență",
+        "România la 1900: economie, societate, cultură",
+        "Primul Război Mondial: cauze, desfășurare",
+        "România în Primul Război Mondial",
+        "Marea Unire 1918: unirea Transilvaniei, Basarabiei, Bucovinei"
+      ],
+      "competences": [
+        "Explică procesul formării statului național român modern",
+        "Analizează cauzele și consecințele Primului Război Mondial",
+        "Argumentează semnificația Marii Uniri din 1918"
+      ],
+      "typical_mistakes": [
+        "Confuzia între Unirea din 1859 și Unirea din 1918",
+        "Neînțelegerea contextului internațional al Marii Uniri"
+      ],
+      "prerequisite_grade": 6
+    },
+    "Fizică": {
+      "key_topics": [
+        "Elemente de mecanică: lucrul mecanic, puterea, energia",
+        "Energia mecanică: cinetică și potențială, conservarea energiei",
+        "Căldura și temperatura: căldura specifică",
+        "Propagarea căldurii: conducție, convecție, radiație",
+        "Efectul termic al curentului electric",
+        "Electromagnetismul: câmpul magnetic, electromagneți",
+        "Motorul electric și generatorul electric (principiu)"
+      ],
+      "competences": [
+        "Calculează lucrul mecanic și puterea",
+        "Aplică legea conservării energiei mecanice",
+        "Calculează cantitățile de căldură schimbate",
+        "Descrie principiul de funcționare al motorului electric"
+      ],
+      "typical_mistakes": [
+        "Confuzia lucru mecanic-energie (W vs E)",
+        "Greșeli la calculul căldurii specifice (formula Q=mcΔT)",
+        "Confuzia conducție-convecție-radiație"
+      ],
+      "prerequisite_grade": 6
+    },
+    "Chimie": {
+      "key_topics": [
+        "Oxizii metalici și nemetalici: proprietăți, reacții",
+        "Acizii anorganici: HCl, H2SO4, HNO3 — proprietăți, reacții",
+        "Bazele: NaOH, Ca(OH)2 — proprietăți, reacții",
+        "Sărurile: nomenclatură, proprietăți, utilizări",
+        "Reacții de neutralizare",
+        "pH-ul: scara pH, soluții acide, bazice, neutre",
+        "Metale: proprietăți generale, coroziunea",
+        "Seria activității metalelor"
+      ],
+      "competences": [
+        "Descrie proprietățile acizilor și bazelor",
+        "Scrie ecuații ale reacțiilor de neutralizare",
+        "Explică fenomenul de coroziune și metode de prevenire",
+        "Utilizează scala pH pentru clasificarea soluțiilor"
+      ],
+      "typical_mistakes": [
+        "Greșeli la ecuarea reacțiilor chimice (nu respectă conservarea masei)",
+        "Confuzia acid-bază la determinarea pH",
+        "Greșeli la nomenclatura sărurilor (sulfat vs sulfit)"
+      ],
+      "prerequisite_grade": 6
+    }
+  }
+}

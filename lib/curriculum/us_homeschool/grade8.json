@@ -1,0 +1,116 @@
+{
+  "curriculum": "US_HOMESCHOOL",
+  "grade": 8,
+  "language": "en",
+  "subjects": {
+    "Mathematics (Core Knowledge Grade 8 / Algebra I)": {
+      "key_topics": [
+        "Real number system: rational vs irrational, approximating irrationals",
+        "Integer exponents and scientific notation",
+        "Linear equations: solving in one variable, special cases",
+        "Systems of linear equations: graphing, substitution, elimination",
+        "Linear functions: slope, intercepts, slope-intercept form",
+        "Functions: definition, domain, range, notation",
+        "Comparing linear and exponential functions",
+        "Geometry: transformations — congruence and similarity",
+        "Pythagorean theorem: proof and applications",
+        "Volume of cones, cylinders, spheres",
+        "Statistics: bivariate data, scatter plots, lines of best fit",
+        "Introduction to quadratic expressions"
+      ],
+      "competences": [
+        "Solve systems of equations using three methods",
+        "Write and interpret linear equations from graphs and tables",
+        "Apply the Pythagorean theorem to 2D and 3D problems",
+        "Analyse scatter plots and use lines of best fit for predictions",
+        "Understand function notation and evaluate functions"
+      ],
+      "typical_mistakes": [
+        "Slope calculation errors (using y/x instead of rise/run)",
+        "Sign errors solving systems by elimination",
+        "Forgetting to check solution in both equations of a system",
+        "Pythagorean theorem applied to non-right triangles",
+        "Confusing positive and negative correlation in scatter plots"
+      ],
+      "prerequisite_grade": 7
+    },
+    "English Language Arts (Core Knowledge Grade 8)": {
+      "key_topics": [
+        "Reading: American and world literature — classic and contemporary",
+        "Shakespeare: Macbeth, Hamlet, or Julius Caesar (excerpts/full)",
+        "19th century American literature: Poe, Hawthorne, Twain",
+        "Literary movements: Romanticism, Realism, Naturalism",
+        "Rhetoric: analysing speeches and essays (MLK, Lincoln, Frederick Douglass)",
+        "Writing: extended literary analysis (5-7 paragraphs)",
+        "Argumentative research paper: 5+ pages, 8+ sources",
+        "Grammar: syntactic sophistication, varied sentence construction",
+        "College-prep vocabulary: SAT/ACT word lists and academic vocabulary",
+        "Speaking and listening: formal debate, multimedia presentation"
+      ],
+      "competences": [
+        "Write sophisticated multi-paragraph literary analysis with close reading",
+        "Complete extended argumentative research paper with full MLA citation",
+        "Analyse rhetoric in historical speeches",
+        "Demonstrate mastery of grade 8 grammar and style"
+      ],
+      "typical_mistakes": [
+        "Retelling plot instead of analysis in literary essays",
+        "Weak thesis statements that describe instead of argue",
+        "Not integrating and analysing evidence effectively",
+        "Sentence structure errors in complex syntax"
+      ],
+      "prerequisite_grade": 7
+    },
+    "History and Geography": {
+      "key_topics": [
+        "World War I: causes (MAIN — Militarism, Alliances, Imperialism, Nationalism), key events",
+        "Aftermath: Treaty of Versailles, League of Nations",
+        "Between the Wars: Great Depression, rise of totalitarianism",
+        "World War II: causes, key theatres, Holocaust, atomic bombs",
+        "Cold War: containment, proxy wars (Korea, Vietnam), détente",
+        "Decolonisation: Africa and Asia independence movements",
+        "Civil Rights Movement: detailed study",
+        "Contemporary World: globalisation, terrorism, climate change",
+        "US Government and Civics: detailed study for civic literacy"
+      ],
+      "competences": [
+        "Explain the complex causes of both World Wars",
+        "Analyse the Holocaust and its significance in history",
+        "Evaluate the Cold War from multiple perspectives",
+        "Demonstrate civic literacy including constitutional principles"
+      ],
+      "typical_mistakes": [
+        "Reducing WWI to a single assassination event",
+        "Confusing Korean and Vietnam War contexts",
+        "Not understanding the Separation of Powers in depth"
+      ],
+      "prerequisite_grade": 7
+    },
+    "Science": {
+      "key_topics": [
+        "Biology: ecology — population dynamics, carrying capacity, succession",
+        "Human impact on ecosystems: deforestation, climate change, pollution",
+        "Chemistry: stoichiometry — mole concept, molar mass, mole ratios",
+        "Solutions: solubility, concentration, acids and bases, pH",
+        "Organic chemistry: introduction to carbon compounds",
+        "Physics: waves — mechanical and electromagnetic, wave equations",
+        "Optics: reflection, refraction, lenses and mirrors",
+        "Electromagnetism: electric circuits, Ohm's Law, electromagnetic induction",
+        "Nuclear physics: radioactivity, fission, fusion, nuclear energy"
+      ],
+      "competences": [
+        "Perform stoichiometric calculations using mole concept",
+        "Describe wave behaviour with equations (v = fλ)",
+        "Apply Ohm's Law to circuit calculations",
+        "Analyse human impact on ecosystems with data"
+      ],
+      "typical_mistakes": [
+        "Stoichiometry ratio errors (using wrong mole ratios from equation)",
+        "Confusing concave and convex lenses/mirrors",
+        "Ohm's Law rearrangement errors",
+        "Confusing fission and fusion in nuclear reactions"
+      ],
+      "prerequisite_grade": 7
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "curriculum": "US_COMMON_CORE",
+  "grade": 5,
+  "language": "en",
+  "subjects": {
+    "Mathematics": {
+      "key_topics": [
+        "Operations and Algebraic Thinking: writing and interpreting numerical expressions",
+        "Order of operations (parentheses, brackets, braces)",
+        "Generating two patterns from two rules and identifying relationships",
+        "Number and Operations in Base Ten: place value to billions and thousandths",
+        "Rounding decimals to any place",
+        "Multiplying multi-digit whole numbers fluently",
+        "Dividing with two-digit divisors",
+        "Adding, subtracting, multiplying, and dividing decimals to hundredths",
+        "Number and Operations — Fractions: adding and subtracting fractions with unlike denominators",
+        "Multiplying fractions and mixed numbers",
+        "Dividing unit fractions by whole numbers and whole numbers by unit fractions",
+        "Fractions as division",
+        "Measurement and Data: converting measurement units (same system)",
+        "Volume: understanding volume, using cubic units",
+        "Volume of rectangular prisms using V = l × w × h and V = b × h",
+        "Line plots with fractional data",
+        "Geometry: coordinate plane in the first quadrant",
+        "Classifying two-dimensional figures into categories"
+      ],
+      "competences": [
+        "Apply order of operations with parentheses and brackets",
+        "Fluently multiply multi-digit numbers and divide with two-digit divisors",
+        "Add, subtract, multiply, and divide fractions including mixed numbers",
+        "Add and subtract decimals to hundredths fluently",
+        "Calculate volume of rectangular prisms using formulas"
+      ],
+      "typical_mistakes": [
+        "Ignoring order of operations (left-to-right instead of PEMDAS)",
+        "Adding both numerators and denominators when adding fractions with unlike denominators",
+        "Multiplying denominators instead of finding LCM",
+        "Confusing volume with surface area",
+        "Placing decimal points incorrectly when multiplying decimals"
+      ],
+      "prerequisite_grade": 4
+    },
+    "English Language Arts": {
+      "key_topics": [
+        "Reading Literature: theme and character development across chapters",
+        "Comparing and contrasting two or more stories in the same genre",
+        "Analyzing how narrator's or speaker's point of view influences descriptions",
+        "Reading Informational Text: explaining relationships among concepts",
+        "Drawing on information from multiple texts",
+        "Analyzing how an author uses evidence to support points",
+        "Greek and Latin affixes and roots",
+        "Reading grade-level text with fluency and comprehension",
+        "Writing: opinion essays with organized arguments and evidence",
+        "Informative writing: organized paragraphs with domain-specific vocabulary",
+        "Narrative writing: establishing situation, characters, problem, resolution",
+        "Research: conducting short research projects, synthesizing sources",
+        "Language: conjunctions, prepositions, interjections, perfect verb tenses, correlative conjunctions"
+      ],
+      "competences": [
+        "Write multi-paragraph opinion essays with evidence-based reasons",
+        "Analyze author's purpose and point of view",
+        "Synthesize information from multiple texts on the same topic",
+        "Demonstrate command of grade 5 grammar and language conventions"
+      ],
+      "typical_mistakes": [
+        "Confusing author's purpose with author's point of view",
+        "Not distinguishing fact from opinion in texts",
+        "Weak essay conclusions (just restating the thesis)",
+        "Overusing simple sentences (lack of sentence variety)",
+        "Errors with perfect tenses (has gone vs. went)"
+      ],
+      "prerequisite_grade": 4
+    },
+    "Science (NGSS-aligned)": {
+      "key_topics": [
+        "Matter and its interactions: properties of matter, mixtures and solutions",
+        "Chemical reactions: evidence that a chemical reaction has occurred",
+        "Ecosystems: food webs, cycling of matter, flow of energy",
+        "Biodiversity and humans: human impact on ecosystems",
+        "Earth's systems: water cycle, wind and ocean patterns",
+        "Earth's history: rock strata, geologic time",
+        "Space systems: patterns of stars, role of the sun"
+      ],
+      "competences": [
+        "Distinguish physical and chemical changes",
+        "Trace matter and energy through ecosystems",
+        "Analyze human impacts on Earth's systems",
+        "Describe patterns of Earth's orbit and their effects"
+      ],
+      "typical_mistakes": [
+        "Confusing physical and chemical changes",
+        "Thinking decomposers are not part of the food web",
+        "Confusing rotation (day/night) and revolution (seasons)"
+      ],
+      "prerequisite_grade": 4
+    },
+    "Social Studies": {
+      "key_topics": [
+        "The Civil War: causes (slavery, states' rights), major battles, Emancipation Proclamation",
+        "Reconstruction: successes and failures, effects on freed slaves",
+        "Immigration and industrialization (late 1800s)",
+        "Progressive Era: reforms and reformers",
+        "World geography: continents, oceans, major physical features",
+        "Connecting geography to historical events",
+        "Economics: trade networks, industrialization, global markets"
+      ],
+      "competences": [
+        "Explain causes and consequences of the Civil War",
+        "Describe the impact of immigration on American society",
+        "Analyze primary sources (letters, speeches, photographs)",
+        "Connect geographic features to economic and historical developments"
+      ],
+      "typical_mistakes": [
+        "Oversimplifying Civil War causes to a single issue",
+        "Confusing Reconstruction amendments (13th, 14th, 15th)"
+      ],
+      "prerequisite_grade": 4
+    }
+  }
+}

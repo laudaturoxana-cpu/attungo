@@ -1,0 +1,94 @@
+{
+  "curriculum": "EN_CAMBRIDGE",
+  "grade": 8,
+  "language": "en",
+  "subjects": {
+    "Mathematics (Cambridge Lower Secondary Stage 8)": {
+      "key_topics": [
+        "Number: standard form (scientific notation), bounds and error intervals",
+        "Surds and irrational numbers (introduction)",
+        "Algebra: quadratic expressions — expanding, factorising simple quadratics",
+        "Solving quadratic equations by factorisation",
+        "Simultaneous equations: graphical and algebraic methods",
+        "Inequalities: representing and solving on a number line",
+        "Graphs: quadratic graphs, real-life graphs, distance-time graphs",
+        "Trigonometry: sin, cos, tan in right-angled triangles",
+        "Geometry: circle theorems (angles subtended at centre and circumference)",
+        "Vectors: basic vector notation, adding and subtracting vectors",
+        "Transformations: combined transformations",
+        "Statistics: cumulative frequency, box plots, histograms",
+        "Probability: conditional probability, Venn diagrams"
+      ],
+      "competences": [
+        "Apply trigonometric ratios to find missing sides and angles",
+        "Solve simultaneous equations by substitution and elimination",
+        "Factorise and solve simple quadratic equations",
+        "Construct and interpret cumulative frequency graphs and box plots",
+        "Calculate conditional probability"
+      ],
+      "typical_mistakes": [
+        "Using sin, cos, tan with the wrong sides (not identifying O, A, H correctly)",
+        "Sign errors when solving simultaneous equations by elimination",
+        "Forgetting to reverse inequality sign when multiplying/dividing by negative",
+        "Errors reading cumulative frequency (reading wrong axis)",
+        "Confusing dependent and independent events in probability"
+      ],
+      "prerequisite_grade": 7
+    },
+    "English (Cambridge Lower Secondary Stage 8)": {
+      "key_topics": [
+        "Reading: analytical response to literary and non-literary texts",
+        "Understanding context: historical, social, cultural influences on texts",
+        "Close reading: effect of individual word and phrase choices",
+        "Unseen poetry: analysing form, structure, and language",
+        "Writing: extended analytical essay (multi-paragraph)",
+        "Creative writing: controlled original composition (prose or poetry)",
+        "Argument and rhetoric: evaluating the effectiveness of arguments",
+        "Research-based writing with full citations",
+        "Grammar: syntactic complexity, register, style",
+        "Editing: peer and self-editing for precision and effect",
+        "Speaking: formal presentation with Q&A, collaborative debate"
+      ],
+      "competences": [
+        "Write sophisticated multi-paragraph analytical essays with embedded quotations",
+        "Respond to unseen poetry with technical analysis",
+        "Produce original creative writing with controlled voice and style",
+        "Evaluate and challenge arguments in spoken and written form"
+      ],
+      "typical_mistakes": [
+        "Retelling plot instead of analysing technique",
+        "Insufficient contextualisation in analytical essays",
+        "Poetry analysis that only describes rather than evaluates effect",
+        "Inconsistent voice in creative writing"
+      ],
+      "prerequisite_grade": 7
+    },
+    "Science (Cambridge Lower Secondary Stage 8)": {
+      "key_topics": [
+        "Biology: genetics — DNA, chromosomes, genes, heredity",
+        "Biology: variation, natural selection, evolution",
+        "Biology: health — disease, immune system, vaccines",
+        "Chemistry: the Periodic Table — groups, periods, trends",
+        "Chemistry: chemical bonding — ionic, covalent, metallic (intro)",
+        "Chemistry: rates of reaction — factors affecting speed of reaction",
+        "Chemistry: acids and bases — pH, neutralisation, salts",
+        "Physics: electromagnetism — electric and magnetic fields",
+        "Physics: electromagnetic induction — generators and transformers (intro)",
+        "Physics: nuclear physics — atomic structure, radioactivity, fission/fusion"
+      ],
+      "competences": [
+        "Explain heredity using DNA, genes, and chromosomes",
+        "Describe trends across the Periodic Table",
+        "Analyse factors affecting reaction rates with experimental evidence",
+        "Explain electromagnetic induction and its applications"
+      ],
+      "typical_mistakes": [
+        "Confusing DNA, gene, and chromosome (hierarchy not understood)",
+        "Thinking groups go across the Periodic Table (not periods)",
+        "Confusing fission and fusion",
+        "Thinking alpha radiation is most penetrating (it's least)"
+      ],
+      "prerequisite_grade": 7
+    }
+  }
+}

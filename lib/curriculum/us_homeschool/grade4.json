@@ -1,0 +1,111 @@
+{
+  "curriculum": "US_HOMESCHOOL",
+  "grade": 4,
+  "language": "en",
+  "subjects": {
+    "Mathematics (Core Knowledge Grade 4)": {
+      "key_topics": [
+        "Multi-digit multiplication: up to four digits by two digits",
+        "Long division: two-digit divisors",
+        "Fractions: equivalent fractions, comparing unlike fractions using benchmarks",
+        "Adding and subtracting fractions with unlike denominators",
+        "Multiplying fractions by whole numbers",
+        "Decimals: tenths and hundredths, ordering, comparing",
+        "Adding and subtracting decimals",
+        "Prime and composite numbers, prime factorisation",
+        "Factors and multiples: GCF, LCM",
+        "Angles: measuring with a protractor",
+        "Lines: parallel, perpendicular, intersecting",
+        "Area and perimeter of complex shapes",
+        "Volume: cubic units"
+      ],
+      "competences": [
+        "Multiply four-digit numbers by two-digit numbers",
+        "Add and subtract fractions with unlike denominators",
+        "Add and subtract decimals to the hundredths",
+        "Find prime factorisation and determine GCF and LCM",
+        "Measure and classify angles"
+      ],
+      "typical_mistakes": [
+        "Partial product errors in long multiplication",
+        "Finding LCM incorrectly (using product instead of least multiple)",
+        "Decimal alignment errors in addition and subtraction",
+        "Reading wrong scale on protractor"
+      ],
+      "prerequisite_grade": 3
+    },
+    "English Language Arts (Core Knowledge Grade 4)": {
+      "key_topics": [
+        "Reading: novels, poetry, myths, historical fiction",
+        "Comprehension: summarising, comparing texts, evaluating evidence",
+        "Literary elements: plot, conflict, theme, character development",
+        "Informational text: text structure (chronological, compare-contrast, cause-effect)",
+        "Writing: multi-paragraph essays (5-paragraph structure)",
+        "Research writing: using multiple sources, note-taking, bibliography",
+        "Grammar: subject-verb agreement, pronoun case (I/me, who/whom)",
+        "Modifiers: adjectives and adverbs for precision",
+        "Vocabulary: context clues, reference materials, Greek and Latin roots"
+      ],
+      "competences": [
+        "Write a five-paragraph essay on a given topic",
+        "Summarise texts accurately without personal opinion",
+        "Analyse text structure and explain how it supports meaning",
+        "Use reference materials to find word meanings and spelling"
+      ],
+      "typical_mistakes": [
+        "Five-paragraph essays with weak topic sentences",
+        "Confusing summary with analysis",
+        "Pronoun case errors (him and me vs. he and I)",
+        "Vague thesis statements"
+      ],
+      "prerequisite_grade": 3
+    },
+    "History and Geography": {
+      "key_topics": [
+        "Medieval History: feudalism, the Middle Ages in Europe",
+        "The Crusades: causes, major figures, consequences",
+        "The Renaissance: key figures (Leonardo, Michelangelo, Raphael), ideas",
+        "The Reformation: Martin Luther, religious conflict in Europe",
+        "Age of Exploration: Columbus, Magellan, Vasco da Gama",
+        "American History: Colonial period — the 13 colonies",
+        "American Revolution: causes, key battles, Declaration of Independence",
+        "World Geography: Africa — physical features and countries"
+      ],
+      "competences": [
+        "Describe the feudal system and medieval society",
+        "Explain the significance of Renaissance artists and ideas",
+        "Trace the Age of Exploration routes on a map",
+        "Describe the causes and outcome of the American Revolution"
+      ],
+      "typical_mistakes": [
+        "Confusing Medieval and Renaissance periods",
+        "Not placing explorers chronologically"
+      ],
+      "prerequisite_grade": 3
+    },
+    "Science": {
+      "key_topics": [
+        "Human Body: digestive system — organs, enzymes, absorption",
+        "Circulatory system: heart, blood, arteries, veins, capillaries",
+        "Respiratory system: lungs, gas exchange",
+        "Nervous system: brain, spinal cord, sensory and motor neurons",
+        "Electricity and Magnetism: circuits, electromagnets",
+        "Sound and Light: wave properties, reflection, refraction",
+        "Earth's Resources: renewable and non-renewable",
+        "Conservation and environmental protection"
+      ],
+      "competences": [
+        "Trace the path of food through the digestive system",
+        "Describe blood circulation through the heart and body",
+        "Explain the difference between renewable and non-renewable resources",
+        "Build a simple circuit and explain how it works"
+      ],
+      "typical_mistakes": [
+        "Confusing arteries and veins",
+        "Thinking respiration and breathing are the same",
+        "Confusing renewable (solar, wind) with non-renewable (coal)"
+      ],
+      "prerequisite_grade": 3
+    }
+  }
+}

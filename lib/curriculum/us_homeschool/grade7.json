@@ -1,0 +1,113 @@
+{
+  "curriculum": "US_HOMESCHOOL",
+  "grade": 7,
+  "language": "en",
+  "subjects": {
+    "Mathematics (Core Knowledge Grade 7 / Pre-Algebra)": {
+      "key_topics": [
+        "Proportional relationships: constant of proportionality, graphs, equations",
+        "Percents: percent change, markup, markdown, commission",
+        "Rational number operations: all four with positive and negative fractions/decimals",
+        "Expressions: expanding, factoring using distributive property",
+        "Solving equations: multi-step, variables on both sides",
+        "Inequalities: solving and graphing",
+        "Geometry: scale drawings, constructions with compass and straightedge",
+        "Circles: circumference and area",
+        "Surface area and volume: composite figures",
+        "Probability: simple and compound events, tree diagrams",
+        "Statistics: sampling, central tendency, variability, comparing distributions",
+        "Introduction to functions: definition, notation, input-output"
+      ],
+      "competences": [
+        "Solve multi-step equations with rational coefficients",
+        "Calculate percent change in real-world contexts",
+        "Find probabilities using tree diagrams",
+        "Compare statistical distributions using measures of centre and spread",
+        "Understand the concept of a function"
+      ],
+      "typical_mistakes": [
+        "Errors solving equations with fractions (not multiplying both sides)",
+        "Confusing percent decrease with percent of original",
+        "Not listing all outcomes in tree diagrams",
+        "Confusing IQR with range"
+      ],
+      "prerequisite_grade": 6
+    },
+    "English Language Arts (Core Knowledge Grade 7)": {
+      "key_topics": [
+        "Reading: canonical American and world literature",
+        "Shakespeare: Romeo and Juliet or A Midsummer Night's Dream",
+        "Greek epic poetry: The Odyssey (selected books)",
+        "Literary analysis: extended essay on a complete novel",
+        "Rhetorical analysis: SOAPS (Speaker, Occasion, Audience, Purpose, Subject)",
+        "Writing: literary analysis essays with textual evidence",
+        "Research paper: 3-5 pages with 5+ sources, MLA format",
+        "Creative writing: short story with literary techniques",
+        "Grammar: sentence variety for stylistic effect",
+        "Advanced vocabulary: connotation, diction, syntax",
+        "Speaking: Socratic seminar, formal debate"
+      ],
+      "competences": [
+        "Write extended literary analysis essays with embedded textual evidence",
+        "Perform SOAPS rhetorical analysis on speeches and essays",
+        "Complete a research paper with proper MLA citations",
+        "Read and analyse Shakespeare with contextual understanding"
+      ],
+      "typical_mistakes": [
+        "Summarising plot in analytical essays (not analysing)",
+        "Incomplete SOAPS analyses (missing purpose or audience)",
+        "Mixing MLA and APA citation styles",
+        "Difficulty with Elizabethan English in Shakespeare"
+      ],
+      "prerequisite_grade": 6
+    },
+    "History and Geography": {
+      "key_topics": [
+        "World History: Age of Revolution — American, French, Haitian",
+        "Napoleon and the Napoleonic Wars",
+        "19th Century Europe: nationalism, industrialisation, imperialism",
+        "The Scramble for Africa: European colonialism",
+        "Asian civilisations: Japan (Meiji), China (Qing), India (British Raj)",
+        "Latin American independence movements: Bolívar, San Martín",
+        "World Geography: comparing world regions using data",
+        "Human Geography: population, urbanisation, migration"
+      ],
+      "competences": [
+        "Compare the American and French Revolutions",
+        "Explain the causes and consequences of European imperialism in Africa",
+        "Trace Latin American independence movements chronologically",
+        "Analyse demographic data for world regions"
+      ],
+      "typical_mistakes": [
+        "Confusing the causes of WWI with 19th century imperialism",
+        "Not understanding the legacy of colonialism in contemporary Africa"
+      ],
+      "prerequisite_grade": 6
+    },
+    "Science": {
+      "key_topics": [
+        "Biology: cell biology — cell cycle, mitosis, meiosis",
+        "Genetics: Mendelian genetics, sex-linked traits, incomplete dominance",
+        "Evolution: evidence (fossil, anatomical, molecular), natural selection",
+        "Chemistry: atomic theory, Bohr model, electron configuration",
+        "The Periodic Table: groups, periods, properties, families",
+        "Chemical bonding: ionic and covalent bonds",
+        "Chemical equations: balancing equations",
+        "Physics: motion — velocity, acceleration, Newton's Laws",
+        "Work, power, and energy: calculations"
+      ],
+      "competences": [
+        "Explain mitosis and meiosis and their roles",
+        "Solve genetics problems including sex-linked traits",
+        "Balance simple chemical equations",
+        "Apply Newton's Laws to motion problems"
+      ],
+      "typical_mistakes": [
+        "Confusing mitosis and meiosis (number of divisions, purpose)",
+        "Errors balancing equations (changing subscripts instead of coefficients)",
+        "Confusing velocity and speed"
+      ],
+      "prerequisite_grade": 6
+    }
+  }
+}

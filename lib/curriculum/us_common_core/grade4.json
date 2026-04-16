@@ -1,0 +1,124 @@
+{
+  "curriculum": "US_COMMON_CORE",
+  "grade": 4,
+  "language": "en",
+  "subjects": {
+    "Mathematics": {
+      "key_topics": [
+        "Operations and Algebraic Thinking: multi-step word problems, factors and multiples",
+        "Prime and composite numbers within 100",
+        "Generating and analyzing patterns",
+        "Number and Operations in Base Ten: place value to 1,000,000",
+        "Reading, writing, comparing multi-digit whole numbers",
+        "Rounding to any place value",
+        "Fluently adding and subtracting multi-digit whole numbers",
+        "Multiplying four-digit by one-digit and two-digit by two-digit numbers",
+        "Dividing with up to four-digit dividends and one-digit divisors",
+        "Number and Operations — Fractions: equivalent fractions",
+        "Comparing fractions with unlike denominators",
+        "Adding and subtracting fractions with like denominators",
+        "Adding and subtracting mixed numbers with like denominators",
+        "Multiplying fractions by whole numbers",
+        "Decimal notation for fractions with denominators 10 or 100",
+        "Comparing two decimals to the hundredths",
+        "Measurement and Data: converting units within a measurement system",
+        "Area and perimeter problems",
+        "Angles: measuring with a protractor, adding angle measures",
+        "Geometry: points, lines, line segments, rays, angles, perpendicular and parallel lines",
+        "Classifying shapes by lines and angles (right triangles, etc.)"
+      ],
+      "competences": [
+        "Multiply four-digit numbers by one-digit numbers and two two-digit numbers",
+        "Divide four-digit numbers by one-digit divisors with remainders",
+        "Add and subtract fractions with like denominators, including mixed numbers",
+        "Understand and use decimal notation to hundredths",
+        "Measure and classify angles using a protractor"
+      ],
+      "typical_mistakes": [
+        "Errors in partial products when multiplying two two-digit numbers",
+        "Forgetting the remainder in long division",
+        "Adding denominators when adding fractions (1/4 + 1/4 = 2/8 instead of 2/4)",
+        "Misreading protractor (reading wrong scale)",
+        "Confusing acute, obtuse, right, and straight angles"
+      ],
+      "prerequisite_grade": 3
+    },
+    "English Language Arts": {
+      "key_topics": [
+        "Reading Literature: theme, summarizing, comparing themes across texts",
+        "Point of view: first vs. third person narration",
+        "Figurative language: metaphor, simile, alliteration, idioms",
+        "Reading Informational Text: main idea, summarizing, text structure",
+        "Comparing accounts of the same event from different sources",
+        "Integrating information from multiple texts on the same topic",
+        "Phonics: Latin roots, multi-syllabic words",
+        "Reading fluency: appropriate rate, accuracy, expression",
+        "Writing: opinion essays with logically ordered reasons",
+        "Informative writing: introducing a topic with facts, definitions, details",
+        "Narrative writing: using dialogue, description, transitional phrases",
+        "Research: gathering information, taking notes, categorizing",
+        "Language: relative pronouns/adverbs, progressive verb tenses, modal auxiliaries"
+      ],
+      "competences": [
+        "Identify theme and use text evidence to support interpretation",
+        "Write well-organized opinion, informative, and narrative essays",
+        "Identify figurative language and explain meaning in context",
+        "Integrate information from multiple texts to learn about a topic"
+      ],
+      "typical_mistakes": [
+        "Summarizing by retelling every detail (not identifying main points)",
+        "Not distinguishing first-person from third-person narration",
+        "Interpreting idioms literally",
+        "Essay conclusions that merely restate the introduction",
+        "Overuse of 'said' in dialogue (not using varied speech tags)"
+      ],
+      "prerequisite_grade": 3
+    },
+    "Science (NGSS-aligned)": {
+      "key_topics": [
+        "Energy: forms of energy, transfer and conservation",
+        "Waves: properties of waves (amplitude, wavelength, frequency)",
+        "Information transfer: signals and communication technology",
+        "Structures of plants and animals for survival",
+        "Internal and external plant/animal structures",
+        "Earth's features: rocks, minerals, soil formation",
+        "Weathering and erosion",
+        "Natural hazards: earthquakes, volcanoes, tsunamis"
+      ],
+      "competences": [
+        "Describe energy transfer through different materials",
+        "Explain how wave properties allow communication of information",
+        "Connect plant/animal structures to their survival functions",
+        "Explain weathering, erosion, and their effects on Earth's surface"
+      ],
+      "typical_mistakes": [
+        "Confusing energy with force",
+        "Thinking erosion is instantaneous (not understanding it takes time)",
+        "Confusing weathering (breaking down) with erosion (moving)"
+      ],
+      "prerequisite_grade": 3
+    },
+    "Social Studies": {
+      "key_topics": [
+        "American history: Colonial period, causes of the American Revolution",
+        "Declaration of Independence: key ideas and signers",
+        "Constitution and Bill of Rights: structure and key amendments",
+        "Westward Expansion: Lewis and Clark, Manifest Destiny",
+        "Geography of the United States: regions, capitals, physical features",
+        "Economics: specialization and trade, global connections",
+        "Civic values: freedom, democracy, equality, justice"
+      ],
+      "competences": [
+        "Explain causes and effects of the American Revolution",
+        "Describe the structure and purpose of the US Constitution",
+        "Identify and describe geographic regions of the United States",
+        "Explain how trade and specialization benefit communities"
+      ],
+      "typical_mistakes": [
+        "Confusing the Constitution with the Declaration of Independence",
+        "Not understanding cause-effect in historical events"
+      ],
+      "prerequisite_grade": 3
+    }
+  }
+}
