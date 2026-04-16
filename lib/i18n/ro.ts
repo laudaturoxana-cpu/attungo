@@ -44,7 +44,7 @@ export const ro = {
     card2: {
       title: "Faceți homeschooling și aveți nevoie de ajutor în engleză",
       text: "Ai ales să educi acasă, în engleză după curriculum american. Atto devine tutorele permanent, adaptat exact la ritmul și pasiunile copilului. Fără program fix, fără presiune.",
-      bullets: "US Common Core · Accelerate Academy style · Flexibil",
+      bullets: "US Common Core · Ritm propriu · Flexibil",
     },
     card3: {
       title: "Copilul tău e în sistemul românesc și are nevoie de ajutor",

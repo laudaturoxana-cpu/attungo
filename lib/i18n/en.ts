@@ -40,7 +40,7 @@ export const en = {
     card2: {
       title: "You homeschool and need support in English",
       text: "You chose to educate at home, in English following the American curriculum. Atto becomes the permanent tutor, adapted exactly to your child's pace and passions. No fixed schedule, no pressure.",
-      bullets: "US Common Core · Accelerate Academy style · Flexible",
+      bullets: "US Common Core · Self-paced · Flexible",
     },
     card3: {
       title: "Your child is in the Romanian system and needs support",
