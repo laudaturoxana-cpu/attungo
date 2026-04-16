@@ -14,7 +14,7 @@ interface AttoCharacterProps {
 
 const STATE_CONFIG: Record<
   AttoState,
-  { glowOpacity: number; glowScale: number; pulseSpeed: string; antennaGlow: boolean; smileD: string }
+  { glowOpacity: number; glowScale: number; pulseSpeed: string; antennaGlow: boolean; smileD: string; browL: string; browR: string }
 > = {
   listening: {
     glowOpacity: 0.5,
@@ -22,6 +22,8 @@ const STATE_CONFIG: Record<
     pulseSpeed: "2s",
     antennaGlow: false,
     smileD: "M 23 26 Q 26 28.5 29 26",
+    browL: "M 18 15 Q 21 13.5 24 15",
+    browR: "M 28 15 Q 31 13.5 34 15",
   },
   thinking: {
     glowOpacity: 0.7,
@@ -29,6 +31,8 @@ const STATE_CONFIG: Record<
     pulseSpeed: "1s",
     antennaGlow: true,
     smileD: "M 23 26 Q 26 27 29 26",
+    browL: "M 18 14.5 Q 21 13 24 15",
+    browR: "M 28 15 Q 31 13 34 14.5",
   },
   happy: {
     glowOpacity: 1,
@@ -36,6 +40,8 @@ const STATE_CONFIG: Record<
     pulseSpeed: "0.5s",
     antennaGlow: true,
     smileD: "M 22 25.5 Q 26 28.5 30 25.5",
+    browL: "M 18 14 Q 21 12 24 14",
+    browR: "M 28 14 Q 31 12 34 14",
   },
   neutral: {
     glowOpacity: 0.4,
@@ -43,6 +49,8 @@ const STATE_CONFIG: Record<
     pulseSpeed: "3s",
     antennaGlow: false,
     smileD: "M 23 26 Q 26 27 29 26",
+    browL: "M 18 15.5 Q 21 14.5 24 15.5",
+    browR: "M 28 15.5 Q 31 14.5 34 15.5",
   },
   concerned: {
     glowOpacity: 0.25,
@@ -50,6 +58,8 @@ const STATE_CONFIG: Record<
     pulseSpeed: "3s",
     antennaGlow: false,
     smileD: "M 23 27 Q 26 25 29 27",
+    browL: "M 18 14 Q 21 16 24 15",
+    browR: "M 28 15 Q 31 16 34 14",
   },
 };
 
@@ -185,6 +195,22 @@ export default function AttoCharacter({
 
         {/* === HEAD === */}
         <circle cx="26" cy="20" r="13" fill="#1B2C3E" />
+
+        {/* === EYEBROWS === */}
+        <path
+          d={cfg.browL}
+          stroke="#3ECDA0"
+          strokeWidth="1.3"
+          strokeLinecap="round"
+          fill="none"
+        />
+        <path
+          d={cfg.browR}
+          stroke="#3ECDA0"
+          strokeWidth="1.3"
+          strokeLinecap="round"
+          fill="none"
+        />
 
         {/* === EYES === */}
         {/* Left eye */}
