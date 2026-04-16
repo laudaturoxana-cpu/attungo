@@ -122,8 +122,8 @@ function getDefaultAttoMessage(body: Record<string, unknown>): string {
   const lang = body.language as string ?? "ro";
   if (body.type === "start_session") {
     return lang === "ro"
-      ? "Bună! Sunt Atto. Înainte să începem — spune-mi un lucru la care ești deja bun. Orice!"
-      : "Hi! I'm Atto. Before we start — tell me one thing you're already good at. Anything!";
+      ? "Bună! Sunt Atto. Înainte să începem, spune-mi un lucru la care ești deja bun. Orice!"
+      : "Hi! I'm Atto. Before we start, tell me one thing you're already good at. Anything!";
   }
   return lang === "ro"
     ? "Interesant! Și dacă ar fi să explici asta unui prieten, cum ai spune?"

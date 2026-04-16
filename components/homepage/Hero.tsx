@@ -12,15 +12,15 @@ interface HeroProps {
 }
 
 const DEMO_RO = [
-  { role: "atto" as const, text: "Înainte să începem — spune-mi un lucru la care ești deja bun. Orice!", state: "listening" as AttoState },
+  { role: "atto" as const, text: "Înainte să începem, spune-mi un lucru la care ești deja bun. Orice!", state: "listening" as AttoState },
   { role: "child" as const, text: "La Minecraft știu să construiesc orice!" },
-  { role: "atto" as const, text: "Wow, asta e o super putere! Acum rezolvăm matematica exact cum construiești în Minecraft — ce pui primul?", state: "happy" as AttoState },
+  { role: "atto" as const, text: "Wow, asta e o super putere! Acum rezolvăm matematica exact cum construiești în Minecraft. Ce pui primul?", state: "happy" as AttoState },
 ];
 
 const DEMO_EN = [
-  { role: "atto" as const, text: "Before we start — tell me one thing you're already good at. Anything!", state: "listening" as AttoState },
+  { role: "atto" as const, text: "Before we start, tell me one thing you're already good at. Anything!", state: "listening" as AttoState },
   { role: "child" as const, text: "I can build anything in Minecraft!" },
-  { role: "atto" as const, text: "Wow, that's a superpower! Now let's solve maths the way you build in Minecraft — what do you place first?", state: "happy" as AttoState },
+  { role: "atto" as const, text: "Wow, that's a superpower! Now let's solve maths the way you build in Minecraft. What do you place first?", state: "happy" as AttoState },
 ];
 
 export default function Hero({ lang = "ro" }: HeroProps) {

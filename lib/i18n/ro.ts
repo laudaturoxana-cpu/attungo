@@ -25,10 +25,10 @@ export const ro = {
 
   // ──── DEMO CHAT ────
   demo: {
-    attoMessage1: "Înainte să începem — spune-mi un lucru la care ești deja bun. Orice!",
+    attoMessage1: "Înainte să începem, spune-mi un lucru la care ești deja bun. Orice!",
     childMessage: "La Minecraft știu să construiesc orice!",
     attoMessage2:
-      "Wow, asta e o super putere! Acum rezolvăm matematica exact cum construiești în Minecraft — ce pui primul?",
+      "Wow, asta e o super putere! Acum rezolvăm matematica exact cum construiești în Minecraft. Ce pui primul?",
     statusListening: "pulsează · ascultă",
     statusThinking: "se gândește...",
   },
@@ -218,7 +218,7 @@ export const ro = {
   session: {
     placeholder: "Scrie răspunsul tău...",
     sprintComplete: "Sprint completat! Ia o pauză",
-    breakSuggestion: "Mișcă-te 3 minute — sare, dansează, orice!",
+    breakSuggestion: "Mișcă-te 3 minute: sare, dansează, orice!",
     stars: "stele câștigate",
     level: "Nivel",
     streak: "zile la rând",

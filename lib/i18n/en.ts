@@ -22,10 +22,10 @@ export const en = {
   },
 
   demo: {
-    attoMessage1: "Before we start — tell me one thing you're already good at. Anything!",
+    attoMessage1: "Before we start, tell me one thing you're already good at. Anything!",
     childMessage: "I can build anything in Minecraft!",
     attoMessage2:
-      "Wow, that's a superpower! Now let's solve maths the way you build in Minecraft — what do you place first?",
+      "Wow, that's a superpower! Now let's solve maths the way you build in Minecraft. What do you place first?",
     statusListening: "pulsing · listening",
     statusThinking: "thinking...",
   },
@@ -206,7 +206,7 @@ export const en = {
   session: {
     placeholder: "Type your answer...",
     sprintComplete: "Sprint complete! Take a break",
-    breakSuggestion: "Move for 3 minutes — jump, dance, anything!",
+    breakSuggestion: "Move for 3 minutes: jump, dance, anything!",
     stars: "stars earned",
     level: "Level",
     streak: "day streak",
