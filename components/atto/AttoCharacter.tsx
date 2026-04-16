@@ -21,35 +21,35 @@ const STATE_CONFIG: Record<
     glowScale: 1,
     pulseSpeed: "2s",
     antennaGlow: false,
-    smileD: "M 20 25 Q 26 29 32 25",
+    smileD: "M 23 26 Q 26 28.5 29 26",
   },
   thinking: {
     glowOpacity: 0.7,
     glowScale: 1.05,
     pulseSpeed: "1s",
     antennaGlow: true,
-    smileD: "M 20 25 Q 26 27 32 25",
+    smileD: "M 23 26 Q 26 27 29 26",
   },
   happy: {
     glowOpacity: 1,
     glowScale: 1.15,
     pulseSpeed: "0.5s",
     antennaGlow: true,
-    smileD: "M 19 24 Q 26 31 33 24",
+    smileD: "M 22 25.5 Q 26 28.5 30 25.5",
   },
   neutral: {
     glowOpacity: 0.4,
     glowScale: 1,
     pulseSpeed: "3s",
     antennaGlow: false,
-    smileD: "M 20 25 Q 26 27 32 25",
+    smileD: "M 23 26 Q 26 27 29 26",
   },
   concerned: {
     glowOpacity: 0.25,
     glowScale: 0.95,
     pulseSpeed: "3s",
     antennaGlow: false,
-    smileD: "M 20 27 Q 26 24 32 27",
+    smileD: "M 23 27 Q 26 25 29 27",
   },
 };
 
@@ -201,7 +201,7 @@ export default function AttoCharacter({
         <path
           d={cfg.smileD}
           stroke="#3ECDA0"
-          strokeWidth="1.5"
+          strokeWidth="1.2"
           strokeLinecap="round"
           fill="none"
         />
