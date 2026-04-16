@@ -13,39 +13,35 @@ export default function Pricing({ lang = "ro" }: PricingProps) {
   const { plans } = t.pricing;
 
   return (
-    <section id="preturi" className="py-24 bg-[#FAFAF5]">
+    <section id="preturi" className="py-16 sm:py-24 bg-[#FAFAF5]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-6">
-          <h2
-            className="text-4xl sm:text-5xl font-bold text-[#0D1B2A] mb-4"
-            style={{ fontFamily: "var(--font-display)" }}
-          >
+        <div className="text-center mb-10 sm:mb-14">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0D1B2A] mb-4"
+            style={{ fontFamily: "var(--font-display)" }}>
             {t.pricing.title}
           </h2>
-          <p className="text-[#9B9A93] text-lg max-w-2xl mx-auto">
+          <p className="text-[#9B9A93] text-base sm:text-lg max-w-2xl mx-auto">
             {t.pricing.subtitle}
           </p>
         </div>
 
-        {/* Plans grid */}
-        <div className="grid md:grid-cols-3 gap-6 mt-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
 
           {/* ESSENTIAL */}
-          <Card className="p-8 flex flex-col gap-6">
+          <Card className="p-6 sm:p-8 flex flex-col gap-5">
             <div>
-              <p className="text-[#9B9A93] text-sm font-semibold uppercase tracking-widest mb-2">
+              <p className="text-[#9B9A93] text-xs font-semibold uppercase tracking-widest mb-2">
                 {plans.essential.name}
               </p>
               <div className="flex items-baseline gap-1">
-                <span className="text-4xl font-black text-[#0D1B2A]" style={{ fontFamily: "var(--font-mono)" }}>
+                <span className="text-3xl sm:text-4xl font-black text-[#0D1B2A]" style={{ fontFamily: "var(--font-mono)" }}>
                   {plans.essential.price}
                 </span>
-                <span className="text-[#9B9A93]">{plans.essential.period}</span>
+                <span className="text-[#9B9A93] text-sm">{plans.essential.period}</span>
               </div>
               <p className="text-[#9B9A93] text-sm mt-1">{plans.essential.children}</p>
             </div>
-            <ul className="flex flex-col gap-3 flex-1">
+            <ul className="flex flex-col gap-2.5 flex-1">
               {plans.essential.features.map((f, i) => (
                 <li key={i} className="flex items-start gap-2 text-sm text-[#3D3C37]">
                   <svg className="w-4 h-4 text-[#1D9E75] flex-shrink-0 mt-0.5" viewBox="0 0 16 16" fill="none">
@@ -55,37 +51,30 @@ export default function Pricing({ lang = "ro" }: PricingProps) {
                 </li>
               ))}
             </ul>
-            <Link
-              href="/register?plan=essential"
-              className="w-full py-3 rounded-full border-2 border-[#E8A020] text-[#E8A020] font-semibold text-center hover:bg-[#E8A020] hover:text-[#92520A] transition-all"
-            >
+            <Link href="/register?plan=essential"
+              className="w-full py-3 rounded-full border-2 border-[#E8A020] text-[#E8A020] font-semibold text-center text-sm hover:bg-[#E8A020] hover:text-[#92520A] transition-all">
               {t.pricing.cta}
             </Link>
           </Card>
 
           {/* FAMILY — featured */}
-          <Card
-            className="p-8 flex flex-col gap-6 border-2 border-[#3ECDA0] relative"
-          >
-            {/* Badge */}
+          <Card className="p-6 sm:p-8 flex flex-col gap-5 border-2 border-[#3ECDA0] relative">
             <div className="absolute -top-3 left-1/2 -translate-x-1/2">
               <Badge variant="teal">{t.pricing.popular}</Badge>
             </div>
-
             <div>
-              <p className="text-[#9B9A93] text-sm font-semibold uppercase tracking-widest mb-2">
+              <p className="text-[#9B9A93] text-xs font-semibold uppercase tracking-widest mb-2">
                 {plans.family.name}
               </p>
               <div className="flex items-baseline gap-1">
-                <span className="text-4xl font-black text-[#0D1B2A]" style={{ fontFamily: "var(--font-mono)" }}>
+                <span className="text-3xl sm:text-4xl font-black text-[#0D1B2A]" style={{ fontFamily: "var(--font-mono)" }}>
                   {plans.family.price}
                 </span>
-                <span className="text-[#9B9A93]">{plans.family.period}</span>
+                <span className="text-[#9B9A93] text-sm">{plans.family.period}</span>
               </div>
               <p className="text-[#9B9A93] text-sm mt-1">{plans.family.children}</p>
             </div>
-
-            <ul className="flex flex-col gap-3 flex-1">
+            <ul className="flex flex-col gap-2.5 flex-1">
               {plans.family.features.map((f, i) => (
                 <li key={i} className="flex items-start gap-2 text-sm text-[#3D3C37]">
                   <svg className="w-4 h-4 text-[#3ECDA0] flex-shrink-0 mt-0.5" viewBox="0 0 16 16" fill="none">
@@ -95,36 +84,30 @@ export default function Pricing({ lang = "ro" }: PricingProps) {
                 </li>
               ))}
             </ul>
-
-            <Link
-              href="/register?plan=family"
-              className="w-full py-3 rounded-full bg-[#1D9E75] text-white font-semibold text-center hover:bg-[#1B5E4F] transition-all glow-teal"
-            >
+            <Link href="/register?plan=family"
+              className="w-full py-3 rounded-full bg-[#1D9E75] text-white font-semibold text-center text-sm hover:bg-[#1B5E4F] transition-all">
               {t.pricing.cta}
             </Link>
           </Card>
 
           {/* ANNUAL */}
-          <Card className="p-8 flex flex-col gap-6 relative">
-            {/* Savings badge */}
+          <Card className="p-6 sm:p-8 flex flex-col gap-5 relative sm:col-span-2 lg:col-span-1">
             <div className="absolute -top-3 left-1/2 -translate-x-1/2">
               <Badge variant="amber">{t.pricing.savings}</Badge>
             </div>
-
             <div>
-              <p className="text-[#9B9A93] text-sm font-semibold uppercase tracking-widest mb-2">
+              <p className="text-[#9B9A93] text-xs font-semibold uppercase tracking-widest mb-2">
                 {plans.annual.name}
               </p>
               <div className="flex items-baseline gap-1">
-                <span className="text-4xl font-black text-[#0D1B2A]" style={{ fontFamily: "var(--font-mono)" }}>
+                <span className="text-3xl sm:text-4xl font-black text-[#0D1B2A]" style={{ fontFamily: "var(--font-mono)" }}>
                   {plans.annual.price}
                 </span>
-                <span className="text-[#9B9A93]">{plans.annual.period}</span>
+                <span className="text-[#9B9A93] text-sm">{plans.annual.period}</span>
               </div>
               <p className="text-[#9B9A93] text-sm mt-1">{plans.annual.children}</p>
             </div>
-
-            <ul className="flex flex-col gap-3 flex-1">
+            <ul className="flex flex-col gap-2.5 flex-1">
               {plans.annual.features.map((f, i) => (
                 <li key={i} className="flex items-start gap-2 text-sm text-[#3D3C37]">
                   <svg className="w-4 h-4 text-[#1D9E75] flex-shrink-0 mt-0.5" viewBox="0 0 16 16" fill="none">
@@ -134,17 +117,13 @@ export default function Pricing({ lang = "ro" }: PricingProps) {
                 </li>
               ))}
             </ul>
-
-            <Link
-              href="/register?plan=annual"
-              className="w-full py-3 rounded-full border-2 border-[#E8A020] text-[#E8A020] font-semibold text-center hover:bg-[#E8A020] hover:text-[#92520A] transition-all"
-            >
+            <Link href="/register?plan=annual"
+              className="w-full py-3 rounded-full border-2 border-[#E8A020] text-[#E8A020] font-semibold text-center text-sm hover:bg-[#E8A020] hover:text-[#92520A] transition-all">
               {t.pricing.ctaAnnual}
             </Link>
           </Card>
         </div>
 
-        {/* Trial note */}
         <p className="text-center text-[#9B9A93] text-sm mt-8 max-w-xl mx-auto">
           {t.pricing.trialNote}
         </p>

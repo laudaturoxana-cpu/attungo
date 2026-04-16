@@ -13,12 +13,12 @@ export default function ForWhoSection({ lang = "ro" }: ForWhoSectionProps) {
   const cards = [t.forWho.card1, t.forWho.card2, t.forWho.card3, t.forWho.card4];
 
   return (
-    <section id="pentru-cine" className="py-24 bg-[#FAFAF5]">
+    <section id="pentru-cine" className="py-16 sm:py-24 bg-[#FAFAF5]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
           <h2
-            className="text-4xl sm:text-5xl font-bold text-[#0D1B2A] mb-4"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0D1B2A] mb-4"
             style={{ fontFamily: "var(--font-display)" }}
           >
             {t.forWho.title}

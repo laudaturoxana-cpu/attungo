@@ -234,28 +234,39 @@ ALTER TABLE parent_reports ENABLE ROW LEVEL SECURITY;
 ALTER TABLE subscriptions ENABLE ROW LEVEL SECURITY;
 
 -- Parents pot vedea/modifica doar propriile date
-CREATE POLICY IF NOT EXISTS "parents_own_data" ON parents
+-- (DROP first to allow re-running the script safely)
+DROP POLICY IF EXISTS "parents_own_data" ON parents;
+DROP POLICY IF EXISTS "parents_own_children" ON children;
+DROP POLICY IF EXISTS "parents_own_profiles" ON child_profiles;
+DROP POLICY IF EXISTS "parents_own_zpd" ON zpd_tracking;
+DROP POLICY IF EXISTS "parents_own_sessions" ON sessions;
+DROP POLICY IF EXISTS "parents_own_messages" ON messages;
+DROP POLICY IF EXISTS "parents_own_reports" ON parent_reports;
+DROP POLICY IF EXISTS "parents_own_memory" ON conversation_memory;
+DROP POLICY IF EXISTS "parents_own_subscriptions" ON subscriptions;
+
+CREATE POLICY "parents_own_data" ON parents
   FOR ALL USING (id = auth.uid());
 
-CREATE POLICY IF NOT EXISTS "parents_own_children" ON children
+CREATE POLICY "parents_own_children" ON children
   FOR ALL USING (parent_id = auth.uid());
 
-CREATE POLICY IF NOT EXISTS "parents_own_profiles" ON child_profiles
+CREATE POLICY "parents_own_profiles" ON child_profiles
   FOR ALL USING (
     child_id IN (SELECT id FROM children WHERE parent_id = auth.uid())
   );
 
-CREATE POLICY IF NOT EXISTS "parents_own_zpd" ON zpd_tracking
+CREATE POLICY "parents_own_zpd" ON zpd_tracking
   FOR ALL USING (
     child_id IN (SELECT id FROM children WHERE parent_id = auth.uid())
   );
 
-CREATE POLICY IF NOT EXISTS "parents_own_sessions" ON sessions
+CREATE POLICY "parents_own_sessions" ON sessions
   FOR ALL USING (
     child_id IN (SELECT id FROM children WHERE parent_id = auth.uid())
   );
 
-CREATE POLICY IF NOT EXISTS "parents_own_messages" ON messages
+CREATE POLICY "parents_own_messages" ON messages
   FOR ALL USING (
     session_id IN (
       SELECT s.id FROM sessions s
@@ -264,17 +275,17 @@ CREATE POLICY IF NOT EXISTS "parents_own_messages" ON messages
     )
   );
 
-CREATE POLICY IF NOT EXISTS "parents_own_reports" ON parent_reports
+CREATE POLICY "parents_own_reports" ON parent_reports
   FOR ALL USING (
     child_id IN (SELECT id FROM children WHERE parent_id = auth.uid())
   );
 
-CREATE POLICY IF NOT EXISTS "parents_own_memory" ON conversation_memory
+CREATE POLICY "parents_own_memory" ON conversation_memory
   FOR ALL USING (
     child_id IN (SELECT id FROM children WHERE parent_id = auth.uid())
   );
 
-CREATE POLICY IF NOT EXISTS "parents_own_subscriptions" ON subscriptions
+CREATE POLICY "parents_own_subscriptions" ON subscriptions
   FOR ALL USING (parent_id = auth.uid());
 
 -- ───────────────────────────────────────────────

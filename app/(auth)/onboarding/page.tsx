@@ -89,7 +89,7 @@ export default function OnboardingPage() {
           </div>
         </div>
 
-        <div className="bg-[#1B2C3E] rounded-2xl border border-white/10 p-8 flex flex-col gap-5">
+        <div className="bg-[#1B2C3E] rounded-2xl border border-white/10 p-5 sm:p-8 flex flex-col gap-5">
           {error && (
             <div className="bg-red-500/10 border border-red-500/30 rounded-xl px-4 py-3 text-red-400 text-sm">
               {error}
@@ -114,7 +114,7 @@ export default function OnboardingPage() {
               {/* Age */}
               <div className="flex flex-col gap-2">
                 <label className="text-white/70 text-sm font-medium">Vârsta</label>
-                <div className="grid grid-cols-5 gap-2">
+                <div className="grid grid-cols-5 sm:grid-cols-10 gap-2">
                   {AGES.map((age) => (
                     <button
                       key={age}
@@ -135,7 +135,7 @@ export default function OnboardingPage() {
               {/* Grade */}
               <div className="flex flex-col gap-2">
                 <label className="text-white/70 text-sm font-medium">Clasa</label>
-                <div className="grid grid-cols-8 gap-2">
+                <div className="grid grid-cols-4 sm:grid-cols-8 gap-2">
                   {GRADES.map((g) => (
                     <button
                       key={g}

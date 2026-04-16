@@ -69,7 +69,7 @@ export default function SessionPage() {
           </p>
         </div>
 
-        <div className="bg-white rounded-2xl border border-[#E5E3DC] p-6 flex flex-col gap-5">
+        <div className="bg-white rounded-2xl border border-[#E5E3DC] p-4 sm:p-6 flex flex-col gap-5">
           {/* Subject selector */}
           <div className="flex flex-col gap-2">
             <label className="text-[#3D3C37] font-medium text-sm">

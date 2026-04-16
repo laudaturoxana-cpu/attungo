@@ -188,3 +188,22 @@ body {
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: #E5E3DC; border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: #9B9A93; }
+
+/* Safe area pentru iOS notch / home indicator */
+.safe-area-pb {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Previne zoom pe input-uri iOS */
+@media (max-width: 768px) {
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Chat interface — fix înălțime pe mobile când apare tastatura */
+.chat-messages-container {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}

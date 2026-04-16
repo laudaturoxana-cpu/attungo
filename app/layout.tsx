@@ -24,6 +24,13 @@ const dmMono = DM_Mono({
   display: "swap",
 });
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  interactiveWidget: "resizes-content",
+};
+
 export const metadata: Metadata = {
   title: "Attungo — Tutorele care ascultă.",
   description:

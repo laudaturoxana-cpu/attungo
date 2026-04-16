@@ -30,7 +30,7 @@ export default function HowItWorks({ lang = "ro" }: HowItWorksProps) {
   const steps = [t.howItWorks.step1, t.howItWorks.step2, t.howItWorks.step3];
 
   return (
-    <section id="cum-functioneaza" className="py-24 bg-[#0D1B2A] relative overflow-hidden">
+    <section id="cum-functioneaza" className="py-16 sm:py-24 bg-[#0D1B2A] relative overflow-hidden">
       {/* Subtle background grid */}
       <div
         className="absolute inset-0 opacity-5"
@@ -44,7 +44,7 @@ export default function HowItWorks({ lang = "ro" }: HowItWorksProps) {
         {/* Header */}
         <div className="text-center mb-20">
           <h2
-            className="text-4xl sm:text-5xl font-bold text-white mb-6"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6"
             style={{ fontFamily: "var(--font-display)" }}
           >
             {t.howItWorks.title}
@@ -56,7 +56,7 @@ export default function HowItWorks({ lang = "ro" }: HowItWorksProps) {
         </div>
 
         {/* Steps */}
-        <div className="grid md:grid-cols-3 gap-10 relative">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-10 relative">
           {/* Connecting line (desktop) */}
           <div className="hidden md:block absolute top-8 left-1/4 right-1/4 h-px bg-gradient-to-r from-[#3ECDA0]/30 via-[#E8A020]/30 to-[#3ECDA0]/30" />
 
