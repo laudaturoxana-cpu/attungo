@@ -18,7 +18,7 @@ export const en = {
       "Meet Atto, the firefly who guides your child through the darkness of learning. Doesn't give answers. Lights the way so your child finds them alone.",
     ctaPrimary: "7 days free →",
     ctaSecondary: "See how it works",
-    trustBar: "€16/month · all subjects · 24/7 available · Grades 1–8 · RO + EN",
+    trustBar: "€12/month · all subjects · 24/7 available · Grades 1–8 · RO + EN",
   },
 
   demo: {
@@ -73,9 +73,9 @@ export const en = {
   pricing: {
     title: "Less than one single tutoring session",
     subtitle:
-      "Private tutors cost €50-100/session. Attungo costs €16/month: all subjects, every day, no scheduling.",
+      "Private tutors cost €50-100/session. Attungo costs €12/month: all subjects, every day, no scheduling.",
     popular: "Most chosen",
-    savings: "Save €50",
+    savings: "Save €45",
     trialNote:
       "7 days free with card. You're not charged in the first 7 days. Cancel anytime with one click, no calls, no penalties.",
     cta: "Try 7 days free",
@@ -83,7 +83,7 @@ export const en = {
     plans: {
       essential: {
         name: "Essential",
-        price: "€16",
+        price: "€12",
         period: "/month",
         children: "1 child · all subjects",
         features: [
@@ -96,7 +96,7 @@ export const en = {
       },
       family: {
         name: "Family",
-        price: "€26",
+        price: "€19",
         period: "/month",
         children: "Up to 3 children",
         features: [
@@ -109,11 +109,11 @@ export const en = {
       },
       annual: {
         name: "Annual",
-        price: "€142",
+        price: "€99",
         period: "/year",
         children: "1 child · all subjects",
         features: [
-          "Equivalent to €12/month",
+          "Equivalent to €8/month",
           "Everything in Essential",
           "Pay once, forget about it",
           "Priority for new features",

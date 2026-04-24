@@ -9,7 +9,7 @@ export function getStripe(): Stripe {
 export const PLANS = {
   essential: {
     name: "Essential",
-    price_eur: 16,
+    price_eur: 12,
     stripe_price_id: process.env.STRIPE_PRICE_ESSENTIAL_MONTHLY!,
     interval: "month" as const,
     children_limit: 1,
@@ -30,7 +30,7 @@ export const PLANS = {
   },
   family: {
     name: "Family",
-    price_eur: 26,
+    price_eur: 19,
     stripe_price_id: process.env.STRIPE_PRICE_FAMILY_MONTHLY!,
     interval: "month" as const,
     children_limit: 3,
@@ -51,18 +51,18 @@ export const PLANS = {
   },
   annual: {
     name: "Annual",
-    price_eur: 142,
+    price_eur: 99,
     stripe_price_id: process.env.STRIPE_PRICE_ANNUAL!,
     interval: "year" as const,
     children_limit: 1,
     features_ro: [
-      "Echivalent €12/lună",
+      "Echivalent €8/lună",
       "Tot ce include Essential",
       "Plătești o dată, uiți de el",
       "Prioritate funcții noi",
     ],
     features_en: [
-      "Equivalent to €12/month",
+      "Equivalent to €8/month",
       "Everything in Essential",
       "Pay once, forget about it",
       "Priority for new features",

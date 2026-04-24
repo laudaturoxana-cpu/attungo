@@ -20,7 +20,7 @@ export const ro = {
       "Cunoaște-l pe Atto, licuriciul care îți ghidează copilul prin întunericul lecțiilor. Nu dă răspunsul. Aprinde lumina. Copilul îl găsește singur.",
     ctaPrimary: "7 zile gratuit →",
     ctaSecondary: "Vezi cum funcționează",
-    trustBar: "€16/lună · toate materiile · 24/7 disponibil · Cls 1–8 · RO + EN",
+    trustBar: "€12/lună · toate materiile · 24/7 disponibil · Cls 1–8 · RO + EN",
   },
 
   // ──── DEMO CHAT ────
@@ -79,9 +79,9 @@ export const ro = {
   pricing: {
     title: "Mai puțin decât o singură ședință de meditații",
     subtitle:
-      "Meditațiile costă 120-200 lei/ședință. Attungo costă €16/lună: toate materiile, toate zilele, fără programare.",
+      "Meditațiile costă 120-200 lei/ședință. Attungo costă €12/lună: toate materiile, toate zilele, fără programare.",
     popular: "Cel mai ales",
-    savings: "Economisești €50",
+    savings: "Economisești €45",
     trialNote:
       "7 zile gratuit cu card. Nu ești taxat în primele 7 zile. Anulezi oricând dintr-un click, fără telefoane, fără penalizări.",
     cta: "Încearcă 7 zile gratuit",
@@ -89,7 +89,7 @@ export const ro = {
     plans: {
       essential: {
         name: "Essential",
-        price: "€16",
+        price: "€12",
         period: "/lună",
         children: "1 copil · toate materiile",
         features: [
@@ -102,7 +102,7 @@ export const ro = {
       },
       family: {
         name: "Family",
-        price: "€26",
+        price: "€19",
         period: "/lună",
         children: "Până la 3 copii",
         features: [
@@ -115,11 +115,11 @@ export const ro = {
       },
       annual: {
         name: "Annual",
-        price: "€142",
+        price: "€99",
         period: "/an",
         children: "1 copil · toate materiile",
         features: [
-          "Echivalent €12/lună",
+          "Echivalent €8/lună",
           "Tot ce include Essential",
           "Plătești o dată, uiți de el",
           "Prioritate funcții noi",
