@@ -29,6 +29,11 @@ export default async function DashboardPage() {
     ? Math.max(0, Math.ceil((new Date(parent.trial_ends_at).getTime() - Date.now()) / 86400000))
     : null;
 
+  const PLAN_LIMITS: Record<string, number> = { trial: 1, essential: 1, family: 3, annual: 1, cancelled: 0 };
+  const childLimit = PLAN_LIMITS[parent?.subscription_plan ?? "trial"] ?? 1;
+  const childCount = children?.length ?? 0;
+  const canAddChild = childCount < childLimit;
+
   return (
     <div className="flex flex-col gap-8">
       {/* Greeting */}
@@ -61,7 +66,7 @@ export default async function DashboardPage() {
             <p className="text-[#9B9A93] mb-6">Atto e gata să se calibreze pe el/ea.</p>
             <Link
               href="/onboarding"
-              className="inline-flex items-center px-6 py-3 rounded-full bg-[#E8A020] text-[#92520A] font-semibold hover:bg-[#C17D0A] hover:text-white transition-all"
+              className="inline-flex items-center px-6 py-3 rounded-full bg-[#E8A020] text-[#3D1500] font-semibold hover:bg-[#C17D0A] hover:text-white transition-all"
             >
               Adaugă copil →
             </Link>
@@ -132,7 +137,7 @@ export default async function DashboardPage() {
                   <div className="flex gap-2 pt-1">
                     <Link
                       href={`/session/${child.id}`}
-                      className="flex-1 py-2.5 rounded-full bg-[#E8A020] text-[#92520A] font-semibold text-sm text-center hover:bg-[#C17D0A] hover:text-white transition-all"
+                      className="flex-1 py-2.5 rounded-full bg-[#E8A020] text-[#3D1500] font-semibold text-sm text-center hover:bg-[#C17D0A] hover:text-white transition-all"
                     >
                       Sesiune cu Atto →
                     </Link>
@@ -148,16 +153,31 @@ export default async function DashboardPage() {
             );
           })}
 
-          {/* Add another child card */}
-          <Link
-            href="/onboarding"
-            className="bg-white rounded-2xl border-2 border-dashed border-[#E5E3DC] p-8 flex flex-col items-center justify-center gap-3 hover:border-[#E8A020]/40 hover:bg-[#FEF3C7]/20 transition-all"
-          >
-            <div className="w-12 h-12 rounded-full bg-[#FEF3C7] flex items-center justify-center text-[#E8A020] text-2xl">
-              +
-            </div>
-            <p className="text-[#9B9A93] text-sm font-medium">Adaugă copil</p>
-          </Link>
+          {/* Add another child card — visible only if under plan limit */}
+          {canAddChild ? (
+            <Link
+              href="/onboarding"
+              className="bg-white rounded-2xl border-2 border-dashed border-[#E5E3DC] p-8 flex flex-col items-center justify-center gap-3 hover:border-[#E8A020]/40 hover:bg-[#FEF3C7]/20 transition-all"
+            >
+              <div className="w-12 h-12 rounded-full bg-[#FEF3C7] flex items-center justify-center text-[#E8A020] text-2xl">
+                +
+              </div>
+              <p className="text-[#9B9A93] text-sm font-medium">Adaugă copil</p>
+            </Link>
+          ) : (
+            <Link
+              href="/settings"
+              className="bg-white rounded-2xl border-2 border-dashed border-[#E5E3DC] p-8 flex flex-col items-center justify-center gap-3 hover:border-[#3ECDA0]/30 hover:bg-[#F0FDF8]/50 transition-all"
+            >
+              <div className="w-12 h-12 rounded-full bg-[#F0FDF8] flex items-center justify-center text-[#1D9E75] text-lg font-bold">
+                ↑
+              </div>
+              <p className="text-[#9B9A93] text-sm font-medium text-center">
+                Upgrade la Family<br />
+                <span className="text-xs text-[#3ECDA0]">pentru 3 profiluri</span>
+              </p>
+            </Link>
+          )}
         </div>
       )}
 

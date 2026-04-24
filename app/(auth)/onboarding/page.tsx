@@ -30,6 +30,14 @@ export default function OnboardingPage() {
   const [curriculum, setCurriculum] = useState<CurriculumType>("RO_NATIONAL");
   const [language, setLanguage] = useState<SessionLanguage>("ro");
 
+  const PLAN_LIMITS: Record<string, number> = {
+    trial: 1,
+    essential: 1,
+    family: 3,
+    annual: 1,
+    cancelled: 0,
+  };
+
   async function handleFinish() {
     setLoading(true);
     setError("");
@@ -39,6 +47,33 @@ export default function OnboardingPage() {
 
     if (!user) {
       router.push("/login");
+      return;
+    }
+
+    // Check plan child limit
+    const { data: parent } = await supabase
+      .from("parents")
+      .select("subscription_plan")
+      .eq("id", user.id)
+      .single();
+
+    const plan = parent?.subscription_plan ?? "trial";
+    const limit = PLAN_LIMITS[plan] ?? 1;
+
+    const { count } = await supabase
+      .from("children")
+      .select("id", { count: "exact", head: true })
+      .eq("parent_id", user.id)
+      .eq("is_active", true);
+
+    if ((count ?? 0) >= limit) {
+      const planLabel = plan === "family" ? "Family (3 copii)" : "Essential/Annual (1 copil)";
+      setError(
+        plan === "cancelled"
+          ? "Abonamentul tău a expirat. Activează un plan din Setări."
+          : `Planul tău ${planLabel} permite maximum ${limit} ${limit === 1 ? "copil" : "copii"}. Upgradează la Family pentru 3 profiluri.`
+      );
+      setLoading(false);
       return;
     }
 
@@ -122,7 +157,7 @@ export default function OnboardingPage() {
                       onClick={() => setChildAge(age)}
                       className={`py-2 rounded-xl text-sm font-semibold transition-all ${
                         childAge === age
-                          ? "bg-[#E8A020] text-[#92520A]"
+                          ? "bg-[#E8A020] text-[#3D1500]"
                           : "bg-[#0D1B2A]/60 text-white/60 hover:text-white border border-white/10"
                       }`}
                     >
@@ -143,7 +178,7 @@ export default function OnboardingPage() {
                       onClick={() => setChildGrade(g)}
                       className={`py-2 rounded-xl text-sm font-semibold transition-all ${
                         childGrade === g
-                          ? "bg-[#E8A020] text-[#92520A]"
+                          ? "bg-[#E8A020] text-[#3D1500]"
                           : "bg-[#0D1B2A]/60 text-white/60 hover:text-white border border-white/10"
                       }`}
                     >
@@ -178,7 +213,7 @@ export default function OnboardingPage() {
                       onClick={() => setCurriculum(opt.value)}
                       className={`py-3 px-4 rounded-xl text-sm font-medium text-left transition-all ${
                         curriculum === opt.value
-                          ? "bg-[#E8A020] text-[#92520A]"
+                          ? "bg-[#E8A020] text-[#3D1500]"
                           : "bg-[#0D1B2A]/60 text-white/60 hover:text-white border border-white/10"
                       }`}
                     >
