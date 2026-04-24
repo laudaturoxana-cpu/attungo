@@ -2,7 +2,12 @@ import { createClient } from "@/lib/supabase/server";
 import Link from "next/link";
 import AttoCharacter from "@/components/atto/AttoCharacter";
 
-export default async function DashboardPage() {
+export default async function DashboardPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ checkout?: string }>;
+}) {
+  const { checkout } = await searchParams;
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) return null;
@@ -36,6 +41,17 @@ export default async function DashboardPage() {
 
   return (
     <div className="flex flex-col gap-8">
+      {/* Payment success banner */}
+      {checkout === "success" && (
+        <div className="bg-[#F0FDF8] border border-[#3ECDA0]/40 rounded-2xl px-5 py-4 flex items-center gap-3">
+          <span className="text-2xl">🎉</span>
+          <div>
+            <p className="font-bold text-[#1D9E75]">Abonament activat cu succes!</p>
+            <p className="text-[#1D9E75]/70 text-sm">Atto e gata să înceapă. Adaugă primul copil sau pornește o sesiune.</p>
+          </div>
+        </div>
+      )}
+
       {/* Greeting */}
       <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
         <div>
