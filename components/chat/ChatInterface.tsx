@@ -8,6 +8,23 @@ import StarsDisplay from "./StarsDisplay";
 import VoiceInput from "./VoiceInput";
 import type { SessionLanguage } from "@/lib/supabase/types";
 
+interface ChildProfile {
+  learning_visual: number;
+  learning_auditory: number;
+  learning_logical: number;
+  learning_kinesthetic: number;
+  passion_sport: number;
+  passion_music: number;
+  passion_tech: number;
+  passion_stories: number;
+  passion_animals: number;
+  passion_art: number;
+  passion_science: number;
+  positive_anchors: string[];
+  current_energy: string;
+  common_mistakes: Record<string, unknown>;
+}
+
 interface ChatInterfaceProps {
   childId: string;
   childName: string;
@@ -16,6 +33,8 @@ interface ChatInterfaceProps {
   grade: number;
   language: SessionLanguage;
   curriculumType?: string;
+  childProfile?: ChildProfile;
+  freeMode?: boolean;
   sprintMinutes?: number;
   onSessionEnd?: (summary: { stars: number; concepts: string[] }) => void;
 }
@@ -28,6 +47,8 @@ export default function ChatInterface({
   grade,
   language,
   curriculumType = "RO_NATIONAL",
+  childProfile,
+  freeMode = false,
   sprintMinutes = 15,
   onSessionEnd,
 }: ChatInterfaceProps) {
@@ -74,6 +95,8 @@ export default function ChatInterface({
           grade,
           language,
           curriculumType,
+          childProfile,
+          freeMode,
         }),
       });
 
@@ -134,6 +157,7 @@ export default function ChatInterface({
           grade,
           language,
           curriculumType,
+          childProfile,
           conversationHistory: messages.map((m) => ({
             role: m.role === "atto" ? "model" : "user",
             content: m.content,

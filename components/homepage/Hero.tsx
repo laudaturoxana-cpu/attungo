@@ -77,12 +77,12 @@ export default function Hero({ lang = "ro" }: HeroProps) {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-              <Link
-                href="/register"
+              <a
+                href="/#preturi"
                 className="inline-flex items-center justify-center px-6 py-4 rounded-full bg-[#E8A020] text-[#3D1500] font-bold text-base sm:text-lg hover:bg-[#C17D0A] hover:text-white transition-all active:scale-95 glow-amber"
               >
                 {t.hero.ctaPrimary}
-              </Link>
+              </a>
               <a
                 href="#cum-functioneaza"
                 className="inline-flex items-center justify-center px-6 py-4 rounded-full border-2 border-white/30 text-white font-semibold hover:border-white/60 hover:bg-white/10 transition-all"

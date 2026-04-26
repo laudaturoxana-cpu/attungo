@@ -79,7 +79,7 @@ export default function Header({ lang = "ro", onLangChange }: HeaderProps) {
                   className={cn(
                     "px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider transition-all",
                     lang === l
-                      ? "bg-[#E8A020] text-[#92520A]"
+                      ? "bg-[#E8A020] text-[#3D1500]"
                       : "text-white/60 hover:text-white"
                   )}
                 >
@@ -97,12 +97,12 @@ export default function Header({ lang = "ro", onLangChange }: HeaderProps) {
             </Link>
 
             {/* CTA button */}
-            <Link
-              href="/register"
-              className="inline-flex items-center px-5 py-2.5 rounded-full bg-[#E8A020] text-[#92520A] font-semibold text-sm hover:bg-[#C17D0A] hover:text-white transition-all active:scale-95"
+            <a
+              href="/#preturi"
+              className="inline-flex items-center px-5 py-2.5 rounded-full bg-[#E8A020] text-[#3D1500] font-semibold text-sm hover:bg-[#C17D0A] hover:text-white transition-all active:scale-95"
             >
               {t.nav.cta}
-            </Link>
+            </a>
 
             {/* Mobile hamburger */}
             <button
@@ -156,7 +156,7 @@ export default function Header({ lang = "ro", onLangChange }: HeaderProps) {
                   className={cn(
                     "px-4 py-1.5 rounded-full text-sm font-semibold uppercase transition-all",
                     lang === l
-                      ? "bg-[#E8A020] text-[#92520A]"
+                      ? "bg-[#E8A020] text-[#3D1500]"
                       : "bg-white/10 text-white/60 hover:text-white"
                   )}
                 >

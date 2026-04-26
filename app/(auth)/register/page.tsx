@@ -57,10 +57,10 @@ function RegisterForm() {
     router.push("/onboarding");
   }
 
-  const PLAN_LABELS: Record<string, string> = {
-    essential: "Essential · €16/lună",
-    family: "Family · €26/lună",
-    annual: "Annual · €142/an",
+  const PLAN_LABELS: Record<string, { name: string; price: string }> = {
+    essential: { name: "Essential", price: "€12/lună" },
+    family: { name: "Family", price: "€19/lună" },
+    annual: { name: "Annual", price: "€99/an (€8/lună)" },
   };
 
   return (
@@ -71,11 +71,16 @@ function RegisterForm() {
         </div>
       )}
 
-      {plan && (
-        <div className="text-center">
-          <span className="bg-[#FEF3C7]/10 border border-[#E8A020]/30 text-[#E8A020] text-xs px-3 py-1 rounded-full">
-            Plan ales: {PLAN_LABELS[plan] || plan}
-          </span>
+      {plan && PLAN_LABELS[plan] && (
+        <div className="bg-[#0D1B2A]/60 rounded-xl px-4 py-3 border border-white/10 flex items-center justify-between">
+          <div>
+            <p className="text-white/40 text-xs">Plan ales</p>
+            <p className="text-white font-semibold text-sm">{PLAN_LABELS[plan].name}</p>
+          </div>
+          <div className="text-right">
+            <p className="text-[#E8A020] font-bold text-sm">{PLAN_LABELS[plan].price}</p>
+            <p className="text-[#3ECDA0] text-xs">7 zile gratuit</p>
+          </div>
         </div>
       )}
 

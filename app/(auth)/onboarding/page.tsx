@@ -18,9 +18,29 @@ const CURRICULUM_OPTIONS: { value: CurriculumType; label: string }[] = [
   { value: "US_HOMESCHOOL", label: "Homeschool (US)" },
 ];
 
+const PLAN_LIMITS: Record<string, number> = {
+  trial: 1,
+  essential: 1,
+  family: 3,
+  annual: 1,
+  cancelled: 0,
+};
+
+type PassionKey = "sport" | "music" | "tech" | "stories" | "animals" | "art" | "science";
+type LearningStyle = "visual" | "auditory" | "logical" | "kinesthetic";
+type EnergyLevel = "low" | "medium" | "high";
+
+interface Step3Answers {
+  passions: PassionKey[];
+  learningStyle: LearningStyle | "";
+  energy: EnergyLevel | "";
+  motivators: string[];
+}
+
 export default function OnboardingPage() {
   const router = useRouter();
   const [step, setStep] = useState(1);
+  const [questionStep, setQuestionStep] = useState(0);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -30,13 +50,118 @@ export default function OnboardingPage() {
   const [curriculum, setCurriculum] = useState<CurriculumType>("RO_NATIONAL");
   const [language, setLanguage] = useState<SessionLanguage>("ro");
 
-  const PLAN_LIMITS: Record<string, number> = {
-    trial: 1,
-    essential: 1,
-    family: 3,
-    annual: 1,
-    cancelled: 0,
-  };
+  const [answers, setAnswers] = useState<Step3Answers>({
+    passions: [],
+    learningStyle: "",
+    energy: "",
+    motivators: [],
+  });
+
+  const firstName = childName.split(" ")[0] || "copilul";
+
+  const STEP3_QUESTIONS = [
+    {
+      id: "passions",
+      attoText: `Bine, ${firstName}! Acum spune-mi — ce îi place lui ${firstName} să facă în timpul liber?`,
+      hint: "Alege până la 2 lucruri",
+      multi: true,
+      max: 2,
+      options: [
+        { label: "🏃 Sport", value: "sport" },
+        { label: "🎵 Muzică", value: "music" },
+        { label: "💻 Jocuri / tech", value: "tech" },
+        { label: "📖 Povești / cărți", value: "stories" },
+        { label: "🐾 Animale", value: "animals" },
+        { label: "🎨 Desen / artă", value: "art" },
+        { label: "🔬 Știință", value: "science" },
+      ],
+    },
+    {
+      id: "learningStyle",
+      attoText: `Super! Și cum învață cel mai bine ${firstName}?`,
+      hint: "Alege una",
+      multi: false,
+      max: 1,
+      options: [
+        { label: "👁️ Vede imagini și diagrame", value: "visual" },
+        { label: "👂 Ascultă explicații", value: "auditory" },
+        { label: "🧩 Rezolvă probleme logice", value: "logical" },
+        { label: "🤸 Face lucruri cu mâinile", value: "kinesthetic" },
+      ],
+    },
+    {
+      id: "energy",
+      attoText: `Înțeles! Cum e ${firstName} în general după școală?`,
+      hint: "Alege una",
+      multi: false,
+      max: 1,
+      options: [
+        { label: "⚡ Plin/ă de energie", value: "high" },
+        { label: "😊 Normal, ok", value: "medium" },
+        { label: "😴 Obosit/ă de obicei", value: "low" },
+      ],
+    },
+    {
+      id: "motivators",
+      attoText: `Ultima întrebare — ce îl/o motivează pe ${firstName} cel mai mult?`,
+      hint: "Alege până la 2",
+      multi: true,
+      max: 2,
+      options: [
+        { label: "🏆 Să câștige / să fie primul", value: "competitie" },
+        { label: "⭐ Stele și recompense", value: "recompense" },
+        { label: "🤝 Să ajute pe alții", value: "altruism" },
+        { label: "🎯 Să înțeleagă bine", value: "mastery" },
+        { label: "😄 Să se distreze", value: "distractie" },
+      ],
+    },
+  ];
+
+  const currentQuestion = STEP3_QUESTIONS[questionStep];
+
+  function getSelected(id: string): string[] {
+    if (id === "passions") return answers.passions;
+    if (id === "learningStyle") return answers.learningStyle ? [answers.learningStyle] : [];
+    if (id === "energy") return answers.energy ? [answers.energy] : [];
+    if (id === "motivators") return answers.motivators;
+    return [];
+  }
+
+  function toggleOption(id: string, value: string) {
+    setAnswers((prev) => {
+      if (id === "passions") {
+        const arr = prev.passions.includes(value as PassionKey)
+          ? prev.passions.filter((v) => v !== value)
+          : prev.passions.length < 2
+          ? [...prev.passions, value as PassionKey]
+          : prev.passions;
+        return { ...prev, passions: arr };
+      }
+      if (id === "learningStyle") {
+        return { ...prev, learningStyle: value as LearningStyle };
+      }
+      if (id === "energy") {
+        return { ...prev, energy: value as EnergyLevel };
+      }
+      if (id === "motivators") {
+        const arr = prev.motivators.includes(value)
+          ? prev.motivators.filter((v) => v !== value)
+          : prev.motivators.length < 2
+          ? [...prev.motivators, value]
+          : prev.motivators;
+        return { ...prev, motivators: arr };
+      }
+      return prev;
+    });
+  }
+
+  function isQuestionAnswered(id: string): boolean {
+    if (id === "passions") return answers.passions.length > 0;
+    if (id === "learningStyle") return answers.learningStyle !== "";
+    if (id === "energy") return answers.energy !== "";
+    if (id === "motivators") return answers.motivators.length > 0;
+    return false;
+  }
 
   async function handleFinish() {
     setLoading(true);
@@ -50,7 +175,6 @@ export default function OnboardingPage() {
       return;
     }
 
-    // Check plan child limit
     const { data: parent } = await supabase
       .from("parents")
       .select("subscription_plan")
@@ -67,33 +191,73 @@ export default function OnboardingPage() {
       .eq("is_active", true);
 
     if ((count ?? 0) >= limit) {
-      const planLabel = plan === "family" ? "Family (3 copii)" : "Essential/Annual (1 copil)";
       setError(
         plan === "cancelled"
           ? "Abonamentul tău a expirat. Activează un plan din Setări."
-          : `Planul tău ${planLabel} permite maximum ${limit} ${limit === 1 ? "copil" : "copii"}. Upgradează la Family pentru 3 profiluri.`
+          : `Planul tău permite maximum ${limit} ${limit === 1 ? "copil" : "copii"}. Upgradează la Family pentru 3 profiluri.`
       );
       setLoading(false);
       return;
     }
 
-    const { error: dbError } = await supabase.from("children").insert({
-      parent_id: user.id,
-      name: childName,
-      age: childAge,
-      grade: childGrade,
-      curriculum_type: curriculum,
-      session_language: language,
-      atto_color: "#E8A020",
-      atto_name: "Atto",
-      is_active: true,
-    });
+    const { data: child, error: dbError } = await supabase
+      .from("children")
+      .insert({
+        parent_id: user.id,
+        name: childName,
+        age: childAge,
+        grade: childGrade,
+        curriculum_type: curriculum,
+        session_language: language,
+        atto_color: "#E8A020",
+        atto_name: "Atto",
+        is_active: true,
+      })
+      .select("id")
+      .single();
 
-    if (dbError) {
+    if (dbError || !child) {
       setError("Eroare la salvare. Încearcă din nou.");
       setLoading(false);
       return;
     }
+
+    // Map passions to profile columns (counters: 0 = not mentioned, 10 = mentioned)
+    const passionMap: Record<string, number> = {
+      sport: 0, music: 0, tech: 0, stories: 0, animals: 0, art: 0, science: 0,
+    };
+    answers.passions.forEach((p) => { passionMap[p] = 10; });
+
+    // Map learning style to profile columns (floats: 0.3 base, 0.8 selected)
+    const learningBase = 0.3;
+    const learningMap = {
+      learning_visual: learningBase,
+      learning_auditory: learningBase,
+      learning_logical: learningBase,
+      learning_kinesthetic: learningBase,
+    };
+    if (answers.learningStyle) {
+      const key = `learning_${answers.learningStyle}` as keyof typeof learningMap;
+      learningMap[key] = 0.8;
+    }
+
+    const positiveAnchors = answers.motivators.length > 0 ? answers.motivators : ["recompense"];
+
+    await supabase
+      .from("child_profiles")
+      .update({
+        passion_sport: passionMap.sport,
+        passion_music: passionMap.music,
+        passion_tech: passionMap.tech,
+        passion_stories: passionMap.stories,
+        passion_animals: passionMap.animals,
+        passion_art: passionMap.art,
+        passion_science: passionMap.science,
+        ...learningMap,
+        current_energy: (answers.energy || "medium") as "low" | "medium" | "high",
+        positive_anchors: positiveAnchors,
+      })
+      .eq("child_id", child.id);
 
     router.push("/dashboard");
   }
@@ -105,15 +269,17 @@ export default function OnboardingPage() {
       <div className="relative z-10 w-full max-w-lg">
         {/* Header */}
         <div className="text-center mb-10 flex flex-col items-center gap-3">
-          <AttoCharacter state="listening" size={72} />
+          <AttoCharacter state={step === 3 ? "happy" : "listening"} size={72} />
           <h1 className="text-white text-3xl font-bold" style={{ fontFamily: "var(--font-display)" }}>
-            Spune-ne despre copilul tău
+            {step === 3 ? `Hai să îl cunosc pe ${firstName}!` : "Spune-ne despre copilul tău"}
           </h1>
-          <p className="text-white/50">Atto se va calibra exact pe el/ea</p>
+          <p className="text-white/50">
+            {step === 3 ? "Câteva întrebări rapide pentru Atto" : "Atto se va calibra exact pe el/ea"}
+          </p>
 
-          {/* Step indicator */}
+          {/* Step indicator — 3 steps now */}
           <div className="flex gap-2 mt-2">
-            {[1, 2].map((s) => (
+            {[1, 2, 3].map((s) => (
               <div
                 key={s}
                 className={`h-1.5 rounded-full transition-all ${
@@ -131,9 +297,9 @@ export default function OnboardingPage() {
             </div>
           )}
 
+          {/* ─── STEP 1 ─── */}
           {step === 1 && (
             <>
-              {/* Child name */}
               <div className="flex flex-col gap-2">
                 <label className="text-white/70 text-sm font-medium">Prenumele copilului</label>
                 <input
@@ -146,7 +312,6 @@ export default function OnboardingPage() {
                 />
               </div>
 
-              {/* Age */}
               <div className="flex flex-col gap-2">
                 <label className="text-white/70 text-sm font-medium">Vârsta</label>
                 <div className="grid grid-cols-5 sm:grid-cols-10 gap-2">
@@ -167,7 +332,6 @@ export default function OnboardingPage() {
                 </div>
               </div>
 
-              {/* Grade */}
               <div className="flex flex-col gap-2">
                 <label className="text-white/70 text-sm font-medium">Clasa</label>
                 <div className="grid grid-cols-4 sm:grid-cols-8 gap-2">
@@ -200,9 +364,9 @@ export default function OnboardingPage() {
             </>
           )}
 
+          {/* ─── STEP 2 ─── */}
           {step === 2 && (
             <>
-              {/* Curriculum */}
               <div className="flex flex-col gap-2">
                 <label className="text-white/70 text-sm font-medium">Curriculum</label>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -223,7 +387,6 @@ export default function OnboardingPage() {
                 </div>
               </div>
 
-              {/* Language */}
               <div className="flex flex-col gap-2">
                 <label className="text-white/70 text-sm font-medium">Limba sesiunilor cu Atto</label>
                 <div className="grid grid-cols-2 gap-3">
@@ -244,7 +407,6 @@ export default function OnboardingPage() {
                 </div>
               </div>
 
-              {/* Summary */}
               <div className="bg-[#0D1B2A]/60 rounded-xl p-4 text-sm text-white/60 space-y-1 border border-white/10">
                 <p><span className="text-white/40">Copil:</span> <span className="text-white">{childName}</span>, {childAge} ani, Clasa {childGrade}</p>
                 <p><span className="text-white/40">Curriculum:</span> <span className="text-[#3ECDA0]">{CURRICULUM_OPTIONS.find(o => o.value === curriculum)?.label}</span></p>
@@ -261,12 +423,100 @@ export default function OnboardingPage() {
                 <Button
                   variant="amber"
                   size="lg"
-                  className="flex-2 flex-1"
-                  disabled={loading}
-                  onClick={handleFinish}
+                  className="flex-1"
+                  onClick={() => { setStep(3); setQuestionStep(0); }}
                 >
-                  {loading ? "Se salvează..." : "Gata, să începem!"}
+                  Continuă →
                 </Button>
+              </div>
+            </>
+          )}
+
+          {/* ─── STEP 3 — Conversational Atto questions ─── */}
+          {step === 3 && (
+            <>
+              {/* Atto speech bubble */}
+              <div className="flex items-start gap-3">
+                <div className="w-8 h-8 rounded-full bg-[#E8A020]/20 flex items-center justify-center flex-shrink-0 mt-1">
+                  <span className="text-[#E8A020] text-xs font-bold">A</span>
+                </div>
+                <div className="bg-[#0D1B2A]/60 rounded-2xl rounded-tl-sm px-4 py-3 border border-white/10 flex-1">
+                  <p className="text-white text-sm leading-relaxed">{currentQuestion.attoText}</p>
+                  {currentQuestion.hint && (
+                    <p className="text-white/40 text-xs mt-1">{currentQuestion.hint}</p>
+                  )}
+                </div>
+              </div>
+
+              {/* Answer chips */}
+              <div className={`grid gap-2 ${currentQuestion.options.length <= 4 ? "grid-cols-1 sm:grid-cols-2" : "grid-cols-2 sm:grid-cols-3"}`}>
+                {currentQuestion.options.map((opt) => {
+                  const selected = getSelected(currentQuestion.id).includes(opt.value);
+                  return (
+                    <button
+                      key={opt.value}
+                      type="button"
+                      onClick={() => toggleOption(currentQuestion.id, opt.value)}
+                      className={`py-3 px-4 rounded-xl text-sm font-medium text-left transition-all border ${
+                        selected
+                          ? "bg-[#E8A020] text-[#3D1500] border-[#E8A020]"
+                          : "bg-[#0D1B2A]/60 text-white/70 hover:text-white border-white/10 hover:border-white/30"
+                      }`}
+                    >
+                      {opt.label}
+                    </button>
+                  );
+                })}
+              </div>
+
+              {/* Question progress dots */}
+              <div className="flex justify-center gap-1.5">
+                {STEP3_QUESTIONS.map((_, i) => (
+                  <div
+                    key={i}
+                    className={`h-1.5 rounded-full transition-all ${
+                      i < questionStep ? "w-5 bg-[#3ECDA0]" : i === questionStep ? "w-5 bg-[#E8A020]" : "w-2.5 bg-white/20"
+                    }`}
+                  />
+                ))}
+              </div>
+
+              {/* Nav buttons */}
+              <div className="flex gap-3">
+                <button
+                  onClick={() => {
+                    if (questionStep === 0) {
+                      setStep(2);
+                    } else {
+                      setQuestionStep((q) => q - 1);
+                    }
+                  }}
+                  className="flex-1 py-3 rounded-full border border-white/20 text-white/60 hover:text-white hover:border-white/40 font-semibold transition-all"
+                >
+                  Înapoi
+                </button>
+
+                {questionStep < STEP3_QUESTIONS.length - 1 ? (
+                  <Button
+                    variant="amber"
+                    size="lg"
+                    className="flex-1"
+                    disabled={!isQuestionAnswered(currentQuestion.id)}
+                    onClick={() => setQuestionStep((q) => q + 1)}
+                  >
+                    Continuă →
+                  </Button>
+                ) : (
+                  <Button
+                    variant="amber"
+                    size="lg"
+                    className="flex-1"
+                    disabled={loading || !isQuestionAnswered(currentQuestion.id)}
+                    onClick={handleFinish}
+                  >
+                    {loading ? "Se salvează..." : "Gata, să înceapă Atto! →"}
+                  </Button>
+                )}
               </div>
             </>
           )}
