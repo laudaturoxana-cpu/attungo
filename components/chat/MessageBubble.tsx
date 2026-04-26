@@ -30,7 +30,7 @@ export default function MessageBubble({ message, lang = "ro" }: MessageBubblePro
       {isAtto ? (
         <AttoCharacter
           state={message.attoState ?? "neutral"}
-          size={28}
+          size={40}
           className="flex-shrink-0 mb-1"
         />
       ) : (

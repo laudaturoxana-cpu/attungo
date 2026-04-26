@@ -288,17 +288,21 @@ export default function ChatInterface({
             <MessageBubble key={msg.id} message={msg} lang={lang} />
           ))}
 
-          {/* Typing indicator */}
+          {/* Typing indicator — firefly lights, not WhatsApp dots */}
           {isTyping && (
             <div className="flex gap-2 items-end animate-fade-in">
-              <AttoCharacter state="thinking" size={28} className="flex-shrink-0 mb-1" />
+              <AttoCharacter state="thinking" size={36} className="flex-shrink-0 mb-1" />
               <div className="bubble-atto px-4 py-3">
-                <div className="flex gap-1 items-center">
+                <div className="flex gap-2 items-center">
                   {[0, 1, 2].map((i) => (
                     <span
                       key={i}
-                      className="w-1.5 h-1.5 rounded-full bg-[#1D9E75] inline-block"
-                      style={{ animation: `typing-dot 1.2s ease-in-out ${i * 0.2}s infinite` }}
+                      className="w-2 h-2 rounded-full inline-block"
+                      style={{
+                        background: "#E8A020",
+                        boxShadow: "0 0 6px rgba(232,160,32,0.7), 0 0 12px rgba(232,160,32,0.3)",
+                        animation: `typing-dot 1.2s ease-in-out ${i * 0.25}s infinite`,
+                      }}
                     />
                   ))}
                 </div>
