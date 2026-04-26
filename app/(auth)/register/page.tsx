@@ -38,17 +38,13 @@ function RegisterForm() {
       return;
     }
 
-    const { error: dbError } = await supabase.from("parents").insert({
-      id: authData.user.id,
-      email,
-      name,
-      subscription_plan: "trial",
-      subscription_status: "active",
-      trial_ends_at: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString(),
-      language_preference: "ro",
+    const registerRes = await fetch("/api/auth/register", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ userId: authData.user.id, email, name }),
     });
 
-    if (dbError) {
+    if (!registerRes.ok) {
       setError("Cont creat, dar eroare la configurare. Contactează-ne.");
       setLoading(false);
       return;
