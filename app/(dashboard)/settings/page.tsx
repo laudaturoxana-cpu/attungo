@@ -149,7 +149,7 @@ export default function SettingsPage() {
             <button
               type="submit"
               disabled={saving}
-              className="px-5 py-2.5 rounded-full bg-[#E8A020] text-[#92520A] font-semibold text-sm hover:bg-[#C17D0A] hover:text-white transition-all disabled:opacity-50"
+              className="px-5 py-2.5 rounded-full bg-[#E8A020] text-[#3D1500] font-semibold text-sm hover:bg-[#C17D0A] hover:text-white transition-all disabled:opacity-50"
             >
               {saving ? "Se salvează..." : "Salvează modificările"}
             </button>

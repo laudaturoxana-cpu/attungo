@@ -50,7 +50,7 @@ export default async function ChildrenPage() {
         {canAddMore && (
           <Link
             href="/onboarding"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#E8A020] text-[#92520A] font-semibold text-sm hover:bg-[#C17D0A] hover:text-white transition-all"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#E8A020] text-[#3D1500] font-semibold text-sm hover:bg-[#C17D0A] hover:text-white transition-all"
           >
             + Adaugă copil
           </Link>
@@ -67,7 +67,7 @@ export default async function ChildrenPage() {
             <p className="text-[#9B9A93] mb-6">Atto e gata să se calibreze pe el/ea.</p>
             <Link
               href="/onboarding"
-              className="inline-flex items-center px-6 py-3 rounded-full bg-[#E8A020] text-[#92520A] font-semibold hover:bg-[#C17D0A] hover:text-white transition-all"
+              className="inline-flex items-center px-6 py-3 rounded-full bg-[#E8A020] text-[#3D1500] font-semibold hover:bg-[#C17D0A] hover:text-white transition-all"
             >
               Adaugă primul copil →
             </Link>
@@ -142,7 +142,7 @@ export default async function ChildrenPage() {
                   <div className="flex gap-2">
                     <Link
                       href={`/session/${child.id}`}
-                      className="flex-1 py-2.5 rounded-full bg-[#E8A020] text-[#92520A] font-semibold text-sm text-center hover:bg-[#C17D0A] hover:text-white transition-all"
+                      className="flex-1 py-2.5 rounded-full bg-[#E8A020] text-[#3D1500] font-semibold text-sm text-center hover:bg-[#C17D0A] hover:text-white transition-all"
                     >
                       Sesiune →
                     </Link>

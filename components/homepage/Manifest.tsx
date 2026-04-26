@@ -33,7 +33,7 @@ export default function Manifest({ lang = "ro" }: ManifestProps) {
 
         <Link
           href="/register"
-          className="mt-2 inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 rounded-full bg-[#E8A020] text-[#92520A] font-bold text-base sm:text-lg hover:bg-[#C17D0A] hover:text-white transition-all active:scale-95 glow-amber"
+          className="mt-2 inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 rounded-full bg-[#E8A020] text-[#3D1500] font-bold text-base sm:text-lg hover:bg-[#C17D0A] hover:text-white transition-all active:scale-95 glow-amber"
         >
           {lang === "ro" ? "Încearcă 7 zile gratuit →" : "Try 7 days free →"}
         </Link>

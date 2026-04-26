@@ -94,7 +94,7 @@ export default async function ChildProfilePage({ params }: { params: Promise<{ c
           </div>
           <Link
             href={`/session/${child.id}`}
-            className="px-4 sm:px-5 py-2.5 rounded-full bg-[#E8A020] text-[#92520A] font-semibold text-sm hover:bg-[#C17D0A] hover:text-white transition-all flex-shrink-0"
+            className="px-4 sm:px-5 py-2.5 rounded-full bg-[#E8A020] text-[#3D1500] font-semibold text-sm hover:bg-[#C17D0A] hover:text-white transition-all flex-shrink-0"
           >
             Sesiune →
           </Link>

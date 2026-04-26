@@ -21,7 +21,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           },
           // Color variants
           {
-            "bg-[#E8A020] text-[#92520A] hover:bg-[#C17D0A] hover:text-white focus-visible:ring-[#E8A020] active:scale-95":
+            "bg-[#E8A020] text-[#3D1500] hover:bg-[#C17D0A] hover:text-white focus-visible:ring-[#E8A020] active:scale-95":
               variant === "amber",
             "bg-[#1D9E75] text-white hover:bg-[#1B5E4F] focus-visible:ring-[#1D9E75] active:scale-95":
               variant === "teal",

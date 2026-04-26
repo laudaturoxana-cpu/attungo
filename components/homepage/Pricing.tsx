@@ -52,7 +52,7 @@ export default function Pricing({ lang = "ro" }: PricingProps) {
               ))}
             </ul>
             <Link href="/register?plan=essential"
-              className="w-full py-3 rounded-full border-2 border-[#E8A020] text-[#E8A020] font-semibold text-center text-sm hover:bg-[#E8A020] hover:text-[#92520A] transition-all">
+              className="w-full py-3 rounded-full border-2 border-[#E8A020] text-[#E8A020] font-semibold text-center text-sm hover:bg-[#E8A020] hover:text-[#3D1500] transition-all">
               {t.pricing.cta}
             </Link>
           </Card>
@@ -118,7 +118,7 @@ export default function Pricing({ lang = "ro" }: PricingProps) {
               ))}
             </ul>
             <Link href="/register?plan=annual"
-              className="w-full py-3 rounded-full border-2 border-[#E8A020] text-[#E8A020] font-semibold text-center text-sm hover:bg-[#E8A020] hover:text-[#92520A] transition-all">
+              className="w-full py-3 rounded-full border-2 border-[#E8A020] text-[#E8A020] font-semibold text-center text-sm hover:bg-[#E8A020] hover:text-[#3D1500] transition-all">
               {t.pricing.ctaAnnual}
             </Link>
           </Card>

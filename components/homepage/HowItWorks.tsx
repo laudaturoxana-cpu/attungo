@@ -59,7 +59,7 @@ export default function HowItWorks({ lang = "ro" }: HowItWorksProps) {
                   {STEP_ICONS[i]}
                 </div>
                 <span
-                  className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-[#E8A020] text-[#92520A] text-xs font-bold flex items-center justify-center"
+                  className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-[#E8A020] text-[#3D1500] text-xs font-bold flex items-center justify-center"
                   style={{ fontFamily: "var(--font-mono)" }}
                 >
                   {i + 1}
