@@ -175,60 +175,11 @@ export default function OnboardingPage() {
       return;
     }
 
-    const { data: parent } = await supabase
-      .from("parents")
-      .select("subscription_plan")
-      .eq("id", user.id)
-      .single();
-
-    const plan = parent?.subscription_plan ?? "trial";
-    const limit = PLAN_LIMITS[plan] ?? 1;
-
-    const { count } = await supabase
-      .from("children")
-      .select("id", { count: "exact", head: true })
-      .eq("parent_id", user.id)
-      .eq("is_active", true);
-
-    if ((count ?? 0) >= limit) {
-      setError(
-        plan === "cancelled"
-          ? "Abonamentul tău a expirat. Activează un plan din Setări."
-          : `Planul tău permite maximum ${limit} ${limit === 1 ? "copil" : "copii"}. Upgradează la Family pentru 3 profiluri.`
-      );
-      setLoading(false);
-      return;
-    }
-
-    const { data: child, error: dbError } = await supabase
-      .from("children")
-      .insert({
-        parent_id: user.id,
-        name: childName,
-        age: childAge,
-        grade: childGrade,
-        curriculum_type: curriculum,
-        session_language: language,
-        atto_color: "#E8A020",
-        atto_name: "Atto",
-        is_active: true,
-      })
-      .select("id")
-      .single();
-
-    if (dbError || !child) {
-      setError("Eroare la salvare. Încearcă din nou.");
-      setLoading(false);
-      return;
-    }
-
-    // Map passions to profile columns (counters: 0 = not mentioned, 10 = mentioned)
     const passionMap: Record<string, number> = {
       sport: 0, music: 0, tech: 0, stories: 0, animals: 0, art: 0, science: 0,
     };
     answers.passions.forEach((p) => { passionMap[p] = 10; });
 
-    // Map learning style to profile columns (floats: 0.3 base, 0.8 selected)
     const learningBase = 0.3;
     const learningMap = {
       learning_visual: learningBase,
@@ -241,23 +192,40 @@ export default function OnboardingPage() {
       learningMap[key] = 0.8;
     }
 
-    const positiveAnchors = answers.motivators.length > 0 ? answers.motivators : ["recompense"];
+    const res = await fetch("/api/auth/onboarding", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        userId: user.id,
+        child: {
+          name: childName,
+          age: childAge,
+          grade: childGrade,
+          curriculum_type: curriculum,
+          session_language: language,
+        },
+        profile: {
+          passion_sport: passionMap.sport,
+          passion_music: passionMap.music,
+          passion_tech: passionMap.tech,
+          passion_stories: passionMap.stories,
+          passion_animals: passionMap.animals,
+          passion_art: passionMap.art,
+          passion_science: passionMap.science,
+          ...learningMap,
+          current_energy: answers.energy || "medium",
+          positive_anchors: answers.motivators.length > 0 ? answers.motivators : ["recompense"],
+        },
+      }),
+    });
 
-    await supabase
-      .from("child_profiles")
-      .update({
-        passion_sport: passionMap.sport,
-        passion_music: passionMap.music,
-        passion_tech: passionMap.tech,
-        passion_stories: passionMap.stories,
-        passion_animals: passionMap.animals,
-        passion_art: passionMap.art,
-        passion_science: passionMap.science,
-        ...learningMap,
-        current_energy: (answers.energy || "medium") as "low" | "medium" | "high",
-        positive_anchors: positiveAnchors,
-      })
-      .eq("child_id", child.id);
+    const data = await res.json();
+
+    if (!res.ok) {
+      setError(data.error || "Eroare la salvare. Încearcă din nou.");
+      setLoading(false);
+      return;
+    }
 
     router.push("/dashboard");
   }
