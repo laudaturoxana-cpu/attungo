@@ -44,6 +44,38 @@ export async function POST(req: NextRequest) {
   }
 }
 
+// Models in order: cheapest first, most capable last
+const GEMINI_MODELS = [
+  "gemini-2.5-flash-lite",
+  "gemini-2.5-flash",
+  "gemini-2.5-pro",
+] as const;
+
+async function callGemini(
+  apiKey: string,
+  geminiBody: Record<string, unknown>,
+): Promise<string | null> {
+  for (const model of GEMINI_MODELS) {
+    try {
+      const res = await fetch(
+        `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(geminiBody),
+        }
+      );
+      if (!res.ok) continue;
+      const data = await res.json();
+      const text = data.candidates?.[0]?.content?.parts?.[0]?.text;
+      if (text) return text;
+    } catch {
+      continue;
+    }
+  }
+  return null;
+}
+
 async function fallbackGemini(body: Record<string, unknown>) {
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) {
@@ -58,21 +90,19 @@ async function fallbackGemini(body: Record<string, unknown>) {
     const grade = body.grade as number ?? 5;
     const curriculumType = (body.curriculumType as CurriculumType) ?? "RO_NATIONAL";
     const childProfile = body.childProfile as ChildProfile | undefined;
-
     const freeMode = body.freeMode as boolean ?? false;
+
     const curriculumData = getCurriculumForGrade(curriculumType, grade);
     const prereqData = grade > 1 ? getCurriculumForGrade(curriculumType, grade - 1) : null;
     const systemPrompt = freeMode
       ? buildFreeModePrompt(childName, grade, lang, topic, curriculumType, curriculumData, prereqData, childProfile)
       : buildAttoPrompt(childName, grade, lang, subject, topic, curriculumType, curriculumData, prereqData, childProfile);
-    const history = (body.conversationHistory as Array<{ role: string; content: string }>) ?? [];
 
-    const contents = [
-      ...history.map((m) => ({
-        role: m.role === "model" ? "model" : "user",
-        parts: [{ text: m.content }],
-      })),
-    ];
+    const history = (body.conversationHistory as Array<{ role: string; content: string }>) ?? [];
+    const contents = history.map((m) => ({
+      role: m.role === "model" ? "model" : "user",
+      parts: [{ text: m.content }],
+    }));
 
     if (body.type === "message") {
       contents.push({ role: "user", parts: [{ text: body.message as string }] });
@@ -84,31 +114,14 @@ async function fallbackGemini(body: Record<string, unknown>) {
 
     const geminiBody = {
       system_instruction: { parts: [{ text: systemPrompt }] },
-      contents: contents.length > 0 ? contents : [{
-        role: "user",
-        parts: [{ text: fallbackUserMsg }],
-      }],
+      contents: contents.length > 0 ? contents : [{ role: "user", parts: [{ text: fallbackUserMsg }] }],
       generationConfig: { maxOutputTokens: 500, temperature: 0.8 },
     };
 
-    const geminiRes = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`,
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(geminiBody),
-      }
-    );
-
-    if (!geminiRes.ok) {
-      return NextResponse.json({ message: getDefaultAttoMessage(body) });
-    }
-
-    const geminiData = await geminiRes.json();
-    const text = geminiData.candidates?.[0]?.content?.parts?.[0]?.text ?? getDefaultAttoMessage(body);
+    const text = await callGemini(apiKey, geminiBody);
 
     return NextResponse.json({
-      message: text,
+      message: text ?? getDefaultAttoMessage(body),
       detected_state: { energy: "medium", frustration: 0.2, engagement: 0.7 },
       concepts_mastered: [],
     });
