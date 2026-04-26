@@ -3,6 +3,7 @@ import { createClient } from "@/lib/supabase/server";
 import { getCurriculumForGrade } from "@/lib/curriculum";
 import type { CurriculumType, GradeCurriculum, SubjectCurriculum } from "@/lib/curriculum/types";
 import { getPedagogyPromptBlock } from "@/lib/atto/pedagogy";
+import type { ChildProfile } from "@/lib/atto/types";
 
 export async function POST(req: NextRequest) {
   const supabase = await createClient();
@@ -43,23 +44,6 @@ export async function POST(req: NextRequest) {
   }
 }
 
-interface ChildProfile {
-  learning_visual: number;
-  learning_auditory: number;
-  learning_logical: number;
-  learning_kinesthetic: number;
-  passion_sport: number;
-  passion_music: number;
-  passion_tech: number;
-  passion_stories: number;
-  passion_animals: number;
-  passion_art: number;
-  passion_science: number;
-  positive_anchors: string[];
-  current_energy: string;
-  common_mistakes: Record<string, unknown>;
-}
-
 async function fallbackGemini(body: Record<string, unknown>) {
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) {
@@ -94,13 +78,17 @@ async function fallbackGemini(body: Record<string, unknown>) {
       contents.push({ role: "user", parts: [{ text: body.message as string }] });
     }
 
+    const fallbackUserMsg = freeMode && topic
+      ? topic
+      : (lang === "ro" ? "Salut Atto!" : "Hi Atto!");
+
     const geminiBody = {
       system_instruction: { parts: [{ text: systemPrompt }] },
       contents: contents.length > 0 ? contents : [{
         role: "user",
-        parts: [{ text: lang === "ro" ? "Salut Atto!" : "Hi Atto!" }],
+        parts: [{ text: fallbackUserMsg }],
       }],
-      generationConfig: { maxOutputTokens: 300, temperature: 0.8 },
+      generationConfig: { maxOutputTokens: 500, temperature: 0.8 },
     };
 
     const geminiRes = await fetch(
