@@ -125,6 +125,13 @@ body {
   to { opacity: 1; }
 }
 
+@keyframes star-pop {
+  0%   { transform: translateY(0) scale(0.3); opacity: 0; }
+  25%  { transform: translateY(-10px) scale(1.5); opacity: 1; }
+  65%  { transform: translateY(-32px) scale(1.1); opacity: 1; }
+  100% { transform: translateY(-60px) scale(0.9); opacity: 0; }
+}
+
 @keyframes antenna-glow {
   0%, 100% { fill: #E8A020; filter: brightness(1); }
   50% { fill: #FDE68A; filter: brightness(1.5) drop-shadow(0 0 4px #E8A020); }
@@ -148,6 +155,10 @@ body {
 
 .animate-fade-in {
   animation: fade-in 0.4s ease-out forwards;
+}
+
+.animate-star-pop {
+  animation: star-pop 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .text-amber-gradient {
