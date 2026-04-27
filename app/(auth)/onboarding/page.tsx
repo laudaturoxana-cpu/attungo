@@ -32,8 +32,8 @@ type EnergyLevel = "low" | "medium" | "high";
 
 interface Step3Answers {
   passions: PassionKey[];
-  learningStyle: LearningStyle | "";
-  energy: EnergyLevel | "";
+  learningStyle: LearningStyle[];
+  energy: EnergyLevel[];
   motivators: string[];
 }
 
@@ -52,8 +52,8 @@ export default function OnboardingPage() {
 
   const [answers, setAnswers] = useState<Step3Answers>({
     passions: [],
-    learningStyle: "",
-    energy: "",
+    learningStyle: [],
+    energy: [],
     motivators: [],
   });
 
@@ -79,9 +79,9 @@ export default function OnboardingPage() {
     {
       id: "learningStyle",
       attoText: `Super! Și cum învață cel mai bine ${firstName}?`,
-      hint: "Alege una",
-      multi: false,
-      max: 1,
+      hint: "Alege tot ce se potrivește",
+      multi: true,
+      max: 4,
       options: [
         { label: "👁️ Vede imagini și diagrame", value: "visual" },
         { label: "👂 Ascultă explicații", value: "auditory" },
@@ -92,9 +92,9 @@ export default function OnboardingPage() {
     {
       id: "energy",
       attoText: `Înțeles! Cum e ${firstName} în general după școală?`,
-      hint: "Alege una",
-      multi: false,
-      max: 1,
+      hint: "Alege tot ce se potrivește",
+      multi: true,
+      max: 3,
       options: [
         { label: "⚡ Plin/ă de energie", value: "high" },
         { label: "😊 Normal, ok", value: "medium" },
@@ -121,46 +121,25 @@ export default function OnboardingPage() {
 
   function getSelected(id: string): string[] {
     if (id === "passions") return answers.passions;
-    if (id === "learningStyle") return answers.learningStyle ? [answers.learningStyle] : [];
-    if (id === "energy") return answers.energy ? [answers.energy] : [];
+    if (id === "learningStyle") return answers.learningStyle;
+    if (id === "energy") return answers.energy;
     if (id === "motivators") return answers.motivators;
     return [];
   }
 
   function toggleOption(id: string, value: string) {
     setAnswers((prev) => {
-      if (id === "passions") {
-        const arr = prev.passions.includes(value as PassionKey)
-          ? prev.passions.filter((v) => v !== value)
-          : prev.passions.length < 2
-          ? [...prev.passions, value as PassionKey]
-          : prev.passions;
-        return { ...prev, passions: arr };
-      }
-      if (id === "learningStyle") {
-        return { ...prev, learningStyle: value as LearningStyle };
-      }
-      if (id === "energy") {
-        return { ...prev, energy: value as EnergyLevel };
-      }
-      if (id === "motivators") {
-        const arr = prev.motivators.includes(value)
-          ? prev.motivators.filter((v) => v !== value)
-          : prev.motivators.length < 2
-          ? [...prev.motivators, value]
-          : prev.motivators;
-        return { ...prev, motivators: arr };
-      }
-      return prev;
+      const key = id as keyof Step3Answers;
+      const arr = prev[key] as string[];
+      const updated = arr.includes(value)
+        ? arr.filter((v) => v !== value)
+        : [...arr, value];
+      return { ...prev, [key]: updated };
     });
   }
 
   function isQuestionAnswered(id: string): boolean {
-    if (id === "passions") return answers.passions.length > 0;
-    if (id === "learningStyle") return answers.learningStyle !== "";
-    if (id === "energy") return answers.energy !== "";
-    if (id === "motivators") return answers.motivators.length > 0;
-    return false;
+    return (answers[id as keyof Step3Answers] as string[]).length > 0;
   }
 
   async function handleFinish() {
@@ -180,17 +159,16 @@ export default function OnboardingPage() {
     };
     answers.passions.forEach((p) => { passionMap[p] = 10; });
 
-    const learningBase = 0.3;
+    // All selected learning styles get 0.8, unselected get 0.3
     const learningMap = {
-      learning_visual: learningBase,
-      learning_auditory: learningBase,
-      learning_logical: learningBase,
-      learning_kinesthetic: learningBase,
+      learning_visual: answers.learningStyle.includes("visual") ? 0.8 : 0.3,
+      learning_auditory: answers.learningStyle.includes("auditory") ? 0.8 : 0.3,
+      learning_logical: answers.learningStyle.includes("logical") ? 0.8 : 0.3,
+      learning_kinesthetic: answers.learningStyle.includes("kinesthetic") ? 0.8 : 0.3,
     };
-    if (answers.learningStyle) {
-      const key = `learning_${answers.learningStyle}` as keyof typeof learningMap;
-      learningMap[key] = 0.8;
-    }
+
+    // DB stores a single energy value — take first selected or default medium
+    const energyValue = answers.energy[0] ?? "medium";
 
     const res = await fetch("/api/auth/onboarding", {
       method: "POST",
@@ -213,7 +191,7 @@ export default function OnboardingPage() {
           passion_art: passionMap.art,
           passion_science: passionMap.science,
           ...learningMap,
-          current_energy: answers.energy || "medium",
+          current_energy: energyValue,
           positive_anchors: answers.motivators.length > 0 ? answers.motivators : ["recompense"],
         },
       }),
