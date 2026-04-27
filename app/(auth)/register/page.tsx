@@ -60,6 +60,22 @@ function RegisterForm() {
       return;
     }
 
+    // Redirect to Stripe checkout (€0 today, card required for after trial)
+    const checkoutRes = await fetch("/api/stripe/checkout", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ plan }),
+    });
+
+    if (checkoutRes.ok) {
+      const { url } = await checkoutRes.json();
+      if (url) {
+        window.location.href = url;
+        return;
+      }
+    }
+
+    // Fallback if Stripe is unavailable
     router.push("/onboarding");
   }
 
@@ -137,8 +153,13 @@ function RegisterForm() {
         disabled={loading}
         className="w-full mt-2"
       >
-        {loading ? "Se creează contul..." : "Creează cont →"}
+        {loading ? "Se pregătește plata..." : "Continuă spre plată →"}
       </Button>
+
+      <div className="bg-[#0D1B2A]/40 rounded-xl px-4 py-3 text-center border border-white/5">
+        <p className="text-[#3ECDA0] text-xs font-semibold">🔒 €0 azi · Cardul e salvat pentru după trial</p>
+        <p className="text-white/30 text-xs mt-0.5">Poți anula oricând din cont în primele 7 zile</p>
+      </div>
 
       <p className="text-center text-white/30 text-xs leading-relaxed">
         Prin înregistrare accepți{" "}

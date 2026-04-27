@@ -64,8 +64,8 @@ export async function POST(req: NextRequest) {
     subscription_data: {
       trial_period_days: 7,
     },
-    success_url: `${baseUrl}/dashboard?checkout=success`,
-    cancel_url: `${baseUrl}/settings?checkout=cancelled`,
+    success_url: `${baseUrl}/onboarding?checkout=success`,
+    cancel_url: `${baseUrl}/register?plan=${planKey}&checkout=cancelled`,
     allow_promotion_codes: true,
     metadata: {
       supabase_user_id: user.id,
