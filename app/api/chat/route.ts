@@ -165,11 +165,34 @@ async function fallbackGemini(body: Record<string, unknown>) {
 
     if (body.type === "message" && body.sessionId) {
       const sessionId = body.sessionId as string;
-      // Save child + Atto messages
+      const conversationHistory = (body.conversationHistory as Array<{ role: string; content: string }>) ?? [];
+
+      // Save child + Atto messages — runs on SERVER, independent of browser tab
       admin.from("messages").insert([
         { session_id: sessionId, role: "child" as const, content: body.message as string },
         { session_id: sessionId, role: "atto" as const, content: responseText },
       ]).then(() => {});
+
+      // Auto-generate/update report on server after every 4th exchange.
+      // This means a report exists even if the user closes the tab without pressing "Încheie".
+      const totalSaved = conversationHistory.length + 2;
+      if (totalSaved >= 8 && totalSaved % 8 === 0) {
+        const fullHistory = [
+          ...conversationHistory,
+          { role: "user", content: body.message as string },
+          { role: "model", content: responseText },
+        ];
+        upsertReport({
+          admin,
+          sessionId,
+          childId,
+          lang,
+          conversationHistory: fullHistory,
+          concepts: [],
+          stars: 0,
+          apiKey,
+        }).catch(() => {});
+      }
     }
 
     return NextResponse.json({
@@ -182,6 +205,81 @@ async function fallbackGemini(body: Record<string, unknown>) {
   }
 }
 
+// Generates or updates the parent report for a session.
+// Called both automatically during the session (server-side) and explicitly at session end.
+async function upsertReport({
+  admin,
+  sessionId,
+  childId,
+  lang,
+  conversationHistory,
+  concepts,
+  stars,
+  apiKey,
+}: {
+  admin: ReturnType<typeof getAdmin>;
+  sessionId: string | undefined;
+  childId: string;
+  lang: string;
+  conversationHistory: Array<{ role: string; content: string }>;
+  concepts: string[];
+  stars: number;
+  apiKey: string | undefined;
+}) {
+  if (!childId) return;
+
+  // Generate summary with Gemini
+  let summary = lang === "ro"
+    ? `Sesiune cu Atto.${concepts.length > 0 ? ` Concepte înțelese: ${concepts.join(", ")}.` : ""}`
+    : `Session with Atto.${concepts.length > 0 ? ` Concepts mastered: ${concepts.join(", ")}.` : ""}`;
+
+  if (apiKey && conversationHistory.length >= 6) {
+    const lastExchanges = conversationHistory.slice(-12)
+      .map((m) => `${m.role === "model" ? "Atto" : (lang === "ro" ? "Copil" : "Child")}: ${m.content}`)
+      .join("\n");
+
+    const prompt = lang === "ro"
+      ? `Ești Atto, mentor pentru copii. Scrie un raport SCURT (2-3 propoziții) pentru PĂRINȚI. Fii cald, concret, pozitiv. Menționează ce a înțeles copilul și ce ar merita exersat.\n\nConversație:\n${lastExchanges}`
+      : `You are Atto, a children's mentor. Write a SHORT report (2-3 sentences) for PARENTS. Be warm, specific, positive. Mention what the child understood and what's worth practicing.\n\nConversation:\n${lastExchanges}`;
+
+    const generated = await callGemini(apiKey, {
+      contents: [{ role: "user", parts: [{ text: prompt }] }],
+      generationConfig: { maxOutputTokens: 200, temperature: 0.7 },
+    });
+    if (generated) summary = generated;
+  }
+
+  const reportData = {
+    child_id: childId,
+    session_id: sessionId ?? null,
+    report_type: "session" as const,
+    summary,
+    concepts_learned: concepts,
+    concepts_struggling: [],
+    passions_detected: [],
+    progress_score: stars > 0 ? Math.min(stars / 5, 1) : 0.5,
+    is_read: false,
+  };
+
+  // Check if a report already exists for this session to decide insert vs update
+  if (sessionId) {
+    const { data: existing } = await admin
+      .from("parent_reports")
+      .select("id")
+      .eq("session_id", sessionId)
+      .maybeSingle();
+
+    if (existing?.id) {
+      await admin.from("parent_reports")
+        .update({ summary, concepts_learned: concepts, progress_score: reportData.progress_score })
+        .eq("id", existing.id);
+      return;
+    }
+  }
+
+  await admin.from("parent_reports").insert(reportData);
+}
+
 async function handleEndSession(body: Record<string, unknown>) {
   const admin = getAdmin();
   const sessionId = body.sessionId as string | undefined;
@@ -190,8 +288,9 @@ async function handleEndSession(body: Record<string, unknown>) {
   const concepts = (body.concepts as string[]) ?? [];
   const stars = (body.stars as number) ?? 0;
   const conversationHistory = (body.conversationHistory as Array<{ role: string; content: string }>) ?? [];
+  const apiKey = process.env.GEMINI_API_KEY;
 
-  // Close session in DB
+  // Mark session as completed
   if (sessionId) {
     admin.from("sessions").update({
       ended_at: new Date().toISOString(),
@@ -200,42 +299,8 @@ async function handleEndSession(body: Record<string, unknown>) {
     }).eq("id", sessionId).then(() => {});
   }
 
-  // Generate parent report summary via Gemini
-  const apiKey = process.env.GEMINI_API_KEY;
-  let summary = lang === "ro"
-    ? `Sesiune completată cu Atto.${concepts.length > 0 ? ` Concepte înțelese: ${concepts.join(", ")}.` : ""}`
-    : `Session completed with Atto.${concepts.length > 0 ? ` Concepts mastered: ${concepts.join(", ")}.` : ""}`;
-
-  if (apiKey && conversationHistory.length >= 4) {
-    const lastExchanges = conversationHistory.slice(-12)
-      .map((m) => `${m.role === "model" ? "Atto" : (lang === "ro" ? "Copil" : "Child")}: ${m.content}`)
-      .join("\n");
-
-    const reportPrompt = lang === "ro"
-      ? `Ești Atto, un mentor pentru copii. Analizează această sesiune și scrie un raport SCURT (2-3 propoziții) pentru PĂRINȚI. Fii cald, concret, pozitiv. Menționează ce a înțeles copilul și ce ar merita exersat.\n\nConversație:\n${lastExchanges}`
-      : `You are Atto, a children's mentor. Analyze this session and write a SHORT report (2-3 sentences) for PARENTS. Be warm, specific, positive. Mention what the child understood and what's worth practicing.\n\nConversation:\n${lastExchanges}`;
-
-    const reportText = await callGemini(apiKey, {
-      contents: [{ role: "user", parts: [{ text: reportPrompt }] }],
-      generationConfig: { maxOutputTokens: 200, temperature: 0.7 },
-    });
-    if (reportText) summary = reportText;
-  }
-
-  // Create parent_reports row
-  if (childId) {
-    await admin.from("parent_reports").insert({
-      child_id: childId,
-      session_id: sessionId ?? null,
-      report_type: "session" as const,
-      summary,
-      concepts_learned: concepts,
-      concepts_struggling: [],
-      passions_detected: [],
-      progress_score: stars > 0 ? Math.min(stars / 5, 1) : 0.5,
-      is_read: false,
-    });
-  }
+  // Generate final report (awaited — this is the "official" end-of-session report)
+  await upsertReport({ admin, sessionId, childId, lang, conversationHistory, concepts, stars, apiKey });
 
   return NextResponse.json({ ok: true });
 }
