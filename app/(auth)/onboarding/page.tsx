@@ -63,9 +63,9 @@ export default function OnboardingPage() {
     {
       id: "passions",
       attoText: `Bine, ${firstName}! Acum spune-mi — ce îi place lui ${firstName} să facă în timpul liber?`,
-      hint: "Alege până la 2 lucruri",
+      hint: "Alege tot ce se potrivește",
       multi: true,
-      max: 2,
+      max: 7,
       options: [
         { label: "🏃 Sport", value: "sport" },
         { label: "🎵 Muzică", value: "music" },
@@ -104,9 +104,9 @@ export default function OnboardingPage() {
     {
       id: "motivators",
       attoText: `Ultima întrebare — ce îl/o motivează pe ${firstName} cel mai mult?`,
-      hint: "Alege până la 2",
+      hint: "Alege tot ce se potrivește",
       multi: true,
-      max: 2,
+      max: 5,
       options: [
         { label: "🏆 Să câștige / să fie primul", value: "competitie" },
         { label: "⭐ Stele și recompense", value: "recompense" },
