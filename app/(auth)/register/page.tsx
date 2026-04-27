@@ -61,10 +61,11 @@ function RegisterForm() {
     }
 
     // Redirect to Stripe checkout (€0 today, card required for after trial)
+    // Pass userId explicitly — session cookie may not be set yet right after signUp
     const checkoutRes = await fetch("/api/stripe/checkout", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ plan }),
+      body: JSON.stringify({ plan, userId: authData.user.id }),
     });
 
     if (checkoutRes.ok) {
@@ -75,8 +76,11 @@ function RegisterForm() {
       }
     }
 
-    // Fallback if Stripe is unavailable
-    router.push("/onboarding");
+    // Show error if Stripe failed
+    const errData = await checkoutRes.json().catch(() => ({}));
+    console.error("[register] checkout failed:", checkoutRes.status, errData);
+    setError("Eroare la inițierea plății. Te rugăm să încerci din nou.");
+    setLoading(false);
   }
 
   const PLAN_LABELS: Record<string, { name: string; price: string }> = {
