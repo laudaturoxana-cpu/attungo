@@ -48,6 +48,7 @@ export default function ChatInterface({
   const [loading, setLoading] = useState(false);
   const [showBurst, setShowBurst] = useState(false);
   const [burstKey, setBurstKey] = useState(0);
+  const [masteredConcepts, setMasteredConcepts] = useState<string[]>([]);
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -173,6 +174,7 @@ export default function ChatInterface({
 
       if (data.concepts_mastered?.length > 0) {
         setStars((s) => s + data.concepts_mastered.length);
+        setMasteredConcepts((prev) => [...prev, ...data.concepts_mastered]);
         if (stars + data.concepts_mastered.length >= level * 5) {
           setLevel((l) => l + 1);
         }
@@ -199,6 +201,29 @@ export default function ChatInterface({
     }
   }, [loading, messages, sessionId, childId, language, lang, stars, level]);
 
+  const endSession = useCallback(async () => {
+    try {
+      await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: "end_session",
+          sessionId,
+          childId,
+          childName,
+          language,
+          stars,
+          concepts: masteredConcepts,
+          conversationHistory: messages.map((m) => ({
+            role: m.role === "atto" ? "model" : "user",
+            content: m.content,
+          })),
+        }),
+      });
+    } catch { /* non-fatal */ }
+    onSessionEnd?.({ stars, concepts: masteredConcepts });
+  }, [sessionId, childId, childName, language, stars, masteredConcepts, messages, onSessionEnd]);
+
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     sendMessage(input);
@@ -219,7 +244,7 @@ export default function ChatInterface({
       {/* Sprint timer bar */}
       <SprintTimer
         durationMinutes={sprintMinutes}
-        onSprintComplete={() => setSprintComplete(true)}
+        onSprintComplete={() => { setSprintComplete(true); endSession(); }}
         lang={lang}
       />
 
@@ -250,16 +275,22 @@ export default function ChatInterface({
 
       {/* Sprint complete banner */}
       {sprintComplete && (
-        <div className="mx-3 mt-3 p-3 bg-[#FEF3C7] border border-[#E8A020]/40 rounded-xl text-sm text-[#92520A] flex items-center gap-2">
+        <div className="mx-3 mt-3 p-3 bg-[#FEF3C7] border border-[#E8A020]/40 rounded-xl text-sm text-[#92520A] flex items-center gap-2 flex-wrap">
           <span>🎉</span>
-          <span>
+          <span className="flex-1">
             {lang === "ro"
               ? "Sprint completat! Ia o pauză și mișcă-te 3 minute!"
               : "Sprint complete! Take a break and move for 3 minutes!"}
           </span>
           <button
+            onClick={endSession}
+            className="px-3 py-1 rounded-full bg-[#E8A020] text-white text-xs font-semibold hover:bg-[#C17D0A] transition-all"
+          >
+            {lang === "ro" ? "Încheie →" : "Finish →"}
+          </button>
+          <button
             onClick={() => setSprintComplete(false)}
-            className="ml-auto text-[#92520A]/60 hover:text-[#92520A]"
+            className="text-[#92520A]/60 hover:text-[#92520A]"
           >
             ✕
           </button>

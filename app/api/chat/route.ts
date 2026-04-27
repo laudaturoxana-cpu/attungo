@@ -1,9 +1,17 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
+import { createClient as createAdminClient } from "@supabase/supabase-js";
 import { getCurriculumForGrade } from "@/lib/curriculum";
 import type { CurriculumType, GradeCurriculum, SubjectCurriculum } from "@/lib/curriculum/types";
 import { getPedagogyPromptBlock } from "@/lib/atto/pedagogy";
 import type { ChildProfile } from "@/lib/atto/types";
+
+function getAdmin() {
+  return createAdminClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.SUPABASE_SERVICE_ROLE_KEY!
+  );
+}
 
 export async function POST(req: NextRequest) {
   const supabase = await createClient();
@@ -14,6 +22,12 @@ export async function POST(req: NextRequest) {
   }
 
   const body = await req.json();
+
+  // End session always handled here — no backend needed
+  if (body.type === "end_session") {
+    return handleEndSession(body);
+  }
+
   const backendUrl = process.env.BACKEND_URL ?? "http://localhost:8000";
 
   try {
@@ -29,17 +43,13 @@ export async function POST(req: NextRequest) {
         "X-User-Id": user.id,
       },
       body: JSON.stringify(body),
+      signal: AbortSignal.timeout(4000),
     });
 
-    if (!res.ok) {
-      // Fallback: direct Gemini call if backend unavailable
-      return fallbackGemini(body);
-    }
-
+    if (!res.ok) return fallbackGemini(body);
     const data = await res.json();
     return NextResponse.json(data);
   } catch {
-    // Backend not available — use direct Gemini
     return fallbackGemini(body);
   }
 }
@@ -83,14 +93,15 @@ async function fallbackGemini(body: Record<string, unknown>) {
   }
 
   try {
-    const lang = body.language as string ?? "ro";
-    const childName = body.childName as string ?? "Copilul";
-    const subject = body.subject as string ?? "";
-    const topic = body.topic as string ?? subject;
-    const grade = body.grade as number ?? 5;
+    const lang = (body.language as string) ?? "ro";
+    const childName = (body.childName as string) ?? "Copilul";
+    const childId = body.childId as string;
+    const subject = (body.subject as string) ?? "";
+    const topic = (body.topic as string) ?? subject;
+    const grade = (body.grade as number) ?? 5;
     const curriculumType = (body.curriculumType as CurriculumType) ?? "RO_NATIONAL";
     const childProfile = body.childProfile as ChildProfile | undefined;
-    const freeMode = body.freeMode as boolean ?? false;
+    const freeMode = (body.freeMode as boolean) ?? false;
 
     const curriculumData = getCurriculumForGrade(curriculumType, grade);
     const prereqData = grade > 1 ? getCurriculumForGrade(curriculumType, grade - 1) : null;
@@ -119,15 +130,114 @@ async function fallbackGemini(body: Record<string, unknown>) {
     };
 
     const text = await callGemini(apiKey, geminiBody);
+    const responseText = text ?? getDefaultAttoMessage(body);
+
+    // ── Persist to DB (fire-and-forget, non-blocking) ──
+    const admin = getAdmin();
+
+    if (body.type === "start_session" && childId) {
+      // Create session row, return real sessionId
+      const { data: sessionRow } = await admin.from("sessions").insert({
+        child_id: childId,
+        subject: subject || "liber",
+        topic: topic || "general",
+        curriculum_type: curriculumType,
+        session_language: (lang as "ro" | "en"),
+        session_type: "free" as const,
+      }).select("id").single();
+
+      const sessionId = sessionRow?.id ?? crypto.randomUUID();
+
+      // Save Atto's opening message
+      admin.from("messages").insert({
+        session_id: sessionId,
+        role: "atto" as const,
+        content: responseText,
+      }).then(() => {});
+
+      return NextResponse.json({
+        sessionId,
+        message: responseText,
+        detected_state: { energy: "medium", frustration: 0.2, engagement: 0.7 },
+        concepts_mastered: [],
+      });
+    }
+
+    if (body.type === "message" && body.sessionId) {
+      const sessionId = body.sessionId as string;
+      // Save child + Atto messages
+      admin.from("messages").insert([
+        { session_id: sessionId, role: "child" as const, content: body.message as string },
+        { session_id: sessionId, role: "atto" as const, content: responseText },
+      ]).then(() => {});
+    }
 
     return NextResponse.json({
-      message: text ?? getDefaultAttoMessage(body),
+      message: responseText,
       detected_state: { energy: "medium", frustration: 0.2, engagement: 0.7 },
       concepts_mastered: [],
     });
   } catch {
     return NextResponse.json({ message: getDefaultAttoMessage(body) });
   }
+}
+
+async function handleEndSession(body: Record<string, unknown>) {
+  const admin = getAdmin();
+  const sessionId = body.sessionId as string | undefined;
+  const childId = body.childId as string;
+  const lang = (body.language as string) ?? "ro";
+  const concepts = (body.concepts as string[]) ?? [];
+  const stars = (body.stars as number) ?? 0;
+  const conversationHistory = (body.conversationHistory as Array<{ role: string; content: string }>) ?? [];
+
+  // Close session in DB
+  if (sessionId) {
+    admin.from("sessions").update({
+      ended_at: new Date().toISOString(),
+      session_completed: true,
+      concepts_mastered_today: concepts,
+    }).eq("id", sessionId).then(() => {});
+  }
+
+  // Generate parent report summary via Gemini
+  const apiKey = process.env.GEMINI_API_KEY;
+  let summary = lang === "ro"
+    ? `Sesiune completată cu Atto.${concepts.length > 0 ? ` Concepte înțelese: ${concepts.join(", ")}.` : ""}`
+    : `Session completed with Atto.${concepts.length > 0 ? ` Concepts mastered: ${concepts.join(", ")}.` : ""}`;
+
+  if (apiKey && conversationHistory.length >= 4) {
+    const lastExchanges = conversationHistory.slice(-12)
+      .map((m) => `${m.role === "model" ? "Atto" : (lang === "ro" ? "Copil" : "Child")}: ${m.content}`)
+      .join("\n");
+
+    const reportPrompt = lang === "ro"
+      ? `Ești Atto, un mentor pentru copii. Analizează această sesiune și scrie un raport SCURT (2-3 propoziții) pentru PĂRINȚI. Fii cald, concret, pozitiv. Menționează ce a înțeles copilul și ce ar merita exersat.\n\nConversație:\n${lastExchanges}`
+      : `You are Atto, a children's mentor. Analyze this session and write a SHORT report (2-3 sentences) for PARENTS. Be warm, specific, positive. Mention what the child understood and what's worth practicing.\n\nConversation:\n${lastExchanges}`;
+
+    const reportText = await callGemini(apiKey, {
+      contents: [{ role: "user", parts: [{ text: reportPrompt }] }],
+      generationConfig: { maxOutputTokens: 200, temperature: 0.7 },
+    });
+    if (reportText) summary = reportText;
+  }
+
+  // Create parent_reports row
+  if (childId) {
+    await admin.from("parent_reports").insert({
+      child_id: childId,
+      session_id: sessionId ?? null,
+      report_type: "session" as const,
+      summary,
+      concepts_learned: concepts,
+      concepts_struggling: [],
+      passions_detected: [],
+      progress_score: stars > 0 ? Math.min(stars / 5, 1) : 0.5,
+      is_read: false,
+    });
+  }
+
+  return NextResponse.json({ ok: true });
 }
 
 /** Fuzzy-match the selected subject name against curriculum subject keys */

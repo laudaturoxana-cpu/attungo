@@ -38,6 +38,16 @@ function RegisterForm() {
       return;
     }
 
+    // If no session (email confirmation required), sign in immediately
+    if (!authData.session) {
+      const { error: signInError } = await supabase.auth.signInWithPassword({ email, password });
+      if (signInError) {
+        setError("Cont creat! Verifică emailul și loghează-te.");
+        setLoading(false);
+        return;
+      }
+    }
+
     const registerRes = await fetch("/api/auth/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
