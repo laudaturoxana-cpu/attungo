@@ -159,7 +159,7 @@ async function fallbackGemini(body: Record<string, unknown>) {
         sessionId,
         message: responseText,
         detected_state: { energy: "medium", frustration: 0.2, engagement: 0.7 },
-        concepts_mastered: [],
+        concepts_mastered: extractConcepts(responseText),
       });
     }
 
@@ -198,7 +198,7 @@ async function fallbackGemini(body: Record<string, unknown>) {
     return NextResponse.json({
       message: responseText,
       detected_state: { energy: "medium", frustration: 0.2, engagement: 0.7 },
-      concepts_mastered: [],
+      concepts_mastered: extractConcepts(responseText),
     });
   } catch {
     return NextResponse.json({ message: getDefaultAttoMessage(body) });
@@ -678,6 +678,15 @@ ${prereqSubjectsBlock ? `═══ GRADE ${grade - 1} CURRICULUM — diagnostic 
 • Correct answer → 🌟 + explicitly NAME the concept they understood.
 • Language: EXCLUSIVELY English, regardless of what ${name} writes.
 • 3 wrong answers in a row → completely change approach, don't repeat the same thing.`;
+}
+
+/** Extract mastered concepts from Atto's response.
+ *  Atto is prompted to write "🌟 [concept]" when the child answers correctly. */
+function extractConcepts(text: string): string[] {
+  const matches = text.match(/🌟[^\n.!?🌟]{1,80}/g) ?? [];
+  return matches
+    .map((m) => m.replace(/^🌟\s*/, "").trim())
+    .filter(Boolean);
 }
 
 function getDefaultAttoMessage(body: Record<string, unknown>): string {
