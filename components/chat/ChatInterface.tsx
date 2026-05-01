@@ -7,6 +7,7 @@ import MessageBubble, { type Message } from "./MessageBubble";
 import SprintTimer from "./SprintTimer";
 import StarsDisplay from "./StarsDisplay";
 import VoiceInput from "./VoiceInput";
+import StarCelebration from "./StarCelebration";
 import type { SessionLanguage } from "@/lib/supabase/types";
 import type { ChildProfile } from "@/lib/atto/types";
 
@@ -302,17 +303,8 @@ export default function ChatInterface({
         {/* Floating firefly dots in background */}
         <AttoFireflies count={5} />
 
-        {/* Star burst overlay when child earns a star */}
-        {showBurst && (
-          <div className="absolute inset-x-0 top-1/3 pointer-events-none z-50 flex justify-center">
-            <div key={burstKey} className="animate-star-pop text-center">
-              <div className="text-6xl drop-shadow-lg">⭐</div>
-              <p className="text-sm font-bold text-[#E8A020] mt-1 drop-shadow">
-                {lang === "ro" ? "+1 stea!" : "+1 star!"}
-              </p>
-            </div>
-          </div>
-        )}
+        {/* Full-screen star celebration when child earns a star */}
+        <StarCelebration show={showBurst} celebrationKey={burstKey} lang={lang} />
 
         <div className="px-4 py-4 space-y-4">
           {messages.map((msg) => (

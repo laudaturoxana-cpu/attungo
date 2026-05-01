@@ -132,6 +132,26 @@ body {
   100% { transform: translateY(-60px) scale(0.9); opacity: 0; }
 }
 
+@keyframes star-fly {
+  0%   { transform: translateY(0) scale(0.2) rotate(0deg); opacity: 0; }
+  10%  { transform: translateY(-80px) scale(1.3) rotate(15deg); opacity: 1; }
+  80%  { transform: translateY(-65vh) scale(0.9) rotate(-10deg); opacity: 0.9; }
+  100% { transform: translateY(-85vh) scale(0.5) rotate(-25deg); opacity: 0; }
+}
+
+@keyframes celebrate-pop {
+  0%   { transform: scale(0) rotate(-20deg); }
+  70%  { transform: scale(1.3) rotate(10deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+@keyframes celebrate-fade {
+  0%   { opacity: 0; }
+  15%  { opacity: 1; }
+  65%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
 @keyframes antenna-glow {
   0%, 100% { fill: #E8A020; filter: brightness(1); }
   50% { fill: #FDE68A; filter: brightness(1.5) drop-shadow(0 0 4px #E8A020); }
