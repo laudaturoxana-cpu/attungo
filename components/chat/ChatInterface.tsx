@@ -50,6 +50,7 @@ export default function ChatInterface({
   const [showBurst, setShowBurst] = useState(false);
   const [burstKey, setBurstKey] = useState(0);
   const [masteredConcepts, setMasteredConcepts] = useState<string[]>([]);
+  const [attoTalking, setAttoTalking] = useState(false);
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -306,9 +307,43 @@ export default function ChatInterface({
         {/* Full-screen star celebration when child earns a star */}
         <StarCelebration show={showBurst} celebrationKey={burstKey} lang={lang} />
 
+        {/* Atto talking overlay — appears when child taps "ascultă" */}
+        {attoTalking && (
+          <div className="fixed inset-0 pointer-events-none z-40 flex flex-col items-center justify-end pb-24">
+            <div className="flex flex-col items-center gap-3 animate-slide-up">
+              {/* Sound waves above Atto */}
+              <div className="flex items-end gap-2">
+                {[0, 1, 2, 3, 4].map((i) => (
+                  <span
+                    key={i}
+                    className="rounded-full"
+                    style={{
+                      width: "4px",
+                      background: "#3ECDA0",
+                      boxShadow: "0 0 8px rgba(62,205,160,0.7)",
+                      height: `${10 + (i % 3) * 8}px`,
+                      animation: `typing-dot 0.9s ease-in-out ${i * 0.12}s infinite`,
+                    }}
+                  />
+                ))}
+              </div>
+              {/* Atto character — large, happy, floating */}
+              <div style={{ animation: "atto-float 2s ease-in-out infinite" }}>
+                <AttoCharacter state="happy" size={120} />
+              </div>
+              {/* Label */}
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl px-5 py-2 border border-[#3ECDA0]/30 shadow-lg">
+                <p className="text-[#1D9E75] font-semibold text-sm">
+                  {lang === "ro" ? "Atto îți explică..." : "Atto is explaining..."}
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
+
         <div className="px-4 py-4 space-y-4">
           {messages.map((msg) => (
-            <MessageBubble key={msg.id} message={msg} lang={lang} />
+            <MessageBubble key={msg.id} message={msg} lang={lang} onAttoSpeaking={setAttoTalking} />
           ))}
 
           {/* Typing indicator — firefly lights, not WhatsApp dots */}

@@ -14,9 +14,10 @@ export interface Message {
 interface MessageBubbleProps {
   message: Message;
   lang?: "ro" | "en";
+  onAttoSpeaking?: (speaking: boolean) => void;
 }
 
-export default function MessageBubble({ message, lang = "ro" }: MessageBubbleProps) {
+export default function MessageBubble({ message, lang = "ro", onAttoSpeaking }: MessageBubbleProps) {
   const isAtto = message.role === "atto";
 
   return (
@@ -64,7 +65,7 @@ export default function MessageBubble({ message, lang = "ro" }: MessageBubblePro
 
         {/* Read Aloud — only on Atto messages */}
         {isAtto && (
-          <ReadAloud text={message.content} lang={lang} />
+          <ReadAloud text={message.content} lang={lang} onSpeakingChange={onAttoSpeaking} />
         )}
       </div>
     </div>

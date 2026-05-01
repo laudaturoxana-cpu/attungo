@@ -5,9 +5,10 @@ import { useState, useEffect, useRef } from "react";
 interface ReadAloudProps {
   text: string;
   lang?: "ro" | "en";
+  onSpeakingChange?: (speaking: boolean) => void;
 }
 
-export default function ReadAloud({ text, lang = "ro" }: ReadAloudProps) {
+export default function ReadAloud({ text, lang = "ro", onSpeakingChange }: ReadAloudProps) {
   const [speaking, setSpeaking] = useState(false);
   const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
 
@@ -34,6 +35,7 @@ export default function ReadAloud({ text, lang = "ro" }: ReadAloudProps) {
     if (speaking) {
       window.speechSynthesis.cancel();
       setSpeaking(false);
+      onSpeakingChange?.(false);
       return;
     }
 
@@ -49,9 +51,9 @@ export default function ReadAloud({ text, lang = "ro" }: ReadAloudProps) {
       const voice = getBestVoice(langCode);
       if (voice) utterance.voice = voice;
 
-      utterance.onstart = () => setSpeaking(true);
-      utterance.onend = () => setSpeaking(false);
-      utterance.onerror = () => setSpeaking(false);
+      utterance.onstart = () => { setSpeaking(true); onSpeakingChange?.(true); };
+      utterance.onend = () => { setSpeaking(false); onSpeakingChange?.(false); };
+      utterance.onerror = () => { setSpeaking(false); onSpeakingChange?.(false); };
 
       utteranceRef.current = utterance;
       window.speechSynthesis.speak(utterance);
