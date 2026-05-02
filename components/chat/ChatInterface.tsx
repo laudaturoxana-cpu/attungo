@@ -72,7 +72,7 @@ export default function ChatInterface({
     if (stars > prevStarsRef.current) {
       setBurstKey((k) => k + 1);
       setShowBurst(true);
-      const t = setTimeout(() => setShowBurst(false), 1600);
+      const t = setTimeout(() => setShowBurst(false), 3800);
       prevStarsRef.current = stars;
       return () => clearTimeout(t);
     } else {

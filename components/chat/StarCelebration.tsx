@@ -7,7 +7,6 @@ function playSuccessSound() {
     const Ctx = window.AudioContext ??
       (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
     const ctx = new Ctx();
-    // Ascending C-major arpeggio: C5 → E5 → G5 → C6
     const notes = [523.25, 659.25, 783.99, 1046.5];
     notes.forEach((freq, i) => {
       const osc = ctx.createOscillator();
@@ -28,12 +27,13 @@ function playSuccessSound() {
   }
 }
 
-const STARS = Array.from({ length: 22 }, (_, i) => ({
+// 35 stars spread across the full width, staggered so they fall like rain
+const STARS = Array.from({ length: 35 }, (_, i) => ({
   id: i,
-  left: 2 + (i * 4.5) % 96,
-  delay: (i * 0.07) % 1.0,
-  size: 20 + (i * 9) % 28,
-  emoji: i % 6 === 0 ? "🌟" : "⭐",
+  left: 1 + (i * 2.8) % 98,
+  delay: (i * 0.09) % 1.6,
+  size: 18 + (i * 7) % 26,
+  emoji: i % 5 === 0 ? "🌟" : "⭐",
 }));
 
 interface Props {
@@ -51,15 +51,16 @@ export default function StarCelebration({ show, celebrationKey, lang = "ro" }: P
 
   return (
     <div className="fixed inset-0 pointer-events-none z-50 overflow-hidden">
+      {/* Rain of stars falling from top */}
       {STARS.map((s) => (
         <span
           key={s.id}
           style={{
             position: "absolute",
             left: `${s.left}%`,
-            bottom: "0",
+            top: "0",
             fontSize: `${s.size}px`,
-            animation: `star-fly 2s ease-out ${s.delay}s forwards`,
+            animation: `star-rain 3.5s ease-in ${s.delay}s forwards`,
             willChange: "transform, opacity",
             lineHeight: 1,
           }}
@@ -68,13 +69,14 @@ export default function StarCelebration({ show, celebrationKey, lang = "ro" }: P
         </span>
       ))}
 
+      {/* Central "Bravo!" — fades in then out */}
       <div
         className="absolute inset-0 flex flex-col items-center justify-center gap-3"
-        style={{ animation: "celebrate-fade 2s ease forwards" }}
+        style={{ animation: "celebrate-fade 3.5s ease forwards" }}
       >
         <span
           style={{
-            fontSize: 80,
+            fontSize: 88,
             display: "block",
             animation: "celebrate-pop 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) forwards",
           }}
